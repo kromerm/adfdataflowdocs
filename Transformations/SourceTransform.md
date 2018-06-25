@@ -21,4 +21,4 @@ Use Sampling to limit the number of rows from your Source.  This is useful when 
 
 ![Scource Transformation](../images/source.png "source 2")
 
-#### You can modify the name of the source columns and their associate data types
+#### You can modify the name of the source columns and their associated data types

@@ -4,6 +4,8 @@
 
 The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow.
 
+** NOTE: Every Data Flow requires at least 1 Source Transformation (i.e. 1 to n) **
+
 ![Scource Transformation options](../images/source.png "source 1")
 
 ### Options

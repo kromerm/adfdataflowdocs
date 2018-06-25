@@ -1,6 +1,6 @@
 1. Provide your Subscription ID so we can whitelist Data Flow on your sub
 2. If your data is not already staged in Blob, create a new Data Factory from the GA service with a Copy Activity to copy your data into Blob
-3. Create a new Data Factory in the [PREVIEW REGION] region using the preview ADF service with Data Flow
+3. Create a new Data Factory in the SE Asia region using the preview ADF service with Data Flow
 4. Transform your data with a Data Flow activity
 5. In the Data Flow, create a new Dataset to point to the Blob folder you landed your data into in step #2
 6. Sink the data in Data Flow to a Blob folder in another Dataset

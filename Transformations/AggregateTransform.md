@@ -14,10 +14,10 @@ The Aggregate transformation is where you will define aggregations of columns in
 #### The Aggregate Column tab 
 (Optional) Choose a Group-by clause for your aggregation and use either the name of an existing column or a new name. Use "Add Column" add more group-by clauses and click on the text box next to the column name to launch the Expression Builder. You can select your aggregation types and functions in the Expression Builder and save your expression.
 
-![Agg Transformation options](../images/agghead.png "aggregator header")
+![Agg Transformation options](../images/agg2.png "aggregator")
 
 ### Define Schema
 
-![Scource Transformation](../images/source.png "source 2")
+![Agg Transformation](../images/agg3.png "agg")
 
 #### You can modify the name of the source columns and their associated data types

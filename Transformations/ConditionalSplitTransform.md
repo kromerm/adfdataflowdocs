@@ -2,8 +2,8 @@
 
 ## Conditional Split
 
-The Aggregate transformation is where you will define aggregations of columns in your data streams. In the Expression Builder, you can define different types of aggregations (i.e. SUM, MIN, MAX, COUNT, etc ...) and create a new field in your output that includes these aggregations with optional group-by fields.
+The Conditional Split transformation can route data rows to different streams depending on the content of the data. The implementation of the Conditional Split transformation is similar to a CASE decision structure in a programming language. The transformation evaluates expressions, and based on the results, directs the data row to the specified strean. This transformation also provides a default output, so that if a row matches no expression it is directed to the default output.
 
 ![conditional split](../images/cd1.png "conditional split")
 
-### Options
+To add additioinal conditions, select "Add Stream" in the bottom configuration pane and click in the Expression Builder text box to build your expression.

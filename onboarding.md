@@ -1,5 +1,8 @@
 1. Provide your Subscription ID so we can whitelist Data Flow on your sub
-2. If your data is not already staged in Blob, create a new Data Factory from the GA service with a Copy Activity to copy your data into Blob
+2. There is 1 Azure region enabled with the new preview Data Flow ADF service: SE Asia
+3. Create a new Data Factory in SE Asia with the ARM Template in the Samples folder. You may use either PowerShell or the Azure Portal to create the factory with this template.
+3. For the current iteration of Data Flow, your data must be in Blob in order for Databricks to transform the data
+4. If your data is not already staged in Blob, create a new Data Factory from the GA service with a Copy Activity to copy your data into Blob
 3. Create a new Data Factory in the SE Asia region using the preview ADF service with Data Flow. For now, new factories in the Data Flow preview service must be created from PowerShell or ARM Template. Please find an ARM Template that you can use in the samples directory.
 4. Create a Linked Service for your Azure Databricks to use for Data Transformations
 5. Create Linked Services for the Datasets that you will use for Data Transformation sources and sinks

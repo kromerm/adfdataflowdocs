@@ -8,10 +8,6 @@ The Aggregate transformation is where you will define aggregations of columns in
 
 ### Options
 
-#### Name and Fed-by
-
-The first options you'll see in the Aggregator are the name you wish to use for the Aggregator and the "Fed by" link. This names the stream that is the link to this transform. You can move the transfom to another part of our Data Flow by clicking on the Fed By stream and selecting a different data stream.
-
 ![Agg Transformation options](../images/agghead.png "aggregator header")
 
 #### Group By

@@ -8,8 +8,6 @@ The Aggregate transformation is where you will define aggregations of columns in
 
 ### Options
 
-![Agg Transformation options](../images/agghead.png "aggregator header")
-
 #### Group By
 (Optional) Choose a Group-by clause for your aggregation and use either the name of an existing column or a new name. Use "Add Column" add more group-by clauses and click on the text box next to the column name to launch the Expression Builder to either select just an existing column, combination of columns or expressions for your grouping.
 

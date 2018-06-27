@@ -6,4 +6,6 @@ Use the Derived Column transformation to generate new columns in your data flow 
 
 ![derive column](../images/dc1.png "Derived Column")
 
-To add additioinal conditions, select "Add Stream" in the bottom configuration pane and click in the Expression Builder text box to build your expression.
+You can perform multiple Derived Column actions in a single Derived Column transformation. Click "Add Column" to transform more than 1 column in the single transformation step.
+
+The Expression text box will open the Expression Builder where you can build the expression for the derived columns using expression functions.

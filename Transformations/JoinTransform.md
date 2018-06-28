@@ -30,7 +30,7 @@ Full Outer produces all columns and rows from both sides with NULL values for co
 
 Specific the cross product of the 2 streams with an expression
 
-### Specific Join Conditions
+### Specify Join Conditions
 
 The Left Join condition is from the data stream connected to the left of your Join. The Right Join condition is the second data stream connected to your Join on the bottom, which will either be a direct connector to another stream or a reference to another stream.
 

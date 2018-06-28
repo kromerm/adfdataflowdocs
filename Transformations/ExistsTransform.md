@@ -8,8 +8,8 @@ The Exists transformation allows you to filter rows in your data stream that exi
 
 ### Settings
 
-#### Allow schema drift
-Select Allow Schema Drift if the source columns will change often. This setting will allow all incoming fields from your source to flow through the transformations to the Sink.
+#### Fed by
+Choose the 2nd source for your Exists so that Data Flow can compare values from Stream 1 against Stream 2
 
 #### Fail if columns in the dataset are not found
 Choose this option to enforce a Source schema validation that will fail your Data Flow if columns that are expected from your source are not present.

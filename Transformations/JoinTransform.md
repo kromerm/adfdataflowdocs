@@ -4,13 +4,23 @@
 
 The Aggregate transformation is where you will define aggregations of columns in your data streams. In the Expression Builder, you can define different types of aggregations (i.e. SUM, MIN, MAX, COUNT, etc ...) and create a new field in your output that includes these aggregations with optional group-by fields.
 
-![Join Transformation](../images/agg.png "Join")
+![Join Transformation](../images/join.png "Join")
 
-### Group By
-(Optional) Choose a Group-by clause for your aggregation and use either the name of an existing column or a new name. Use "Add Column" add more group-by clauses and click on the text box next to the column name to launch the Expression Builder to either select just an existing column, combination of columns or expressions for your grouping.
+### Join types
 
-### The Aggregate Column tab 
-(Required) Choose the Aggregate Column tab to build the aggregation expressions. You can either choose an existing column to overwrite the value with the aggregation, or create a new field with the new name for the aggregation. The expression that you wish to use for the aggregation will be entered in the right-hand box next to the column name selector. Clicking on that text box will open up the Expression Builder.
+#### Inner
 
+#### Left Outer
+
+#### Right Outer
+
+#### Full Outer
+
+#### Cross Join
+
+
+### Specific Join Conditions
+
+The Left Join condition is from the data stream connected to the left of your Join. The Right Join condition is the second data stream connected to your Join on the bottom, which will either be a direct connector to another stream or a reference to another stream.
 
 

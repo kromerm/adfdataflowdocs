@@ -8,7 +8,11 @@ The Aggregate transformation is where you will define aggregations of columns in
 
 ### Join types
 
+Selecting Join type is required for the Join transformation
+
 #### Inner
+
+
 
 #### Left Outer
 
@@ -23,4 +27,5 @@ The Aggregate transformation is where you will define aggregations of columns in
 
 The Left Join condition is from the data stream connected to the left of your Join. The Right Join condition is the second data stream connected to your Join on the bottom, which will either be a direct connector to another stream or a reference to another stream.
 
+You are required to enter at least 1 (1..n) join conditions. They can be either directly-referenced fields selected from the drop-down menu, or expressions.
 

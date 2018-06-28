@@ -2,26 +2,33 @@
 
 ## Join
 
-The Aggregate transformation is where you will define aggregations of columns in your data streams. In the Expression Builder, you can define different types of aggregations (i.e. SUM, MIN, MAX, COUNT, etc ...) and create a new field in your output that includes these aggregations with optional group-by fields.
+Use Join to combine data from 2 tables in your Data Flow. Add the Join transform with the Plus icon on the data stream where you would like to join and then inside the transform you will select the 2nd Join stream.
 
 ![Join Transformation](../images/join.png "Join")
 
 ### Join types
 
-Selecting Join type is required for the Join transformation
+Selecting Join Type is required for the Join transformation
 
-#### Inner
+#### Inner Join
 
-
+Inner join will pass through only rows that match the column conditions from from both tables
 
 #### Left Outer
 
+All rows from the left stream not meeting the join condition are passed through, and output columns from the other table are set to NULL in addition to all rows returned by the inner join.
+
 #### Right Outer
+
+All rows from the right stream not meeting the join condition are passed through, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.
 
 #### Full Outer
 
+Full Outer produces all columns and rows from both sides with NULL values for columns that are not present in the other table
+
 #### Cross Join
 
+Specific the cross product of the 2 streams with an expression
 
 ### Specific Join Conditions
 

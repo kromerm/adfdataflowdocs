@@ -11,12 +11,4 @@ The Exists transformation allows you to filter rows in your data stream that exi
 #### Fed by
 Choose the 2nd source for your Exists so that Data Flow can compare values from Stream 1 against Stream 2
 
-#### Fail if columns in the dataset are not found
-Choose this option to enforce a Source schema validation that will fail your Data Flow if columns that are expected from your source are not present.
-
-#### Sampling
-Use Sampling to limit the number of rows from your Source.  This is useful when you need just a sample of your source data for testing and debugging purposes.
-
-### Define Schema
-
-#### You can modify the name of the source columns and their associated data types
+Select the column from Source 1 and from Source 2 whose values you wish to check against for Exists or Not Exists.

@@ -1,15 +1,15 @@
 # Azure Data Factory Data Flow Transformations
 
-## Exists
+## Sink
 
-The Exists transformation allows you to filter rows in your data stream that exists (SQL WHERE EXISTS) or do not exist (SQL WHERE NOT EXISTS). The resuling rows from your data stream after this transformation will either include all rows where column values from source 1 exist in source 2 or do NOT exist in source 2.
+![Sink settings 1](../images/sink1.png "Sink 1")
 
-![Exists settings](../images/exsits.png "exists 1")
+At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data.
 
-### Settings
+A common practice to account for changing incoming data and to account for data drift is to sink the output data to a folder without a defined schema in the output dataset.
 
-#### Fed by
-Choose the 2nd source for your Exists so that Data Flow can compare values from Stream 1 against Stream 2
+You can choose to overwrite, append, or fail the data flow when sinking to a dataset.
 
-Select the column from Source 1 and from Source 2 whose values you wish to check against for Exists or Not Exists.
+You can also choose "automap" to simply sink all incoming fields. If you wish to choose the fields that you want to sink to the destination, or if you would like to change the names of the fields at the destination, choose "Off" for "automap" and then click on the Mapping tab to map output fields:
 
+![Sink settings 2](../images/sink1.png "Sink 2")

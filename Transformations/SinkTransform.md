@@ -12,4 +12,4 @@ You can choose to overwrite, append, or fail the data flow when sinking to a dat
 
 You can also choose "automap" to simply sink all incoming fields. If you wish to choose the fields that you want to sink to the destination, or if you would like to change the names of the fields at the destination, choose "Off" for "automap" and then click on the Mapping tab to map output fields:
 
-![Sink settings 2](../images/sink1.png "Sink 2")
+![Sink settings 2](../images/sink2.png "Sink 2")

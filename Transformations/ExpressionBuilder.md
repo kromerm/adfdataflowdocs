@@ -2,26 +2,8 @@
 
 ## Expression Builder
 
-The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow.
+In ADF Data Flow, you will find expression boxes when you can enter expressions for data transformation that utilizes columns, fields, variables, parameters, functions from your data flow. To build the expression, you use the Expression Builder, which can be launched by clicking in the expression text box within each transformation. You will also sometimes see "Computed Column" options when selecting columns for transformation. When you click that, you will also see the Expression Builder launched.
 
-** NOTE: Every Data Flow requires at least 1 Source Transformation (i.e. 1 to n) **
+![Expression Builder](../images/expression.png "Expression Builder")
 
-![Scource Transformation options](../images/source.png "source 1")
-
-### Options
-
-#### Allow schema drift
-Select Allow Schema Drift if the source columns will change often. This setting will allow all incoming fields from your source to flow through the transformations to the Sink.
-
-#### Fail if columns in the dataset are not found
-Choose this option to enforce a Source schema validation that will fail your Data Flow if columns that are expected from your source are not present.
-
-#### Sampling
-Use Sampling to limit the number of rows from your Source.  This is useful when you need just a sample of your source data for testing and debugging purposes.
-
-### Define Schema
-
-![Scource Transformation](../images/source.png "source 2")
-
-#### You can modify the name of the source columns and their associated data types
-
+The Expression Builder tool defaults to the text editor option with auto-complete from the entire ADF Data Flow object model with syntax checking and highlighting.

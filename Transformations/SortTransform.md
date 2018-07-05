@@ -3,13 +3,12 @@
 
 ## Sort
 
-The Sort transformation allows you to filter rows in your data stream that exists (SQL WHERE EXISTS) or do not exist (SQL WHERE NOT EXISTS). The resuling rows from your data stream after this transformation will either include all rows where column values from source 1 exist in source 2 or do NOT exist in source 2.
-
 ![Sort settings](../images/sort.png "Sort")
 
-### Settings
+The Sort transformation allows you to sort the incoming rows on the current data stream. The outcoming rows from the Sort Transformation will subsequently follow the ordering rules that you set. You can choose invidual columns and sort them ASC or DEC, using the arrow indicator next to each field. If you need to modify the column before applying the sort, click on "Computed Columns" to launch the expression editor. This will provide with an opportunity to build an expression for the sort operation instead of simply applying a column for the sort.
 
-#### Fed by
-Choose the 2nd source for your Exists so that Data Flow can compare values from Stream 1 against Stream 2
+You can turn on "Case insensitive" if you wish to ignore case when sorting string or text fields.
 
-Select the column from Source 1 and from Source 2 whose values you wish to check against for Exists or Not Exists.
+"Sort Only Within Partitions" leverages the Spark data partitioning capability to sort incoming data only within each partition as opposed to the entire data stream.
+
+Each of the sort conditions in the Sort Transformation can be re-arranged. So if you need to move a column higher in the sort precendence, grab that row with your mouse and move it higher or lower in the sorting list.

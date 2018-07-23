@@ -24,3 +24,9 @@ Use Sampling to limit the number of rows from your Source.  This is useful when 
 ![Scource Transformation](../images/source.png "source 2")
 
 #### You can modify the name of the source columns and their associated data types
+
+For source file types that are not strongly types (i.e. flat files as opposed to Parquet files) you should define the data types for each field here in the Source transformation as opposed to in the Dataset.
+
+Here in the "Define Schema" tab on the Source transformation is where you can set the data types and formats:
+
+![Scource Transformation](../images/source003.png "data types")

@@ -10,4 +10,4 @@ The default setting for "Select" is to include all incoming columns and keep tho
 
 To alias individual columns, deselect "Select All" and use the column mapping at the bottom.
 
-
+![Select Transformation](../images/select001.png "Select Alias")

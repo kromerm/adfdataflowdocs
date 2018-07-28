@@ -4,4 +4,4 @@ In order to protect against Schema Drift, it is important to have the facilities
 
 1. Define sources that have mutable field names, data types, values and sizes
 2. Define transformation parameters that can work with data patterns instead of hard-coded fields and values
-3. Deinfe expressions that understand template patterns
+3. Define expressions that understand template patterns

@@ -1,6 +1,6 @@
 Get started with your first ADF Data Flow by first building a new Factory in the SE Asia region using the ARM Template in the Samples folder.
 
-You can use PowerShell or the Azure Portal Template Deploymnet mechanism to build the factory from the ARM Template.
+You can use PowerShell or the Azure Portal Template Deploymnet mechanism to build the factory from the ARM Template. For Private Preview, use the "SE Asia" region, enter "southeastasia" for the Location field in the ARM Template parameters.
 
 When filling-out the parameter fields for the ARM Template, you are only required to complete the Resource Group, FActory Name and Databricks fields. You can enter placeholder dummy values for Azure Databricks connectivity and correct those values later after you begin building your Data Flow.
 

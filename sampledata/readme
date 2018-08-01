@@ -1,1 +1,3 @@
-readme
+The sample data files found in this folder are free for your use in Azure Data Factory Data Flows to experiment and play with.
+
+Upload the files to your Azure Blob Storage and point to them with an ADF Linked Service + Dataset as part of defining a Data Flow Source transform.

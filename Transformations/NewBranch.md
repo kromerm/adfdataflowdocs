@@ -1,4 +1,4 @@
-![New Branch](../images/menu.png "New Branch")
+<img src="../images/menu.png" width="200">
 
 Branching will take the current data stream in your data flow and replicate it to another stream. This allows you to perform multiple sets of different operations and transformations against the same data stream.
 

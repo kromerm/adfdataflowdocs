@@ -2,7 +2,7 @@
 
 ## Sink
 
-![Sink settings 1](../images/sink1.png "Sink 1")
+<img src="../images/sink1.png" width="400">
 
 At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data.
 
@@ -12,7 +12,7 @@ You can choose to overwrite, append, or fail the data flow when sinking to a dat
 
 You can also choose "automap" to simply sink all incoming fields. If you wish to choose the fields that you want to sink to the destination, or if you would like to change the names of the fields at the destination, choose "Off" for "automap" and then click on the Mapping tab to map output fields:
 
-![Sink settings 2](../images/sink2.png "Sink 2")
+<img src="../images/sink2.png" width="400">
 
 ** PLEASE NOTE: Not all Dataset properties in Blob and ADW are configured for use within Data Flow during the preview period. Currently, ADF supports both a straight-forward Copy Activity as well as data tranformation-based Data Flow capability, both of which utilize Datasets. All of the Dataset properties present today work with Copy Activity. The UI will try to notify you interactively of which properties are not recognized by Data Flow. We will updates these properties during each subsequent iteration of Data Flow. **
 
@@ -22,5 +22,5 @@ We are releasing an early beta of the ADW Sink Dataset for Data Flow. This will 
 
 Start by creating an ADW dataset, just as you would for any other ADF pipeline, with a Linked Service that includes your ADW credentials and choose the database that you wish to connect to.
 
-<img src="../images/adw3.png" width="400">
+<img src="../images/adw3.png" width="500">
 

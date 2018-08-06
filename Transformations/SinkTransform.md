@@ -22,5 +22,5 @@ We are releasing an early beta of the ADW Sink Dataset for Data Flow. This will 
 
 Start by creating an ADW dataset, just as you would for any other ADF pipeline, with a Linked Service that includes your ADW credentials and choose the database that you wish to connect to.
 
-<img src="../images/adw3.png" width="200">
+<img src="../images/adw3.png" width="400">
 

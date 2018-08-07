@@ -486,9 +486,7 @@
             "properties": {
                 "type": "AzureStorage",
                 "typeProperties": {
-                    "connectionString": {
-                        "connectionString": "[parameters('MyAzureStorageLinkedService_connectionString')]"
-                    }
+                    "connectionString": "[parameters('MyAzureStorageLinkedService_connectionString')]"
                 }
             },
             "dependsOn": [

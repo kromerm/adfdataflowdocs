@@ -2,9 +2,9 @@ Get started with your first ADF Data Flow by first building a new Factory in the
 
 You can use PowerShell or the Azure Portal Template Deploymnet mechanism to build the factory from the ARM Template. For Private Preview, use the "SE Asia" region, enter "southeastasia" for the Location field in the ARM Template parameters.
 
-When filling-out the parameter fields for the ARM Template, you are only required to complete the Resource Group, FActory Name and Databricks fields. You can enter placeholder dummy values for Azure Databricks connectivity and correct those values later after you begin building your Data Flow.
+When filling-out the parameter fields for the ARM Template, you are only required to complete the Resource Group, Factory Name, Linked Services connection string and Azure Databricks key fields (i.e. all fields with a red \*). To generate a key for your Azure Databricks account, visit the Azure Databricks workspace page under "User Settings > Generate Key". To get the Linked Service connection string for your Azure Blob storage, visit the "Keys" section in the Azure Portal for your Storage account. This is where you will store the sample data files.
 
-The folder paths for the sample data can also be corrected later. For now, generate a Factory with these values and begin building your Data Flow.
+The Sample Data folder here in this Github repo contains all of the data files for the demos. In your Azure Storage Account, make sure to first create a container called "demo". This ARM Template assumes that you have a container called "demo".
 
 You will see a series of sample Pipeleines, Datasets, Linked Services and Data Flows to get you started:
 

@@ -1,4 +1,4 @@
-![Agg Transformation options](../images/agghead.png "aggregator header")
+![Agg Transformation options](../images/agghead1.png "aggregator header")
 
 On each Transformation, with the exception of the Source & Union Transforms, you will see an "Incoming Steam" field on the tranformation's settings pane.
 

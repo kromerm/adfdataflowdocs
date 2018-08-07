@@ -6,7 +6,7 @@ When filling-out the parameter fields for the ARM Template, you are only require
 
 <img src="../images/gentoken.png" width="400">
 
-To get the Linked Service connection string for your Azure Blob storage, visit the "Keys" section in the Azure Portal for your Storage account. This is where you will store the sample data files.
+To get the Linked Service connection string for your Azure Blob storage, visit the "Access Keys" section in the Azure Portal for your Storage account. This is where you will store the sample data files.
 
 <img src="../images/storeage.png" width="400">
 
@@ -14,8 +14,6 @@ The Sample Data folder here in this Github repo contains all of the data files f
 
 You will see a series of sample Pipeleines, Datasets, Linked Services and Data Flows to get you started:
 
-![Data Flow Samples](../images/template.png "Samples")
-
-
+<img src="../images/template.png" width="400">
 
 You will need to also confiure your Azure Databricks account before you can submit Data Flows for execution. First, build an Azure Databrick workspace and then grab the Access Token to enter into the ADF Linked Service for Azure Databricks. If you choose "create new cluster", ADF will spin-up a new job cluster for every execution of your data flow. You will incur approximtely 5 minutes of start-up time for the cluster to become ready. If you choose "existing cluster", you can control the start/stop actions on your own Azure Databricks cluster. Copy the cluster ID from your cluster and paste it in the Cluster ID field in the Linked Service.

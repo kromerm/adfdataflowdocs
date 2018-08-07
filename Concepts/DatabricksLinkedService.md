@@ -14,4 +14,4 @@ Click New to create the new Linked Service.
 6. When selecting "New job cluster", choose 4.1 for Cluster Version and Standard_DS4_v2 for Cluster Node type.
 7. You can choose the min/max workers and Autoscaling based on your requirements.
 
-** For designing, debugging Data Flows interactively, we suggest using the BYOC or "Existing Cluster" option. This way, the cluster is already warm and Data Flows can execute immediately. For operationalized, scheduled pipelines with Data Flows, the "New Cluster" option will work fine because you won't be impacted by the 5-7 minute spin-up time for a new job cluster when you schedule your Data Flow jobs nightly. **
+**For designing, debugging Data Flows interactively, we suggest using the BYOC or "Existing Cluster" option. This way, the cluster is already warm and Data Flows can execute immediately. For operationalized, scheduled pipelines with Data Flows, the "New Cluster" option will work fine because you won't be impacted by the 5-7 minute spin-up time for a new job cluster when you schedule your Data Flow jobs nightly**

@@ -20,7 +20,21 @@ You can also choose "automap" to simply sink all incoming fields. If you wish to
 
 We are releasing an early beta of the ADW Sink Dataset for Data Flow. This will allow you to land your transformed data directly into Azure SQL DW within Data Flow without the need of adding a Copy Activity in your pipeline.
 
-Start by creating an ADW dataset, just as you would for any other ADF pipeline, with a Linked Service that includes your ADW credentials and choose the database that you wish to connect to.
+Start by creating an ADW dataset, just as you would for any other ADF pipeline, with a Linked Service that includes your ADW credentials and choose the database that you wish to connect to. In the table name, either select an existing table or type in the name of the table that you would like Data Flow to auto-create for you from in the ioncoming fields.
+
+** NOTE: At this time, we are not supporting SQL Server square brackets " [ ] ", so please use the "Edit" link on the table name field and remove the brackets. **
 
 <img src="../images/adw3.png" width="500">
+
+Back on the Sink tranformation (ADW is currently only supported as a Sink) you will choose the ADW Dataset that you created as well as the Storage account you wish to use for staging the data for the Polybase load into ADW. The path field is of the format: "containername/foldername".
+
+<img src="../images/adw1.png" width="500">
+
+#### Save Policy
+
+Overwrite will truncate the table if it exists, then recreate it and load the data. Append will simply insert the new rows. If the table from the Dataset table name does not exist at all in the target ADW, Data Flow will create the table, then load the data.
+
+If you deselect "Auto Map", you can map the fields to your destination table manually.
+
+<img src="../images/adw2.png" width="500">
 

@@ -4,7 +4,7 @@ Once you've gone through building a new Azure Data Factory with the new version 
 
 To begin building your first Data Flow from scratch, begin by building a new ADF Pipeline in the Factory. From the Pipeline Builder UI, go to the left-hand resource explorer and click the + sign to build a new Data Flow.
 
-<img src="../images/resource1.png" width="400">
+<img src="images/resource1.png" width="400">
 
 In the Data Flow canvas, give your Data Flow a name and start with a Source transform. Every Data Flow must have a least 1 Source to be a valid flow.
 
@@ -19,7 +19,7 @@ being designed in Git mode, or Publish the changes, if you are designing your wo
 Now you're ready to test your Data Flow. From the Pipeline view, add a new Data Flow activity. Select the name of the Data Flow that you just created
 and use your Azure Databricks account Linked Service. Instructions for how to configure Databricks can be found in the doc "First Data Flow" under Samples.
 
-<img src="../images/pipe1.png" width="400">
+<img src="images/pipe1.png" width="400">
 
 You can test your Data Flow from this pipeline with either a Debug run or a Trigger-Now run from the pipeline. Once you are satisified with your results,
 save or publish the latest changes and you're ready to operationalize your Data Flow.
@@ -27,4 +27,4 @@ save or publish the latest changes and you're ready to operationalize your Data 
 Scheduling, monitoring and source control is all the same process that ADF already supports. To view the results of Data Flow runs in the ADF Monitor view,
 be sure to click into the Data Flow activity from your pipeline run view.
 
-<img src="../images/mon1.png" width="400">
+<img src="images/mon1.png" width="400">

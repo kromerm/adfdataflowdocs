@@ -6,3 +6,4 @@
 | Data Flow DTS Engine | Azure Databricks |
 | Connection Manager   | Connections      |
 | SSDT                 | UI               |
+| Connections          | Linked Service   |

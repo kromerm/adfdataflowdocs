@@ -2,7 +2,11 @@
 
 ## Select
 
-The Select transform allows you to alias an entire stream or columns in that stream toBy sassign different names and then reference those new names later in your data flow. This is very useful for self-join scenarios.
+The Select transform allows you to alias an entire stream, or columns in that stream, assign different names (aliases) and then reference those new names later in your data flow. This is very useful for self-join scenarios.
+
+Select can also be used as a way de-select columns from your data flow. For example, if you have 6 columns defined in your sink, but you only wish to pick a specific 3 to transform and then flow to the sink, you can select just those 3 by using the select transform.
+
+### NOTE: You must off auto-map to pick only specific columns ###
 
 ## Options
 

@@ -5,3 +5,4 @@
 * Treat Blob Store as your "staging area" for cooking data in Databricks for transformation. Move your data into this blob staging area using Copy Activity first, if needed.
 * Blob & Azure Data Warehouse are only Sinks supported at this time
 * Debug in Data Flow is not yet enabled. For now, Debug Data Flows by adding a Data Flow activity to a pipeline and debug from pipeline.
+* Data Flow uses Azure Databricks as the execution engine. You must stand-up an Azure Databricks workspace first for Data Flow to work.

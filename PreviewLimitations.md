@@ -6,3 +6,7 @@
 * Blob & Azure Data Warehouse are only Sinks supported at this time
 * Debug in Data Flow is not yet enabled. For now, Debug Data Flows by adding a Data Flow activity to a pipeline and debug from pipeline.
 * Data Flow uses Azure Databricks as the execution engine. You must stand-up an Azure Databricks workspace first for Data Flow to work.
+* The Microsoft Azure Data Factory team will push frequent updates to the service. This can result in interuptions in the service and can invalidate Data Factories that you've built with this ADF version.
+* Factories built on this new ADF version with Data Flows enabled are NOT meant for production
+* There is no formal support or SLA associated with the prviate preview of Data Flow in ADF
+* All questions, requests and support must go through this email alias: adfdataflowext@microsoft.com 

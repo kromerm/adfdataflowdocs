@@ -1,6 +1,6 @@
 Get started with your first ADF Data Flow by first building a new Factory in the SE Asia region using the ARM Template in the Samples folder.
 
-The simplest way to do this is to click on this URL to build your first sample ADF Data Flow Factory with our ARM Template: https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json
+The simplest way to do this is to [CLICK HERE](https://https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json) to build your first sample ADF Data Flow Factory with our ARM Template.
 
 You can use PowerShell or the Azure Portal Template Deploymnet mechanism to build the factory from the ARM Template. For Private Preview, use the "SE Asia" region, enter "southeastasia" for the Location field in the ARM Template parameters.
 

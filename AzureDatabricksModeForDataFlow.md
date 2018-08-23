@@ -2,7 +2,7 @@
 
 ### New Job Cluster
 
-Use ths mode when you have completed building and testing your Data Flow. This mode directs ADF to spin-up a new Azure Databricks job cluster on every exeuction of your Data Flow. It works well in operationalized ADF pipelines where Data Flow is an activity within that pipeline which can be scheduled to run on a calendar or event. This way, you do not incur the costs of the Azure Databricks cluster running without activity since ADF only spins-up the job cluster on demand. However, you must allow the cluster to warm-up, which can take 5-7 minutes in most cases.
+Use this mode when you have completed building and testing your Data Flow. This mode directs ADF to spin-up a new Azure Databricks job cluster on every exeuction of your Data Flow. It works well in operationalized ADF pipelines where Data Flow is an activity within that pipeline which can be scheduled to run on a calendar or event. This way, you do not incur the costs of the Azure Databricks cluster running without activity since ADF only spins-up the job cluster on demand. However, you must allow the cluster to warm-up, which can take 5-7 minutes in most cases.
 
 <img src="images/existingcluster.png" width="400">
 

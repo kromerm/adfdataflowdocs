@@ -38,7 +38,7 @@ That should take you to a new window which is azure data factory author main pag
 8. Now here you need to change the Azure databricks cluster to existing if you
     want to use existing running clusters
 
-    ![](media/a0b2dbe0b01e1a3f4a9a6b17ab57bbe2.png)
+    ![](media/adb1.png)
 
 9. Make sure Select Existing Cluster
 

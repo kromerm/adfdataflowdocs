@@ -13,7 +13,7 @@ Click New to create the new Linked Service.
 5. If you select "Existing Cluster", Data Flow will utilize your existing cluster. For this option, you must provide the Cluster ID for your interactive cluster. In this case, you control the start/stop of your cluster to make it available for data flow.
 
 **The Cluster ID for your existing cluster can be found under "Tags" on your Databricks cluster UI
-<img src="../images/tags1.png" width="200">
+<img src="../images/tags1.png" width="400">
 
 6. When selecting "New job cluster", choose 4.1 for Cluster Version and Standard_DS4_v2 for Cluster Node type.
 7. You can choose the min/max workers and Autoscaling based on your requirements.

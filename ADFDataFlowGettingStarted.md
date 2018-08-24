@@ -4,7 +4,7 @@ Once you've gone through building a new Azure Data Factory with the new version 
 
 The ARM Template Demos default the Azure Databricks Linked Service to "New Job Cluster". That is the Data Flow mode you will want to run in once your Data Flows are operationalized in scheduled ADF pipelines. During development, designing and debugging Data Flows, you will want to set the Linked Service to "Existing Cluster" and point the Linked Service to your Azure Databricks cluster that is already warm and running so that you do not need to wait for the 5-7 minute start-up time of the job cluster on every execution.
 
-To build you first Data Flow Data Factory [CLICK HERE](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json)
+To build your first Data Flow Data Factory [CLICK HERE](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json)
 
 To begin building your first Data Flow from scratch, begin by building a new ADF Pipeline in the Factory. From the Pipeline Builder UI, go to the left-hand resource explorer and click the + sign to build a new Data Flow.
 

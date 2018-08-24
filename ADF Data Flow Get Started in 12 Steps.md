@@ -6,7 +6,7 @@ Here’s how to get started using Azure Data factory Data Flow in 12 Steps
 This guide is for private preview customers to get started with Azure data factory v2 with data flow
 ----------------------------------------------------------------------------------------------------
 
-1.  To build you first Data Flow Data Factory [CLICK HERE](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json)
+1.  To build your first Data Flow Data Factory [CLICK HERE](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fkromerm%2Fadfdataflowdocs%2Fmaster%2Fsamples%2Fcurrent_df_arm_template.json)
 
 2. Then click on the Purchase button. Your Data Factory with Data Flow will deploy in less than 5 minutes.
 

@@ -1,7 +1,7 @@
 by balakreshnan <https://github.com/balakreshnan>
 
-Here’s how to get started using Azure Data factory Data Flow in 12 Steps
-========================================================================
+Here’s how to get started using Azure Data factory Data Flow
+============================================================
 
 This guide is for private preview customers to get started with Azure data factory v2 with data flow
 ----------------------------------------------------------------------------------------------------
@@ -40,17 +40,18 @@ That should take you to a new window which is azure data factory author main pag
 
     ![](media/adb1.png)
 
-9. Make sure Select Existing Cluster
+9. You will need to provide the access token key for your Azure Databricks account. [Here is more information on how to obtain that.](https://docs.databricks.com/api/latest/authentication.html#generate-token)
 
-10. Then Get the cluster ID from the Azure Data bricks URL
+10. Make sure Select Existing Cluster
 
-11. Would be numbers and letters combined. If you go to azure Databricks
+11. Then Get the cluster ID from the Azure Data bricks URL
+
+12. Would be numbers and letters combined. If you go to azure Databricks
     workbench and select the cluster, you will see the Cluster ID in the Tags
     section at the bottom of the cluster page:
 
     ![](media/c6511f8763cfc590a0e2262cdc960442.png)
 
-12. Now copy that and paste that in the configuration page and then click on
-    Test Connection
+13. Copy and paste that in the configuration page.
 
-Now the Data factory is ready for submitting the jobs with data transformaions via Data Flow.
+You're done! Now the Data factory is ready for submitting the jobs with data transformaions via Data Flow.

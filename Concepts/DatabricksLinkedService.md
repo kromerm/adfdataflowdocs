@@ -12,7 +12,7 @@ Click New to create the new Linked Service.
 
 <img src="../images/accesstoken.png" width="400">
 
-[Click here for more details on obtaining Azure Databricks access key tokens] (https://docs.databricks.com/api/latest/authentication.html#generate-token)
+[Click here for more details on obtaining Azure Databricks access key tokens](https://docs.databricks.com/api/latest/authentication.html#generate-token)
 
 4. Now you must select whether you wish to have ADF Data Flow automatically start-up a job cluster on every Data Flow execution, or do you want to re-use an existing cluster.
 5. If you select "New job cluster", Data Flow will startup a new Databricks job cluster on each execution of your data flow. You will incur a spin-up wait time in the neighborhood of 5-7 minutes before your data flow will execute.

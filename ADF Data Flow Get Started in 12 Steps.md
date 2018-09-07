@@ -8,7 +8,7 @@ This guide is for private preview customers to get started with Azure data facto
 
 1. To build your first Data Flow Data Factory, use the Azure Portal to create "Azure Data Factory" and select "V2 with data flow (preview)"
 
-<img src="../images/portal.png" width="400">
+<img src="images/portal.png" width="400">
 
 2. That will create your new Data Factory with Data Flows in the SE Asia region
 

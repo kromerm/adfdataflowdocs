@@ -1,9 +1,6 @@
 * Azure Key Vault Not Supported for Linked Services
 * Only SE Asia region is supported for Data Factory with Data Flow. This is for the metadata service only. Your data, resource groups, blob stores and Azure Databricks account can reside in any region.
-* No portal support for creating factory. Use ARM Template or PowerShell to create factory.
-* Blob Store is the only Source supported at this time
-* Treat Blob Store as your "staging area" for cooking data in Databricks for transformation. Move your data into this blob staging area using Copy Activity first, if needed.
-* Blob & Azure Data Warehouse are currently the only Sinks supported at this time
+* If the source and sink that you are wishing to use are not yet available as Datasets in Data Flow, please use the Copy Activity to first land data from your source into Blob, then transform the data in Blob. Same with Sink. You can land transformed data in Blob and then use Copy Activity in pipeline to land it in whatever data store Copy Activity supports.
 * Debug in Data Flow is not yet enabled. For now, Debug Data Flows by adding a Data Flow activity to a pipeline and debug from pipeline.
 * Data Flow uses Azure Databricks as the execution engine. You must stand-up an Azure Databricks workspace first for Data Flow to work.
 * The Microsoft Azure Data Factory team will push frequent updates to the service. This can result in interuptions in the service and can invalidate Data Factories that you've built with this ADF version.

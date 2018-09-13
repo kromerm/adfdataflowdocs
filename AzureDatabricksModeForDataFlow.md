@@ -16,4 +16,4 @@ There is an additional option in the Azure Databricks Linked Service that you mu
 
 <img src="images/tags1.png" width="400">
 
-**NOTE: If your Azure Databricks cluster is failing when switching to "running" mode, check the cluster error logs to see if you do not have enough cores / vCPUs enabled on your subscription. [Click here for details on the Azure Databricks cores limitation](https://github.com/kromerm/adfdataflowdocs/blob/master/Help-Databricks-NoMoreCores.md)**
+**NOTE: If your Azure Databricks cluster is failing when running your cluster, check the cluster error logs to see if you do not have enough cores / vCPUs enabled on your subscription. [Click here for details on the Azure Databricks cores limitation](https://github.com/kromerm/adfdataflowdocs/blob/master/Help-Databricks-NoMoreCores.md)**

@@ -4,3 +4,7 @@ You can do this from the Azure Portal. Find the "subscriptions" resource and sel
 
 Select vCPUs as the quote type and the VM types that you are using with Azure Databricks, most likely the DS3 series.
 
+From there, select the region where your Azure Databricks is stood up and increase the number of cores. After submitting your request, you should receive and email confirmation that your subscription has had the vCPU / cores limit increased based on your request.
+
+[The detailed documentation for requesting these increases is here](https://docs.microsoft.com/en-us/azure/azure-supportability/resource-manager-core-quotas-request)
+

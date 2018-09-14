@@ -2,7 +2,7 @@
 
 ## Source
 
-The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow.
+The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow. This is where you will begin designing your Data Flows.
 
 ** NOTE: Every Data Flow requires at least 1 Source Transformation (i.e. 1 to n) **
 
@@ -27,6 +27,10 @@ Use Sampling to limit the number of rows from your Source.  This is useful when 
 
 For source file types that are not strongly types (i.e. flat files as opposed to Parquet files) you should define the data types for each field here in the Source transformation as opposed to in the Dataset.
 
+If you do not see the column names and types in your Data Flow, it is likely because you did not define them in the Define Schema section of the Sink. You will only need to do this if you are not using Data Flow's Schema Drift handling.
+
 Here in the "Define Schema" tab on the Source transformation is where you can set the data types and formats:
 
 ![Scource Transformation](../images/source003.png "data types")
+
+

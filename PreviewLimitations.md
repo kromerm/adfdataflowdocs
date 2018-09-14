@@ -1,4 +1,4 @@
-* Azure Key Vault Not Supported for Linked Services
+* Azure Key Vault, SAS URL and MSI are currently Not Supported for Linked Services when creating connections to your Sources and Sinks.
 * Only SE Asia region is supported for Data Factory with Data Flow. This is for the metadata service only. Your data, resource groups, blob stores and Azure Databricks account can reside in any region.
 * If the source and sink that you are wishing to use are not yet available as Datasets in Data Flow, please use the Copy Activity to first land data from your source into Blob, then transform the data in Blob. Same with Sink. You can land transformed data in Blob and then use Copy Activity in pipeline to land it in whatever data store Copy Activity supports.
 * Debug in Data Flow is not yet enabled. For now, Debug Data Flows by adding a Data Flow activity to a pipeline and debug from pipeline.

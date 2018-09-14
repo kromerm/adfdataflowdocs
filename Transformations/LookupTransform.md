@@ -2,37 +2,10 @@
 
 ## Lookup
 
-Use Lookup to add reference data from another source to your Data Flow. Add the Join transform with the Plus icon on the data stream where you would like to join and then inside the transform you will select the 2nd Join stream.
+Use Lookup to add reference data from another source to your Data Flow. The Lookup transform requires a defined source that points to your reference table and matches on key fields.
 
-![Join Transformation](../images/join.png "Join")
+![Lookup Transformation](../images/lookup1.png "Lookup")
 
-### Join types
+Select the key fields that you wish to match on between the incoming stream fields and the fields from the reference source. You must first have created a new source on the Data Flow design canvas to use as the right-side for the lookup.
 
-Selecting Join Type is required for the Join transformation
-
-#### Inner Join
-
-Inner join will pass through only rows that match the column conditions from from both tables
-
-#### Left Outer
-
-All rows from the left stream not meeting the join condition are passed through, and output columns from the other table are set to NULL in addition to all rows returned by the inner join.
-
-#### Right Outer
-
-All rows from the right stream not meeting the join condition are passed through, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.
-
-#### Full Outer
-
-Full Outer produces all columns and rows from both sides with NULL values for columns that are not present in the other table
-
-#### Cross Join
-
-Specific the cross product of the 2 streams with an expression
-
-### Specify Join Conditions
-
-The Left Join condition is from the data stream connected to the left of your Join. The Right Join condition is the second data stream connected to your Join on the bottom, which will either be a direct connector to another stream or a reference to another stream.
-
-You are required to enter at least 1 (1..n) join conditions. They can be either directly-referenced fields selected from the drop-down menu, or expressions.
-
+When matches are found, the resulting rows and columns from the reference source will be added to your data flow. You can choose which fields of interest that you wish to include in your Sink at the end of your Data Flow.

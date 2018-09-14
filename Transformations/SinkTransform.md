@@ -14,7 +14,13 @@ You can also choose "automap" to simply sink all incoming fields. If you wish to
 
 <img src="../images/sink2.png" width="400">
 
+### Output to one File
 For Azure Storage Blob sink types, you will see an option for "Output to one file". Check this box if you wish to have Data Flow consolidate your Spark output into a single output file instead of the normal Spark-partitioned multiple PART files.
+
+### Blob Storage Folder
+When Sinking your data transformations to Blob Store, choose a blob *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.
+
+<img src="../images/folderpath.png" width="400">
 
 **PLEASE NOTE: Not all Dataset properties in Blob and ADW are configured for use within Data Flow during the preview period. Currently, ADF supports both a straight-forward Copy Activity as well as data tranformation-based Data Flow capability, both of which utilize Datasets. All of the Dataset properties present today work with Copy Activity. The UI will try to notify you interactively of which properties are not recognized by Data Flow. We will updates these properties during each subsequent iteration of Data Flow**
 

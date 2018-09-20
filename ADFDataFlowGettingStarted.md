@@ -1,6 +1,6 @@
 # Getting Started
 
-Start by building a new Data Factory with Data Flows from the Azure Portal. Select V2 (data flow preview):
+Start by building a new Data Factory with Data Flows from the Azure Portal. Select V2 (data flow preview). Be sure to include the sample Data Flows by checking the "sample" checkbox:
 
 <img src="images/portal.png" width="400">
 

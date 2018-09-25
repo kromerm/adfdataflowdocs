@@ -6,7 +6,7 @@
 
 At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data.
 
-A common practice to account for changing incoming data and to account for schema drift is to sink the output data to a folder without a defined schema in the output dataset.
+A common practice to account for changing incoming data and to account for schema drift is to sink the output data to a folder without a defined schema in the output dataset. You can additionally account for all column changes in your sources by selecting "Allow Schema Drift" at the Source and then auto-map all fields in the Sink.
 
 You can choose to overwrite, append, or fail the data flow when sinking to a dataset.
 

@@ -12,8 +12,15 @@ You will see stats at this level as well inculding the run times and status. The
 
 <img src="images/mon002.png" width="800">
 
-
+When you are in the graphical node monitoring view, you will see a simplified view-only version of your data flow graph.
 
 <img src="images/mon003.png" width="800">
 
+When your Data Flow is executed in Databricks, ADF determines optimal code paths based on the entirity of your data flow. Additionally, the execution paths may occur on different scale-out nodes and data partitions. Therefore, the monitoring graph represents the design of your flow, taking into account the execution path of your transformations. When you click on individual nodes, you will see "groupings" that represent code that was executed together on the cluster. The timings and counts that you see represent those groups as opposed to the individual steps in your design.
+
 <img src="images/mon004.png" width="800"> 
+
+
+
+<img src="images/mon005.png" width="800"> 
+

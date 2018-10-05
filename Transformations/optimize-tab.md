@@ -12,4 +12,4 @@ However, there are instances where you may wish to adjust the partitioning. For 
 
 If you 
 
-<img src="../images/opt001.png" width="400">
+<img src="../images/opt002.png" width="400">

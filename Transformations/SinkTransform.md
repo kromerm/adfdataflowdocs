@@ -15,7 +15,9 @@ You can also choose "automap" to simply sink all incoming fields. If you wish to
 <img src="../images/sink2.png" width="400">
 
 ### Output to one File
-For Azure Storage Blob sink types, you will see an option for "Output to one file". Check this box if you wish to have Data Flow consolidate your Spark output into a single output file instead of the normal Spark-partitioned multiple PART files.
+For Azure Storage Blob or Data Lake sink types, you will output the transformed data into a folder. Spark will generate partitioned output data files based on the partitioning scheme being used in the Sink transform. You can set the partitioning scheme by clicking on the "Optimize" tab. If you would like ADF to merge your output into a single file, click on the "Single Partition" radio button.
+
+<img src="../images/opt001.png" width="400">
 
 ### Blob Storage Folder
 When Sinking your data transformations to Blob Store, choose a blob *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.

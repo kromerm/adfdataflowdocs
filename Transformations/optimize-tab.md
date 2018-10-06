@@ -12,6 +12,8 @@ However, there are instances where you may wish to adjust the partitioning. For 
 
 If you wish to change partitioning on any transformation, simply click the Optimize tab and select the "Set Partitioning" radio button. You will then be presented with a series of options for partitioning. The best method of partitioning to implement will differ based on your data volumes, candidate keys, null values and cardinality. Best practice is to start with default partitioning and then try the different partitioning options. You can test using the Debug run in Pipeline and then view the time spent in each transformation grouping as well as partition usage from the Monitoring view.
 
+<img src="../images/opt002.png" width="600">
+
 ### Round Robin
 
 This is simple partition that automatically distributes data equally across partitions. This should only be used when you do not have good key candidates to implement a solid, smart partitioning strategy. You can set the number of physical partitions.
@@ -31,5 +33,3 @@ You must build an expression that provides a fixed range for values within your 
 ### Key
 
 If you have a good understanding of the cardinality of your data, key partitioning may be a good partition strategy. This will create partitions for each unique value in your column. You cannot set the number of partitions because the number will be based on unique values in the data.
-
-<img src="../images/opt002.png" width="400">

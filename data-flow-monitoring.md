@@ -16,11 +16,28 @@ When you are in the graphical node monitoring view, you will see a simplified vi
 
 <img src="images/mon003.png" width="800">
 
+### Monitoring View
+
 When your Data Flow is executed in Databricks, ADF determines optimal code paths based on the entirity of your data flow. Additionally, the execution paths may occur on different scale-out nodes and data partitions. Therefore, the monitoring graph represents the design of your flow, taking into account the execution path of your transformations. When you click on individual nodes, you will see "groupings" that represent code that was executed together on the cluster. The timings and counts that you see represent those groups as opposed to the individual steps in your design.
 
 <img src="images/mon004.png" width="800"> 
 
+1. When you click on the open space in the monitoring window, the stats in the bottom pane will display timing and row counts for each Sink and the Transformations that led to the sink data for transformation lineage.
 
+2. When you select individual transformations, you will receive additional feedback on the right-hand panel that shows partition stats, column counts, skewness (how evenly is the data distributed across partitions) and kurtosis (how spikey is the data).
+
+3. When you click on the Sink in the node view, you will see column lineage. There 3 different methods that columns are accumulated throughout your data flow to land in the Sink. They are:
+
+  a. Computed: You use the column for conditional processing or within an expression in your data flow, but do not land it in the Sink
+  b. Derived: The column is a new column that you generated in your flow, i.e. it was not present in the Source
+  c. Mapped: The column originated from the source and your are mapping it to a sink field
+  
+### Monitoring Icons
+
+This icon means that the transformation data was already cached on the cluster, so the timings and execution path have taken that into account:
 
 <img src="images/mon005.png" width="800"> 
+
+You will also see green circle icons in the transformation. They represent a count of the number of sinks that data is flowing into.
+
 

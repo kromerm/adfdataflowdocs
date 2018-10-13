@@ -4,7 +4,7 @@ In order to protect against Schema Drift, it is important to have the facilities
 
 1. Define sources that have mutable field names, data types, values and sizes
 2. Define transformation parameters that can work with data patterns instead of hard-coded fields and values
-3. Define expressions that understand template patterns
+3. Define expressions that understand patterns to match incoming fields, instead of using named fields
 
 In ADF Data Flow, those facilities are surfaced through this worflow:
 
@@ -26,4 +26,4 @@ In ADF Data Flow, those facilities are surfaced through this worflow:
 
 <img src="../images/columnpattern.png" width="400">
 
-7. 
+*NOTE* You need to make an architectural decision in your data flow to accept schema drift throughout your flow. When you do this, you can protect against schema changes from the sources. However, you will lose early-binding of your columns and types throughout your data flow. ADF treats schema drift flows as late-binding flows, so when you build your transformations, the column names will not be avaiable to you in the schema views throuhgout the flow.

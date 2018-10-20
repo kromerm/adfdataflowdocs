@@ -4,6 +4,6 @@
 * [Build your first ADF Data Flow](https://youtu.be/WQ1KqsRL9Bg)
 * [ADF Data Flow Debug Session, Pt 1](https://www.youtube.com/watch?v=k0YHmJc14FM)
 * [ADF Data Flow Debug Session: Data Prep, Pt 2](https://www.youtube.com/watch?v=6ezKRDgK3rE)
-* [ADF Data Flow Monitoring UX](https://www.youtube.com/watch?v=6ezKRDgK3rE)
+* [ADF Data Flow Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)
 * [ADF Data Schema Drift Handling](https://www.youtube.com/watch?v=6ezKRDgK3rE)
 

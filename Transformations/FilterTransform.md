@@ -2,4 +2,10 @@
 
 ## Filter
 
-The Filter transforms takes and expression that allows you to build a filter expression which allows you to control which rows from the current data stream are allowed to pass through (filter) to the next transformation.
+The Filter transforms is a row filter takes an expression as its parameter. Click in the text box to launch the Expression Builder. This is where you can build a filter expression which allows you to control which rows from the current data stream are allowed to pass through (filter) to the next transformation.
+
+I.e. filter on loan_status column:
+
+```
+in([‘Default’, ‘Charged Off’, ‘Fully Paid’], loan_status).
+```

@@ -2,7 +2,7 @@
 
 ## Extend Transformation
 
-Use the Extend Transformation to add your own custom data transformation to ADF's Data Flow by providing a JAR file that Data Flow will execute for you on your Azure Databricks cluster.
+Use the Extend Transformation to add your own custom data transformation via Spark coed that you're built, which can be included in ADF's Data Flow by providing a JAR file that Data Flow will execute for you on your Azure Databricks cluster.
 
 ![Extend Transform](../images/extend.png "Extend Transformation")
 

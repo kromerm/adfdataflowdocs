@@ -9,3 +9,9 @@ I.e. filter on loan_status column:
 ```
 in([‘Default’, ‘Charged Off’, ‘Fully Paid’], loan_status).
 ```
+
+Filter on the year column in the Movies demo:
+
+```
+year > 1980
+```

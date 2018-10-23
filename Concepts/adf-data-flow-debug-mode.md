@@ -1,14 +1,9 @@
-The concept of Schema Drift is the case where your sources often change metadata. Fields, columns, types, etc. can be added, removed or changed on the fly. Without handling for Schema Drift, your Data Flow becomes vulnerable to changes in upstream data source changes. When incoming columns and fields change, typical ETL patterns fail because they tend to be tied to those source names.
 
-In order to protect against Schema Drift, it is important to have the facilities in a Data Flow tool to allow you, as a Data Engineer, to:
+Azure Data Factory Data Flow has a debug mode which can be switched on from the Debug button at the top of the design surface.
 
-1. Define sources that have mutable field names, data types, values and sizes
-2. Define transformation parameters that can work with data patterns instead of hard-coded fields and values
-3. Define expressions that understand patterns to match incoming fields, instead of using named fields
+<img src="../images/schemadrift001.png" width="400">
 
-In ADF Data Flow, those facilities are surfaced through this worflow:
 
-1. Choose "Allow Schema Drift" in your Source Tranformation
 
 <img src="../images/schemadrift001.png" width="400">
 

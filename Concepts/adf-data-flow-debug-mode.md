@@ -1,13 +1,11 @@
 
 Azure Data Factory Data Flow has a debug mode which can be switched on from the Debug button at the top of the design surface.
 
-<img src="../images/schemadrift001.png" width="400">
+<img src="../images/debugbutton.png" width="400">
 
+When Debug mode is on, you will interactively build your data flow with a running Azure Databricks interactive cluster. The session will close once you turn debug off in ADF. You should be aware of the hourly charges incurred by Azure Databricks during the time that you have the debug session turned on.
 
-
-<img src="../images/schemadrift001.png" width="400">
-
-2. When you've selected this option, all incoming fields will be read from your source on every Data Flow execution and will be passed through the entire flow to the Sink.
+There is a cluster status indicator at the top of the design surface that will turn green.
 
 3. Make sure to use "Auto-Map" to map all new fields in the Sink Transformation so that all new fields get picked-up and landed in your destination:
 

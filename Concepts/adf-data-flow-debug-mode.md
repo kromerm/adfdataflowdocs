@@ -3,10 +3,18 @@ Azure Data Factory Data Flow has a debug mode which can be switched on from the 
 
 <img src="../images/debugbutton.png" width="400">
 
+## Overview
 When Debug mode is on, you will interactively build your data flow with a running Azure Databricks interactive cluster. The session will close once you turn debug off in ADF. You should be aware of the hourly charges incurred by Azure Databricks during the time that you have the debug session turned on.
 
-There is a cluster status indicator at the top of the design surface that will turn green.
+## Debug Mode On
+When you switch on debug mode, you will be prompted with a side-panel form that will request you to point to your Azure Databricks cluster and select options for the source sampling
 
+## Cluster status
+There is a cluster status indicator at the top of the design surface that will turn green when the cluster is ready for debug. If your cluster is already warm, then the green indicator will appear almost instantly. If your cluster was not already running when you entered debug mode, then you will have to wait 5-7 minutes for the cluster to spin up. The indiciator light will be yellow until it is ready.
+
+
+
+## 
 3. Make sure to use "Auto-Map" to map all new fields in the Sink Transformation so that all new fields get picked-up and landed in your destination:
 
 <img src="../images/automap.png" width="400">

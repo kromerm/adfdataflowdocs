@@ -21,7 +21,7 @@ Use Sampling to limit the number of rows from your Source.  This is useful when 
 
 #### Define Schema
 
-![Scource Transformation](../images/source.png "source 2")
+![Scource Transformation](../images/source2.png "source 2")
 
 #### You can modify the name of the source columns and their associated data types
 
@@ -31,11 +31,11 @@ If you do not see the column names and types in your Data Flow, it is likely bec
 
 Here in the "Define Schema" tab on the Source transformation is where you can set the data types and formats:
 
-![Scource Transformation](../media/data-flow/source003.png "data types")
+![Scource Transformation](../images/source003.png "data types")
 
 ### Optimize
 
-![Scource Partitions](../images/sourcepart.png "data types")
+![Scource Partitions](../images/sourcepart.png "partitioning")
 
 On the Optimize tab for the Source Transformation, you will see an additional paritioning type called "Source". This will only light-up when you have select Azure SQL DB as your source. This is because ADF will wish to parallelize connections to execute large queries against your Azure SQL DB source.
 

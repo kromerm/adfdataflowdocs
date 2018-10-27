@@ -11,7 +11,7 @@ In most cases, it is a good practice to build your Data Flows in debug mode so t
 ## Debug Mode On
 When you switch on debug mode, you will be prompted with a side-panel form that will request you to point to your interactive Azure Databricks cluster and select options for the source sampling. You must use an interactive cluster from Azure Databricks and select either a sampling size from each your Source transforms, or pick a text file to use for your test data.
 
-<img src="../images/upload.png" width="400">
+<img src="../images/upload.png" width="800">
 
 ## Debug Settings
 Debug settings can be Each Source from your Data Flow will appear in the side panel and can also be edited by selecting "source settigns" on Data Flow design toolbar. You can select the limits and/or file source to use for each your Source transformation here. You can also select which Databricks cluster that you'd like to use for debug.
@@ -21,8 +21,14 @@ There is a cluster status indicator at the top of the design surface that will t
 
 When you are finished with your debugging, turn the Debug switch off so that your Azure Databricks cluster can terminate.
 
+<img src="../images/datapreview.png" width="400">
+
 ## Data Preview
-With debug on, the Data Preview tab will light-up on the bottom panel (look under Inspect). Without degub mode on, Data Flow will show you only the current metadata in and out of each of your transformations. The data preview will only query the number of rows that you have set as your limit in your source settings. You may need to click "Fetch data" to refresh the data preview.
+With debug on, the Data Preview tab will light-up on the bottom panel. Without degub mode on, Data Flow will show you only the current metadata in and out of each of your transformations in the Inspect tab. The data preview will only query the number of rows that you have set as your limit in your source settings. You may need to click "Fetch data" to refresh the data preview.
 
 <img src="../images/stats.png" width="400">
 
+## Columns Stats
+Selecting individual columns in your data preview tab will pop-up a chart on the far-right of your data grid with details about each field. ADF will make a determination based upon the data sampling of which type of chart to display. High-cardinality fields will default to NULL / NOT NULL charts while categorical and numeric data that has low cardinality will display bar charts showing data value frequency. You will also see max / len length of string fields, min / max values in numeric fields, standard dev, percentiles, counts and average. 
+
+<img src="../images/chart.png" width="400">

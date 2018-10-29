@@ -8,6 +8,8 @@ The Source transformation configures a data source that you wish to use to bring
 
 ![Scource Transformation options](../images/source.png "source 1")
 
+Your Data Flow source must be associated with exactly 1 ADF Dataset, which defines the shape and location of your data to write to or read from.
+
 ### Options
 
 #### Allow schema drift

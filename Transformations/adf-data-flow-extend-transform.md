@@ -24,6 +24,10 @@ public class ExtensionFrame {
 	}
 }
 ```
+### Method Field
 In the transformation field "Method", enter "com.microsoft.dataflow.extension.transform".
- 
 
+### Upload JAR file
+Author your custom transformation in either Java or Scala, build the JAR and then point to the JAR file in your Azure Blob Storage container. You can upload the JAR from your local file system using "Browse local".
+
+![External Dependencies](../images/extdep.png "Extend Transformation")

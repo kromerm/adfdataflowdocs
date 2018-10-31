@@ -42,6 +42,4 @@ Please note that unlike Merge Join in tools like SSIS, ADF's Join in Data Flow i
 
 ![Join Transformation optimize](../images/joinoptimize.png "Join Optimization")
 
-If your dataset can fit into the Databricks worker node memory, we can optimize your Join performance. You can also specify partitioning of your data on the Join operation to create sets of data that can fit better into memory per worker:
-
-![Join Transformation](../images/joinpart.png "Join Paritiong")
+If your dataset can fit into the Databricks worker node memory, we can optimize your Join performance. You can also specify partitioning of your data on the Join operation to create sets of data that can fit better into memory per worker.

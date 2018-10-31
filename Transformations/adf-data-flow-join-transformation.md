@@ -36,3 +36,12 @@ The Left Join condition is from the data stream connected to the left of your Jo
 
 You are required to enter at least 1 (1..n) join conditions. They can be either directly-referenced fields selected from the drop-down menu, or expressions.
 
+### Join Peformance Optimizations
+
+Please note that unlike Merge Join in tools like SSIS, ADF's Join in Data Flow is not a mandatory merge join operation. Therefore, the join keys do not need to be sorted first. The Join operation will occur in Spark using Databricks based on the optimal join operation in Spark: Broadcast / Map-side join:
+
+![Join Transformation optimize](../images/joinoptimize.png "Join Optimization")
+
+If your dataset can fit into the Databricks worker node memory, we can optimize your Join performance. You can also specify partitioning of your data on the Join operation to create sets of data that can fit better into memory per worker:
+
+![Join Transformation](../images/joinpart.png "Join Paritiong")

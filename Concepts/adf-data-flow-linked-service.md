@@ -4,8 +4,6 @@ Before you can begin debugging or executing your Data Flows, you must link to yo
 
 <img src="../images/lsconnections.png" width="300">
 
-<img src="../images/adb.png" width="400">
-
 <img src="../images/dfls2.png" width="400">
 
 There are 2 ways to connect Data Flow to your Azure Databricks account. You must first ensure that you have an Azure Databricks Workspace: https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal
@@ -30,7 +28,7 @@ There is also a custom size where you can then go through the size configuration
 
 ## Azure Databricks Linked Service
 
-<img src="../images/dbls001.png" width="200">
+<img src="../images/dbls001.png" width="400">
 
 You can manually configure a Linked Service to Databricks as opposed to using the Data Flow linked service above. In this case, you are responsible for configuring the cluster settings in the Linked Service and determining when to use an Interactive Cluster vs. a Job Cluster.
 

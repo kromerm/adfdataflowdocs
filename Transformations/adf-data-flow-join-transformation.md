@@ -43,3 +43,11 @@ Please note that unlike Merge Join in tools like SSIS, ADF's Join in Data Flow i
 ![Join Transformation optimize](../images/joinoptimize.png "Join Optimization")
 
 If your dataset can fit into the Databricks worker node memory, we can optimize your Join performance. You can also specify partitioning of your data on the Join operation to create sets of data that can fit better into memory per worker.
+
+### Self-Join
+
+You can achieve self-join conditions in ADF Data Flow by using the Select transformation to alias an existing stream. First, create a "New Branch" from a stream, then add a Select to alias the entire original stream.
+
+![Self-join](../images/select001.png "Self-join")
+
+In the above diagram, the Select transform is at the top. All it's doing is aliasing the original stream to "OrigSourceBatting". In the higlighted Join transform below it you can see that we use this Select alias stream as the right-hand join, allowing us to reference the same key in both the Left & Right side of the Inner Join.

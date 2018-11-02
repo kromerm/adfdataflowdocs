@@ -7,6 +7,4 @@
 | Connection Manager   | Connections      |
 | SSDT                 | UI               |
 | Connections          | Linked Service   |
-| Joins (Merge Join)   | Join (Hash or    |
-|                      |  Replicated      |
-|                      |   Broadcast Join)|
+| Joins (Merge Join)   | Join (Hash or replicated / broadcast join)  |

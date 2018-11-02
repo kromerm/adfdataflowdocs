@@ -4,9 +4,11 @@ Before you can begin debugging or executing your Data Flows, you must link to yo
 
 <img src="../images/lsconnections.png" width="400">
 
-![Azure Databricks](../images/adb.png "databricks")
+<img src="../images/adb.png" width="200">
 
-There are 2 ways to connect Data Flow to your Azure Databricks account. You must first ensure that have an Azure Databricks Workspace: https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal
+<img src="../images/dfls2.png" width="400">
+
+There are 2 ways to connect Data Flow to your Azure Databricks account. You must first ensure that you have an Azure Databricks Workspace: https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal
 
 ## Data Flow Linked Service
 
@@ -16,11 +18,7 @@ The ADF Data Flow Linked Service can take care of standing-up your Databricks cl
 
 In the Linked Service definition, either pick the Workspace from your Azure Subscription in the drop-down or manually enter the URL for the workspace.
 
-You will need to provide the access token key for your Azure Databricks account so that we can connect to your clusters for execution of your Data Flows.
-
-<img src="../images/accesstoken.png" width="400">
-
-[Click here for more details on obtaining Azure Databricks access key tokens](https://docs.databricks.com/api/latest/authentication.html#generate-token)
+You will need to provide the access token key for your Azure Databricks account so that we can connect to your clusters for execution of your Data Flows. [Click here for more details on obtaining Azure Databricks access key tokens](https://docs.databricks.com/api/latest/authentication.html#generate-token)
 
 1. Small would be appropriate for debug and testing
 3. Medium is best for normal operationalized workloads

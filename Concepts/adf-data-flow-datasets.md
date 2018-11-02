@@ -6,7 +6,7 @@ Therefore, you use ADF Datasets in Source & Sink transforms to define the basic 
 
 There are currently 5 direct connectors available to you in Data Flow:
 
-1. ADLS Gen 1
+1. ADLS Gen 1 (MSI & AKV authentication not currently supported)
 2. ADLS Gen 2
 3. Blob Storage
 4. Azure SQL DB

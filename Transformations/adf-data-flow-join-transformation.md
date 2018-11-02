@@ -48,6 +48,6 @@ If your dataset can fit into the Databricks worker node memory, we can optimize 
 
 You can achieve self-join conditions in ADF Data Flow by using the Select transformation to alias an existing stream. First, create a "New Branch" from a stream, then add a Select to alias the entire original stream.
 
-![Self-join](../images/select001.png "Self-join")
+![Self-join](../images/selfjoin.png "Self-join")
 
 In the above diagram, the Select transform is at the top. All it's doing is aliasing the original stream to "OrigSourceBatting". In the higlighted Join transform below it you can see that we use this Select alias stream as the right-hand join, allowing us to reference the same key in both the Left & Right side of the Inner Join.

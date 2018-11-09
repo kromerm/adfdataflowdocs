@@ -1,38 +1,12 @@
 # ADF Data Flow Linked Services
 
-Before you can begin debugging or executing your Data Flows, you must link to your Azure Databricks account. You can create new Databricks and Data Flow Linked Services from the Connections section in the ADF UI or when you add a Data Flow activity to the Pipeline canvas. Choose New > Linked Service.
-
-<img src="../images/lsconnections.png" width="300">
-
-<img src="../images/dfls2.png" width="400">
-
-There are 2 ways to connect Data Flow to your Azure Databricks account. You must first ensure that you have an Azure Databricks Workspace: https://docs.microsoft.com/en-us/azure/azure-databricks/quickstart-create-databricks-workspace-portal
-
-## Data Flow Linked Service
-
-<img src="../images/dataflowls.png" width="400">
-
-The ADF Data Flow Linked Service can take care of standing-up your Databricks cluster for you based on debug session (interactive cluster) or pipeline execution (job cluster). This type of Linked Service removes the need for you, as a Data Engineer, to choose Databricks configurations. Simply select Small, Medium or Large size for your execution environment.
-
-In the Linked Service definition, either pick the Workspace from your Azure Subscription in the drop-down or manually enter the URL for the workspace.
-
-You will need to provide the access token key for your Azure Databricks account so that we can connect to your clusters for execution of your Data Flows. [Click here for more details on obtaining Azure Databricks access key tokens](https://docs.databricks.com/api/latest/authentication.html#generate-token)
-
-1. Small would be appropriate for debug and testing
-3. Medium is best for normal operationalized workloads
-3. Large should be used to execute very large big data workloads with auto-scaling
-
-You can create separate Linked Services for each environment and then choose the appropriately-sized Linked Service based on your current workload.
-
-There is also a custom size where you can then go through the size configurations manually, while still allowing ADF to pick the right type of cluster to execute based on debug (interactive cluster) or pipeline (job cluster) execution environment.
+Before you can begin debugging or executing your Data Flows, you must link to your Azure Databricks account. You can create new Azure Databricks Linked Services from the Connections section in the ADF UI or when you add a Data Flow activity to the Pipeline canvas. Choose New > Linked Service.
 
 ## Azure Databricks Linked Service
 
 <img src="../images/dbls001.png" width="400">
 
-You can manually configure a Linked Service to Databricks as opposed to using the Data Flow linked service above. In this case, you are responsible for configuring the cluster settings in the Linked Service and determining when to use an Interactive Cluster vs. a Job Cluster.
-
-**For designing, debugging Data Flows interactively, you must use the "Existing Cluster" option so that ADF can use an Azure Databricks interactive cluster. This way, the cluster is already warm and Data Flows can execute immediately. For operationalized, scheduled pipelines with Data Flows, the "New Cluster" option will work fine because you won't be impacted by the 5-7 minute spin-up time for a new job cluster when you schedule your Data Flow jobs nightly**
+For designing, debugging Data Flows interactively, you must use the "Existing Cluster" option so that ADF can use an Azure Databricks interactive cluster. This way, the cluster is already warm and Data Flows can execute immediately. For operationalized, scheduled pipelines with Data Flows, the "New Cluster" option will work fine because you won't be impacted by the 5-7 minute spin-up time for a new job cluster when you schedule your Data Flow jobs nightly
 
 In the Linked Service definition, either pick the Workspace from your Azure Subscription in the drop-down or manually enter the URL for the workspace.
 

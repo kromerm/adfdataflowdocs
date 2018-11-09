@@ -21,3 +21,5 @@ You must then select whether you wish to have ADF Data Flow automatically start-
 If you select "New job cluster", Data Flow will startup a new Databricks job cluster on each execution of your data flow. You will incur a spin-up wait time in the neighborhood of 5-7 minutes before your data flow will execute.
 
 If you select "Existing Cluster", Data Flow will utilize your existing cluster. For this option, you will choose the Cluster Name from the list. This is the name you gave to your interactive cluster. In this case, you control the start/stop of your cluster to make it available for data flow.
+
+[This will walk you through creating a new Interactive Cluster on Azure Databricks to use as your execution environment for ADF Data Flow debug sessions] (https://docs.azuredatabricks.net/user-guide/clusters/create.html)

@@ -11,9 +11,9 @@ In most cases, it is a good practice to build your Data Flows in debug mode so t
 ## Debug Mode On
 When you switch on debug mode, you will be prompted with a side-panel form that will request you to point to your interactive Azure Databricks cluster and select options for the source sampling. You must use an interactive cluster from Azure Databricks and select either a sampling size from each your Source transforms, or pick a text file to use for your test data.
 
-<img src="../images/upload.png" width="800">
+<img src="../images/upload.png" width="400">
 
-**NOTE: When running in Debug Mode in Data Flow, your data will not be written to the Sink transform. A Debug session is intended to serve as a test harness for your transformations. Sinks are not required during debug and are ignored in your data flow. If you wish to test writting the data in your Sink, execute the Data Flow from an ADF Pipeline and use the Debug execution from a pipeline.
+**NOTE: When running in Debug Mode in Data Flow, your data will not be written to the Sink transform. A Debug session is intended to serve as a test harness for your transformations. Sinks are not required during debug and are ignored in your data flow. If you wish to test writting the data in your Sink, execute the Data Flow from an ADF Pipeline and use the Debug execution from a pipeline**
 
 ## Debug Settings
 Debug settings can be Each Source from your Data Flow will appear in the side panel and can also be edited by selecting "source settigns" on Data Flow design toolbar. You can select the limits and/or file source to use for each your Source transformation here. You can also select which Databricks cluster that you'd like to use for debug.

@@ -27,3 +27,11 @@ In ADF Data Flow, those facilities are surfaced through this worflow:
 <img src="../images/columnpattern.png" width="400">
 
 *NOTE* You need to make an architectural decision in your data flow to accept schema drift throughout your flow. When you do this, you can protect against schema changes from the sources. However, you will lose early-binding of your columns and types throughout your data flow. ADF treats schema drift flows as late-binding flows, so when you build your transformations, the column names will not be avaiable to you in the schema views throuhgout the flow.
+
+## Example
+
+<img src="../images/taxidrift1.png" width="400">
+
+In the Taxi Demo sample Data Flow, there is a sample Schema Drift in the bottom data flow with the TripFare source. In the Aggregate transformation, notice that we are using the "column pattern" design for the aggregation fields. Instead of naming specific columns, or looking for columns by position, we assume that the data can change and may not in the ordera
+
+<img src="../images/taxidrift2.png" width="400">

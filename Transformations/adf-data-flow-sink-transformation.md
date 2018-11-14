@@ -48,3 +48,9 @@ If you deselect "Auto Map", you can map the fields to your destination table man
 
 <img src="../images/adw2.png" width="500">
 
+#### Max Concurrent Connections
+
+You can set the maximum concurrent connections in the Sink transformation when writing your data to an Azure database connection.
+
+<img src="../images/maxcon.png" width="400">
+

@@ -1,6 +1,6 @@
 # Azure Data Factory Data Flow Transformations
 
-## Sink
+## Sink Transformation
 
 <img src="../images/sink1.png" width="400">
 

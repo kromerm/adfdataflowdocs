@@ -1,6 +1,8 @@
 # Azure Data Factory Data Flow Transformations
 
-## Select
+## Select Transformation
+
+Use this transformation for column selectivity (reducing number of columns) or to alias columns and stream names.
 
 The Select transform allows you to alias an entire stream, or columns in that stream, assign different names (aliases) and then reference those new names later in your data flow. This is very useful for self-join scenarios. The way to implement a self-join in ADF Data Flow is to take a stream, branch it with "New Branch", then immediately afterward, add a "Select" transform. That stream will now have a new name that you can use to join back to the original stream, creating a self-join:
 

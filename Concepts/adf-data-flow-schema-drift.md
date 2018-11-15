@@ -36,8 +36,6 @@ In the Taxi Demo sample Data Flow, there is a sample Schema Drift in the bottom 
 
 In this example of ADF Data Flow schema drift handling, we've built and aggregation that scans for columns of type 'double', knowing that the data domain contains prices for each trip. We can then perform an aggregrate math calculation across all double fields in the source, regardless of where the column lands and regardless of the column's naming.
 
-<img src="../images/taxidrift2.png" width="400">
-
 The ADF Data Flow syntax uses $$ to represent each matched column from your matching pattern. You can also match on column names using complex string search and regular expression functions. In this case, we are going to create a new aggregated field name based on each match of a 'double' type of column and append the text ```_total``` to each of those matched names: 
 
 ```concat($$, '_total')```
@@ -45,3 +43,7 @@ The ADF Data Flow syntax uses $$ to represent each matched column from your matc
 Then, we will round and sum the values for each of those matched columns:
 
 ```round(sum ($$))```
+
+You can test this out with the ADF Data Flow sample "Taxi Demo". Switch on the Debug session using the Debug toggle at the top of the Data Flow design surface so that you can see your results interactively:
+
+<img src="../images/taxidrift2.png" width="800">

@@ -1,5 +1,7 @@
 [Pop-out for expression functions](https://adfdataflowexecutor.azurewebsites.net)
 
+**NOTE: For Regular Expressions, you currently must escape backslashes. Eg: samples below listed as \d+ must be entered in the ADF Data Flow Expression Builder as \\d+**
+
 *********************************
 isNull
 ==============================

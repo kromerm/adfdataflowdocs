@@ -8,7 +8,7 @@ Use this mode when you have completed building and testing your Data Flow. This 
 
 ### Existing Cluster
 
-The spin-up time of the "New Job Cluster" mode above does not work well with debugging due to the spin-up delay. Therefore, we recommend using the "Existing Cluster" option when debugging, building, designing Data Flows.
+The spin-up time of the "New Job Cluster" mode above does not work well with debugging due to the spin-up delay. Therefore, we recommend using the "Existing Cluster" option when debugging, building, designing Data Flows. The concept behind Debug sessions in ADF Data Flow is to work on limited / sampled data. So keep that in mind when you size your Azure Databricks interactive cluster for debug. We recommend that you do not use auto-scaling with your cluster for debug. Instead, manually resize the cluster when you are debugging large datasets. It is preferrable to debug with smaller datasets.
 
 #### Cluster ID
 

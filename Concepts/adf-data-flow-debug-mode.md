@@ -8,6 +8,8 @@ When Debug mode is on, you will interactively build your data flow with a runnin
 
 In most cases, it is a good practice to build your Data Flows in debug mode so that you can validate your business logic and view your data transformations before publishing your work in ADF.
 
+Use an Azure Databricks interactive cluster for debug workloads. It is recommend to not use auto-scaling of your cluster and to use limited/sampled datasets for testing in ADF Data Flow debug sessions. If you need a larger cluster when debugging, manually resize the Databricks cluster to a large instance.
+
 ## Debug Mode On
 When you switch on debug mode, you will be prompted with a side-panel form that will request you to point to your interactive Azure Databricks cluster and select options for the source sampling. You must use an interactive cluster from Azure Databricks and select either a sampling size from each your Source transforms, or pick a text file to use for your test data.
 

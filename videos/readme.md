@@ -8,4 +8,5 @@
 * [ADF Data Flow Data Lineage](https://www.youtube.com/watch?v=5KvqYF-y93s)
 * [ADF Data Flow Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
+* [ADF Data Flow: Staging Data](https://www.youtube.com/watch?v=zukwayEXRtg)
 

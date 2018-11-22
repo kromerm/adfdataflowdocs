@@ -1,5 +1,7 @@
 # Azure Data Factory Data Flow Transformations
 
+* [ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
+
 ## Join
 
 Use Join to combine data from 2 tables in your Data Flow. Add the Join transform with the Plus icon on the data stream where you would like to join and then inside the transform you will select the 2nd Join stream.

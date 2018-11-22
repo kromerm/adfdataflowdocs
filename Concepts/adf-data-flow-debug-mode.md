@@ -1,4 +1,9 @@
 
+# ADF Data Flow Debug Mode
+
+* [ADF Data Flow Debug Session, Pt 1](https://www.youtube.com/watch?v=k0YHmJc14FM)
+* [ADF Data Flow Debug Session: Data Prep, Pt 2](https://www.youtube.com/watch?v=6ezKRDgK3rE)
+
 Azure Data Factory Data Flow has a debug mode which can be switched on from the Debug button at the top of the design surface.
 
 <img src="../images/debugbutton.png" width="400">

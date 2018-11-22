@@ -1,3 +1,7 @@
+# ADF Data Flow Schema Drift
+
+* [ADF Data Flow Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
+
 The concept of Schema Drift is the case where your sources often change metadata. Fields, columns, types, etc. can be added, removed or changed on the fly. Without handling for Schema Drift, your Data Flow becomes vulnerable to changes in upstream data source changes. When incoming columns and fields change, typical ETL patterns fail because they tend to be tied to those source names.
 
 In order to protect against Schema Drift, it is important to have the facilities in a Data Flow tool to allow you, as a Data Engineer, to:

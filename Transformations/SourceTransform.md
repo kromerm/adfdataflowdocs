@@ -10,6 +10,12 @@ The Source transformation configures a data source that you wish to use to bring
 
 Your Data Flow source must be associated with exactly 1 ADF Dataset, which defines the shape and location of your data to write to or read from.
 
+### Data Flow Staging Areas
+
+ADF Data Flow has line-of-sight to 5 primary "staging" areas within Azure to perform your data transformations: Azure Blob, ADLS Gen 1, ADLS Gen 2, Azure SQL DB and Azure SQL DW. ADF has access to nearly 80 different native connectors, so to include those other sources of data into your Data Flow, first stage that data into one of those 5 primary Data Flow staging areas first by using the Copy Activity:
+
+* [ADF Data Flow: Staging Data](https://youtu.be/mZLKdyoL3Mo)
+
 ### Options
 
 #### Allow schema drift

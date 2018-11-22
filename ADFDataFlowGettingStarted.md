@@ -1,5 +1,8 @@
 # Getting Started
 
+* [Getting Started with ADF Data Flow ARM Template and Samples](https://www.youtube.com/watch?v=YhpHlyYWCyI)
+* [Build your first ADF Data Flow](https://youtu.be/WQ1KqsRL9Bg)
+
 Start by building a new Data Factory with Data Flows from the Azure Portal. Select V2 (data flow preview). Be sure to include the sample Data Flows by checking the "sample" checkbox:
 
 <img src="images/portal.png" width="400">

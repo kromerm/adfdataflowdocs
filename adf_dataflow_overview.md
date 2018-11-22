@@ -9,3 +9,7 @@ Start by creating data flows, then add a Data Flow activity to your pipeline to 
 You will then operationalize your Data Flow by scheduling and monitoring your ADF pipeline that is executing the Data Flow activity.
 
 There is also a Debug Mode toggle switch on the Data Flow design surface to allow you to interactively build your data transformations in an interative data prep environment.
+
+ADF Data Flow has line-of-sight to 5 primary "staging" areas within Azure to perform your data transformations: Azure Blob, ADLS Gen 1, ADLS Gen 2, Azure SQL DB and Azure SQL DW. ADF has access to nearly 80 different native connectors, so to include those other sources of data into your Data Flow, first stage that data into one of those 5 primary Data Flow staging areas using the Copy Activity:
+
+* [ADF Data Flow: Staging Data](https://www.youtube.com/watch?v=zukwayEXRtg)

@@ -1,5 +1,8 @@
 # Azure Data Factory Data Flow
 
+* [ADF Data Flow Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)
+* [ADF Data Flow Data Lineage](https://www.youtube.com/watch?v=5KvqYF-y93s)
+
 ## Monitoring Data Flows
 
 After you have completed building and debugging your data flow, you will want to schedule your data flow to execute on a schedule within the context of a pipeline. You can schedule the pipeline from ADF using Triggers. Or you can use the Trigger Now option from the ADF Pipeline Builder to execute a single-run execution to test your data flow within the pipeline context.

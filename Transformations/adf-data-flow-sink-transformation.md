@@ -19,16 +19,16 @@ For Azure Storage Blob or Data Lake sink types, you will output the transformed 
 
 <img src="../images/opt001.png" width="400">
 
-### Blob Storage Folder
-When Sinking your data transformations to Blob Store, choose a blob *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.
+### Data Lake Folders
+When Sinking your data transformations to Azure Blob Store or ADLS, choose a blob *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.
 
 <img src="../images/folderpath.png" width="400">
 
 **PLEASE NOTE: Not all Dataset properties in Blob and ADW are configured for use within Data Flow during the preview period. Currently, ADF supports both a straight-forward Copy Activity as well as data tranformation-based Data Flow capability, both of which utilize Datasets. All of the Dataset properties present today work with Copy Activity. The UI will try to notify you interactively of which properties are not recognized by Data Flow. We will updates these properties during each subsequent iteration of Data Flow**
 
-### Optional Azure SQL Data Warehouse Sink
+### Azure SQL Data Warehouse and SQL Database Sink Datasets
 
-We are releasing an early beta of the ADW Sink Dataset for Data Flow. This will allow you to land your transformed data directly into Azure SQL DW within Data Flow without the need of adding a Copy Activity in your pipeline.
+If you prefer to sink your transformed data directly into Azure SQL DW or Azure SQL DB instead of the Lake approach of landing transformed data into Blob or ADLS first, you can use Sink Datasets for Data Flow that are Azure SQL DB or DW. This will allow you to land your transformed data directly into Azure SQL DW within Data Flow without the need of adding a Copy Activity in your pipeline.
 
 Start by creating an ADW dataset, just as you would for any other ADF pipeline, with a Linked Service that includes your ADW credentials and choose the database that you wish to connect to. In the table name, either select an existing table or type in the name of the table that you would like Data Flow to auto-create for you from in the ioncoming fields.
 
@@ -36,7 +36,7 @@ Start by creating an ADW dataset, just as you would for any other ADF pipeline, 
 
 <img src="../images/adw3.png" width="500">
 
-Back on the Sink tranformation (ADW is currently only supported as a Sink) you will choose the ADW Dataset that you created as well as the Storage account you wish to use for staging the data for the Polybase load into ADW. The path field is of the format: "containername/foldername".
+Azure SQL DW Datasets require staging locations to be specified because ADF uses Polybase behind the scenes. You'll select the Storage account you wish to use for staging the data for the Polybase load into ADW. The path field is of the format: "containername/foldername".
 
 <img src="../images/adw1.png" width="500">
 
@@ -44,9 +44,13 @@ Back on the Sink tranformation (ADW is currently only supported as a Sink) you w
 
 Overwrite will truncate the table if it exists, then recreate it and load the data. Append will simply insert the new rows. If the table from the Dataset table name does not exist at all in the target ADW, Data Flow will create the table, then load the data.
 
-If you deselect "Auto Map", you can map the fields to your destination table manually.
+#### Field Mapping
 
-<img src="../images/adw2.png" width="500">
+On the Mapping tab of your Sink transformation, you can map the incoming (left side) columns to the destination (right side). When you sink data flows to files, ADF will always write new files to a folder. When you map to a database dataset, you can choose to either generate a new table with this schema (set Save Policy to "overwrite") or insert new rows to an existing table and map the fields to the existing schema.
+
+You can use multi-select in the mapping table to Link multiple columns with one click, Delink multiple columns or map multiple rows to the same column name.
+
+<img src="../images/multi1.png" width="500">
 
 #### Max Concurrent Connections
 
@@ -54,3 +58,4 @@ You can set the maximum concurrent connections in the Sink transformation when w
 
 <img src="../images/maxcon.png" width="400">
 
+### 

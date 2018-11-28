@@ -52,10 +52,11 @@ You can use multi-select in the mapping table to Link multiple columns with one 
 
 <img src="../images/multi1.png" width="500">
 
+If you'd like to reset your columns mappings, press the "Remap" button to reset the mappings.
+
 #### Max Concurrent Connections
 
 You can set the maximum concurrent connections in the Sink transformation when writing your data to an Azure database connection.
 
 <img src="../images/maxcon.png" width="400">
 
-### 

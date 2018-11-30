@@ -30,7 +30,7 @@ Full Outer produces all columns and rows from both sides with NULL values for co
 
 #### Cross Join
 
-Specific the cross product of the 2 streams with an expression
+Specific the cross product of the 2 streams with an expression and use this option to write a free-form expression for other JOIN types.
 
 ### Specify Join Conditions
 

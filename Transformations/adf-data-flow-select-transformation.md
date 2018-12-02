@@ -4,7 +4,7 @@
 
 Use this transformation for column selectivity (reducing number of columns) or to alias columns and stream names.
 
-In ADF Data Flow, all of your columns will automatically propogate throughout your streams. As your columns accumulate, you can use the Select transform to "select" the columns that you wish to keep. You will see stream names appended to the column names to indicate the origins and lineage of those columns to help you make the proper determination.
+In ADF Data Flow, all of your columns will automatically propagate throughout your streams. As your columns accumulate, you can use the Select transform to "select" the columns that you wish to keep. You will see stream names appended to the column names to indicate the origins and lineage of those columns to help you make the proper determination.
 
 While you can always choose column selectivity in the Sink transform at the end of your Data Flow, maintaining column hygiene may help you to prune your column lists. The downside to this approach is that you will lose that metadata downstream and will not be able to access it once you've dropped it from your metadata with a Select.
 

@@ -4,6 +4,10 @@
 
 Use this transformation for column selectivity (reducing number of columns) or to alias columns and stream names.
 
+In ADF Data Flow, all of your columns will automatically propogate throughout your streams. As your columns accumulate, you can use the Select transform to "select" the columns that you wish to keep. You will see stream names appended to the column names to indicate the origins and lineage of those columns to help you make the proper determination.
+
+While you can always choose column selectivity in the Sink transform at the end of your Data Flow, maintaining column hygiene may help you to prune your column lists. The downside to this approach is that you will lose that metadata downstream and will not be able to access it once you've dropped it from your metadata with a Select.
+
 The Select transform allows you to alias an entire stream, or columns in that stream, assign different names (aliases) and then reference those new names later in your data flow. This is very useful for self-join scenarios. The way to implement a self-join in ADF Data Flow is to take a stream, branch it with "New Branch", then immediately afterward, add a "Select" transform. That stream will now have a new name that you can use to join back to the original stream, creating a self-join:
 
 ![Self-join](../images/selfjoin.png "Self-join")

@@ -4,7 +4,7 @@ Before you can begin debugging or executing your Data Flows, you must link to yo
 
 *ADF Data Flow currently only supports Azure Databricks version 5.0*
 
-<img src="images/adb50.png" width="400">
+<img src="../images/adb50.png" width="400">
 
 ## Azure Databricks Linked Service
 

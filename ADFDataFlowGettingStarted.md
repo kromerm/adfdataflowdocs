@@ -5,7 +5,7 @@
 
 Start by building a new Data Factory with Data Flows from the Azure Portal. Select V2 (data flow preview). Be sure to include the sample Data Flows by checking the "sample" checkbox:
 
-<img src="images/portal.png" width="400">
+<img src="images/portal.png" width="300">
 
 Once you've gone through building a new Azure Data Factory with the new version that enables Data Flow (use the ARM Template in the Samples directory), you can begin by experimenting with the 3 samples that will be loaded in your Factory from the ARM Template: Taxi Demo, Currency Demo and Movies Demo.
 
@@ -22,6 +22,10 @@ End your Data Flow with a Sink to land your transformed data either back in Blob
 Click "Validate" to see if you have any configuration errors. If it all checks out clean, then you can either Save your Data Flow, if it is being designed in Git mode, or Publish the changes, if you are designing your work directly against the ADF Service.
 
 Now you're ready to test your Data Flow. From the Pipeline view, add a new Data Flow activity. Select the name of the Data Flow that you just created and use your Azure Databricks account Linked Service. Instructions for how to configure Databricks can be found in the doc "First Data Flow" under Samples.
+
+ADF Data Flow currently only supports Azure Databricks version 5.0
+
+<img src="images/adb50.png" width="300">
 
 <img src="images/pipe1.png" width="400">
 

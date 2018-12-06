@@ -8,7 +8,7 @@ This guide is for private preview customers to get started with Azure data facto
 
 1. To build your first Data Flow Data Factory, use the Azure Portal to create "Azure Data Factory" and select "V2 with data flow (preview)". Be sure to include the sample Data Flows by checking the "sample" checkbox:
 
-<img src="images/portal.png" width="400">
+<img src="images/portal.png" width="300">
 
 2. That will create your new Data Factory with Data Flows in the SE Asia region
 
@@ -25,6 +25,10 @@ That should take you to a new window which is azure data factory author main pag
 5. Click on Connections in the left bottom of the page to edit the Azure Databricks Linked Service
 
     ![](media/d242a4c1928463417119ab08248e1e37.png)
+    
+ADF Data Flow currently only supports Azure Databricks version 5.0
+
+<img src="images/adb50.png" width="300">
 
 6. Click on the Edit button as highlighted with black arrow
 

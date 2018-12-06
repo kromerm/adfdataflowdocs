@@ -1,3 +1,7 @@
+# ADF Data Flow currently only supports Azure Databricks version 5.0
+
+<img src="images/adb50.png" width="400">
+
 ## There are 2 modes that ADF Data Flow will use to execute your Data Flows on Azure Databricks: New Job Cluster and Existing Cluster.
 
 ### New Job Cluster

@@ -2,6 +2,10 @@
 
 Before you can begin debugging or executing your Data Flows, you must link to your Azure Databricks account. You can create new Azure Databricks Linked Services from the Connections section in the ADF UI or when you add a Data Flow activity to the Pipeline canvas. Choose New > Linked Service.
 
+*ADF Data Flow currently only supports Azure Databricks version 5.0*
+
+<img src="images/adb50.png" width="400">
+
 ## Azure Databricks Linked Service
 
 <img src="../images/dbls001.png" width="400">

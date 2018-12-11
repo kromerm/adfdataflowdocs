@@ -4,7 +4,7 @@
 
 Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns has its distinct row values transformed into individual columns.
 
-<img src="../images/pivot1.png" width="400">
+<img src="../images/pivot1.png" width="300">
 
 ### Join types
 

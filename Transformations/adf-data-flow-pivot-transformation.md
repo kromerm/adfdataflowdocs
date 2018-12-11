@@ -2,9 +2,9 @@
 
 ## Pivot
 
-Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns has its distinct values transformed into individual columns.
+Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns has its distinct row values transformed into individual columns.
 
-![Pivot Transformation](../images/pivot1.png "Pivot")
+<img src="../images/pivot1.png" width="400">
 
 ### Join types
 

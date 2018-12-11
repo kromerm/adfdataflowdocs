@@ -14,7 +14,7 @@ Selecting Join Type is required for the Join transformation
 
 #### Inner Join
 
-Inner join will pass through only rows that match the column conditions from from both tables
+Inner join will pass through only rows that match the column conditions from both tables
 
 #### Left Outer
 

@@ -6,48 +6,26 @@ Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns 
 
 <img src="../images/pivot1.png" width="300">
 
-### Join types
+### Group By
 
-Selecting Join Type is required for the Join transformation
+<img src="../images/pivot2.png" width="300">
 
-#### Inner Join
+First, set the columns that you wish to group by for your pivot aggregation. You can set more than 1 column here with the + sign next to the column list.
 
-Inner join will pass through only rows that match the column conditions from from both tables
+#### Pivot Key
 
-#### Left Outer
+<img src="../images/pivot3.png" width="300">
 
-All rows from the left stream not meeting the join condition are passed through, and output columns from the other table are set to NULL in addition to all rows returned by the inner join.
+The Pivot Key is the column that ADF will pivot from row to column. By default, each unqiue value in the dataset for this field will pivot to a column. However, you can optionally enter the values from the dataset that you wish to pivot to column values.
 
-#### Right Outer
+#### Pivoted Columns
 
-All rows from the right stream not meeting the join condition are passed through, and output columns that correspond to the other table are set to NULL, in addition to all rows returned by the inner join.
+<img src="../images/pivot4.png" width="300">
 
-#### Full Outer
+Lastly, you will choose the aggregation that you wish to use for the pivoted values and how you would like the columns to be displayed in the new output projection from the transformation.
 
-Full Outer produces all columns and rows from both sides with NULL values for columns that are not present in the other table
+(Optional) You can set a naming pattern with a prefix, middle, and suffix to be added to each new column name from the row values.
 
-#### Cross Join
+For instance, pivoting "Sales" by "Region" would simply give you new column values from each sales value, i.e. "25", "50", "1000", etc. However, if you set a prefix value of "Sales " 
 
-Specific the cross product of the 2 streams with an expression and use this option to write a free-form expression for other JOIN types.
-
-### Specify Join Conditions
-
-The Left Join condition is from the data stream connected to the left of your Join. The Right Join condition is the second data stream connected to your Join on the bottom, which will either be a direct connector to another stream or a reference to another stream.
-
-You are required to enter at least 1 (1..n) join conditions. They can be either directly-referenced fields selected from the drop-down menu, or expressions.
-
-### Join Peformance Optimizations
-
-Please note that unlike Merge Join in tools like SSIS, ADF's Join in Data Flow is not a mandatory merge join operation. Therefore, the join keys do not need to be sorted first. The Join operation will occur in Spark using Databricks based on the optimal join operation in Spark: Broadcast / Map-side join:
-
-![Join Transformation optimize](../images/joinoptimize.png "Join Optimization")
-
-If your dataset can fit into the Databricks worker node memory, we can optimize your Join performance. You can also specify partitioning of your data on the Join operation to create sets of data that can fit better into memory per worker.
-
-### Self-Join
-
-You can achieve self-join conditions in ADF Data Flow by using the Select transformation to alias an existing stream. First, create a "New Branch" from a stream, then add a Select to alias the entire original stream.
-
-![Self-join](../images/selfjoin.png "Self-join")
-
-In the above diagram, the Select transform is at the top. All it's doing is aliasing the original stream to "OrigSourceBatting". In the higlighted Join transform below it you can see that we use this Select alias stream as the right-hand join, allowing us to reference the same key in both the Left & Right side of the Inner Join.
+<img src="../images/pivot5.png" width="300">

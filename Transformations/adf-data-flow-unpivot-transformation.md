@@ -4,21 +4,21 @@
 
 Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns has its distinct row values transformed into individual columns.
 
-<img src="../images/pivot1.png" width="300">
+<img src="../images/unpivot1.png" width="300">
 
-### Group By
+### UnGroup By
 
 <img src="../images/pivot2.png" width="300">
 
 First, set the columns that you wish to group by for your pivot aggregation. You can set more than 1 column here with the + sign next to the column list.
 
-### Pivot Key
+### UnPivot Key
 
 <img src="../images/pivot3.png" width="400">
 
 The Pivot Key is the column that ADF will pivot from row to column. By default, each unqiue value in the dataset for this field will pivot to a column. However, you can optionally enter the values from the dataset that you wish to pivot to column values.
 
-### Pivoted Columns
+### UnPivoted Columns
 
 <img src="../images/pivot4.png" width="400">
 
@@ -32,6 +32,3 @@ For instance, pivoting "Sales" by "Region" would simply give you new column valu
 
 Setting the Column Arrangement to "Normal" will group together all of the pivoted columns with their aggregated values. Setting the columns arrangment to "Lateral" will alternate between column and value.
 
-#### Aggregation
-
-To set the aggregation you wish to use for the pivot, click on the field at the bottom of the Pivoted Columns pane. You will enter into the ADF Data Flow expression builder where you can build an aggregation expression and optionally provide an alternate name for your new aggregated values.

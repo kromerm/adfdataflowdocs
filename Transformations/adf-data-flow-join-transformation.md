@@ -1,6 +1,6 @@
 # Azure Data Factory Data Flow Transformations
 
-* [ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
+* [Video: ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
 
 ## Join
 

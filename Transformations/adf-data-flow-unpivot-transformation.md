@@ -32,6 +32,6 @@ For instance, pivoting "Sales" by "Region" would simply give you new column valu
 
 Setting the Column Arrangement to "Normal" will group together all of the pivoted columns with their aggregated values. Setting the columns arrangment to "Lateral" will alternate between column and value.
 
-<img src="../images/unpivot7.png" width="400">
+<img src="../images/unpivot7.png" width="600">
 
-The final unpivoted data result set shows the column values 
+The final unpivoted data result set shows the column totals now unpivoted into separate row values.

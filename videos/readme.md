@@ -10,4 +10,5 @@
 * [ADF Data Flow Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
 * [ADF Data Flow: Staging Data](https://youtu.be/mZLKdyoL3Mo)
+* [ADF Data Flow Patterns: Clean Addresses](https://youtu.be/axEYbuU3lmw)
 

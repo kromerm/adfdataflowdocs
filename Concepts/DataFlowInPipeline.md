@@ -12,6 +12,6 @@ When you add a Data Flow activity to your pipeline, you will be prompted to eith
 
 Use the "Existing Cluster" for debugging / designing data flows for a quick and interactive experience. Use the "New Job Cluster" choice for operationalized pipelines that are executing pipelines on a schedule.
 
-You will also need to point to an Azure Blog Storage that we can use as a staging area for data transformation. Use a Linked Service for Azure Blog and then enter your container/folder name for a staging location.
+You will also need to point to an Azure Blob Storage that we can use as a staging area for data transformation. Use a Linked Service for Azure Blob and then enter your container/folder name for a staging location.
 
 <img src="../images/newdataflowactivity.png" width="400">

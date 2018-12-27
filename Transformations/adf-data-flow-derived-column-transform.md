@@ -4,7 +4,7 @@
 
 ## Derived Column
 
-Use the Derived Column transformation to generate new columns in your data flow or to modify existing incoming data columns.
+Use the Derived Column transformation to generate new columns in your data flow or to modify existing incoming data columns. Use the ADF Data Flow Expression Language to describe the column transformations in the Expression Builder: https://aka.ms/dataflowexpressions.
 
 ![derive column](../images/dc1.png "Derived Column")
 

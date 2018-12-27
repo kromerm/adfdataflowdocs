@@ -14,5 +14,7 @@ The Aggregate transformation is where you will define aggregations of columns in
 ### The Aggregate Column tab 
 (Required) Choose the Aggregate Column tab to build the aggregation expressions. You can either choose an existing column to overwrite the value with the aggregation, or create a new field with the new name for the aggregation. The expression that you wish to use for the aggregation will be entered in the right-hand box next to the column name selector. Clicking on that text box will open up the Expression Builder.
 
+Use the ADF Data Flow Expression Language to describe the column transformations in the Expression Builder: https://aka.ms/dataflowexpressions.
+
 ![Agg Transformation options](../images/agg2.png "aggregator")
 

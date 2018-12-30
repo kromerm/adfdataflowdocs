@@ -37,3 +37,7 @@ Setting the Column Arrangement to "Normal" will group together all of the pivote
 To set the aggregation you wish to use for the pivot, click on the field at the bottom of the Pivoted Columns pane. You will enter into the ADF Data Flow expression builder where you can build an aggregation expression and optionally provide an alternate name for your new aggregated values.
 
 Use the ADF Data Flow Expression Language to describe the pivoted column transformations in the Expression Builder: https://aka.ms/dataflowexpressions.
+
+#### How to rejoin original fields
+*NOTE: Aggregate transforms will only output the columns used in the aggregation. I.e. only the fields used in group-by and the aggregated fields will be passed on to the next transformation in your data flow. If you wish to include the previous columns in your flow, use a New Branch from the previous step and use the self-join pattern to connect the flow with the original metadata.*
+

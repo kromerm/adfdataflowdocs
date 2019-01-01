@@ -23,9 +23,10 @@ The line selector has 2 values to set: the values before the current row and the
 
 <img src="../images/windows6.png" width="400">
 
+### Window Columns
+Lastly, use the Expression Builder to define the aggregations you wish to use with the data windows such as RANK, COUNT, MIN, MAX, DENSE RANK, LEAD, LAG, etc.
 
+<img src="../images/windows2.png" width="400">
 
-Use the ADF Data Flow Expression Language to describe the column transformations in the Expression Builder: https://aka.ms/dataflowexpressions.
-
-![Agg Transformation options](../images/agg2.png "aggregator")
+The full list of aggregation and analytical functions available for you to use in the ADF Data Flow Expression Language via the Expression Builder are listed here: https://aka.ms/dataflowexpressions.
 

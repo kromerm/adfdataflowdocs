@@ -19,7 +19,7 @@ Also part of the Over clause is setting the Order By, or sort order. As is the c
 ### Range By
 Next, set the window frame as Unbounded or Bounded. To set an unbounded window frame, set the slider to Unbounded on both ends. If you choose a setting between Unbounded and Current Row, then you must set the Offset values.
 
-The line selector has 2 values to set: the values before the current row and the values after the current row. The Start and End offset matches the 2 selectors on the line.
+The window slider has 2 values to set: the values before the current row and the values after the current row. The Start and End offset matches the 2 selectors on the slider.
 
 <img src="../images/windows6.png" width="400">
 

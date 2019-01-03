@@ -14,6 +14,18 @@ The Expression Builder tool defaults to the text editor option with auto-complet
 
 At the top left of the Expression Builder UI, you will see a field called "Currently Working On" with the name of the field that you are currently working on. The expression that you build in the UI will be applied just to that currently working field. If you wish to transform another field, you can save your current work and use this drop-down to select another field and build an expression for the other fields.
 
+## Data Preview in Debug mode
+
+![Expression Builder](../images/exp4.png "Expression Data Preview")
+
+When you are working on your expressions, you can optionally switch on Debug mode from the ADF Data Flow design surface, enabling live in-progress preview of your data results from the expression that you are buidling. This enables real-time debugging of your expression code.
+
+![Debug Mode](../images/debugmode.png "Debug Mode")
+
+Click the Refresh button when you are ready to update the results and test your expressions.
+
+![Expression Builder](../images/exp5.png "Expression Data Preview")
+
 ## Comments
 
 You can generate comments in your expressions using single line and multi-line comment syntax:
@@ -22,7 +34,7 @@ You can generate comments in your expressions using single line and multi-line c
 
 ## Regular Expressions
 
-The ADF Data Flow expression language, [full reference documentation here](https://docs.databricks.com/api/latest/authentication.html#generate-token), enables functions that include regular expression syntax. When using regular expression functions, the Expression Builder will try to interpret backslash (\) as an escape character sequence. So, when using backslashes in your regular expression, either enclose the entire regex in ticks ` ` or use a double backslash.
+The ADF Data Flow expression language, [full reference documentation here](http://aka.ms/), enables functions that include regular expression syntax. When using regular expression functions, the Expression Builder will try to interpret backslash (\) as an escape character sequence. So, when using backslashes in your regular expression, either enclose the entire regex in ticks ` ` or use a double backslash.
 
 I.e. using ticks
 

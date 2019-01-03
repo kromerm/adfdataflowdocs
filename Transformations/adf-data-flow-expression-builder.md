@@ -16,7 +16,7 @@ At the top left of the Expression Builder UI, you will see a field called "Curre
 
 ## Data Preview in Debug mode
 
-![Expression Builder](../images/exp4.png "Expression Data Preview")
+![Expression Builder](../images/exp4b.png "Expression Data Preview")
 
 When you are working on your expressions, you can optionally switch on Debug mode from the ADF Data Flow design surface, enabling live in-progress preview of your data results from the expression that you are buidling. This enables real-time debugging of your expression code.
 

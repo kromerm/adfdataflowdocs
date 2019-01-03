@@ -18,3 +18,6 @@ Use the ADF Data Flow Expression Language to describe the column transformations
 
 ![Agg Transformation options](../images/agg2.png "aggregator")
 
+### Data Preview in Expression Builder
+
+Note that in Debug mode, expression builder cannot produce data previews with Aggregate functions. You must view data previews from the Aggregate transformation, outside of the expression builder.

@@ -13,3 +13,17 @@ The Expression Builder tool defaults to the text editor option with auto-complet
 You can generate comments in your expressions using single line and multi-line comment syntax:
 
 ![Comments](../images/comments.png "Comments")
+
+## Regular Expressions
+
+The ADF Data Flow expression language, [full reference documentation here](https://docs.databricks.com/api/latest/authentication.html#generate-token), enables functions that include regular expression syntax. When using regular expression functions, the Expression Builder will try to interpret backslash (\) as an escape character sequence. So, when using backslashes in your regular expression, either enclose the entire regex in ticks ` ` or use a double backslash.
+
+I.e. using ticks
+
+```
+regex_replace('100 and 200', `(\d+)`, 'digits')
+```
+or using double slash
+```
+regex_replace('100 and 200', '(\\d+)', 'digits')
+```

@@ -17,7 +17,7 @@ Also part of the Over clause is setting the Order By, or sort order. As is the c
 <img src="../images/windows5.png" width="400">
 
 ### Range By
-Next, set the window frame as Unbounded or Bounded. To set an unbounded window frame, set the slider to Unbounded on both ends. If you choose a setting between Unbounded and Current Row, then you must set the Offset values.
+Next, set the window frame as Unbounded or Bounded. To set an unbounded window frame, set the slider to Unbounded on both ends. If you choose a setting between Unbounded and Current Row, then you must set the Offset start and end values. Both values will be positive integers. You can use either relative numbers or values from your data.
 
 The window slider has 2 values to set: the values before the current row and the values after the current row. The Start and End offset matches the 2 selectors on the slider.
 
@@ -26,7 +26,7 @@ The window slider has 2 values to set: the values before the current row and the
 ### Window Columns
 Lastly, use the Expression Builder to define the aggregations you wish to use with the data windows such as RANK, COUNT, MIN, MAX, DENSE RANK, LEAD, LAG, etc.
 
-<img src="../images/windows2.png" width="400">
+<img src="../images/windows2.png" width="600">
 
 The full list of aggregation and analytical functions available for you to use in the ADF Data Flow Expression Language via the Expression Builder are listed here: https://aka.ms/dataflowexpressions.
 

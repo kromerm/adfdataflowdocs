@@ -11,4 +11,5 @@
 * [ADF Data Flow Joins](https://www.youtube.com/watch?v=zukwayEXRtg)
 * [ADF Data Flow: Staging Data](https://youtu.be/mZLKdyoL3Mo)
 * [ADF Data Flow Patterns: Clean Addresses](https://youtu.be/axEYbuU3lmw)
+* [ADF Data Flow Pivot Transformation](https://www.youtube.com/watch?v=Tua14ZQA3F8&t=34s)
 

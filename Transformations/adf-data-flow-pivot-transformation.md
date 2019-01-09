@@ -2,6 +2,8 @@
 
 ## Pivot
 
+* [ADF Data Flow Pivot Transformation](https://www.youtube.com/watch?v=Tua14ZQA3F8&t=34s)
+
 Use Pivot in ADF Data Flow as an aggregation where one or more grouping columns has its distinct row values transformed into individual columns. Essentially, you can Pivot row values into new columns (turn data into metadata).
 
 <img src="../images/pivot1.png" width="300">

@@ -20,12 +20,12 @@ For Azure Storage Blob or Data Lake sink types, you will output the transformed 
 <img src="../images/opt001.png" width="400">
 
 ### Data Lake Folders
-When Sinking your data transformations to Azure Blob Store or ADLS, choose a blob *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.
+When Sinking your data transformations to Azure Blob Store or ADLS, choose a data lake *folder* as your destination folder path, not a file. ADF Data Flow will generate the output files for you in that folder.
 
 <img src="../images/folderpath.png" width="400">
 
 ### Azure Blob Folders
-When sinking your data to Azure Blob Store datasets, make sure to choose a folder inside of a container, i.e.: container/folder. Do not land your data directlying in a container, create an output folder inside your container.
+When sinking your data to Azure Blob Store datasets, make sure to choose a blob *folder* inside of a container, i.e.: container/folder. Do not land your data directlying in a container, create an output folder inside your container.
 
 **PLEASE NOTE: Not all Dataset properties in Blob and ADW are configured for use within Data Flow during the preview period. Currently, ADF supports both a straight-forward Copy Activity as well as data tranformation-based Data Flow capability, both of which utilize Datasets. All of the Dataset properties present today work with Copy Activity. The UI will try to notify you interactively of which properties are not recognized by Data Flow. We will updates these properties during each subsequent iteration of Data Flow**
 

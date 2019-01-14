@@ -16,7 +16,7 @@ The spin-up time of the "New Job Cluster" mode above does not work well with deb
 
 #### Cluster ID
 
-There is an additional option in the Azure Databricks Linked Service that you must set when using an existing cluster. You will need to point Data Flow to the cluster that you wish to use. For this, go to your Azure Databricks workspace in Azure and find the "Tags" section at the bottom of the page. There you will see a field called "Cluster ID". Copy and paste that into the Cluster ID field in the Linked Service.
+There is an additional option in the Azure Databricks Linked Service that you must set when using an existing cluster. You will need to point Data Flow to the cluster that you wish to use. Each Azure Databricks workspace account can have many Databricks clusters, so you'll need to point the Linked Service to the interactive cluster you wish to use. For this, go to your Azure Databricks workspace in Azure and find the "Tags" section at the bottom of the page. There you will see a field called "Cluster ID". That cluster name will appear in the Linked Service.
 
 <img src="images/tags1.png" width="400">
 

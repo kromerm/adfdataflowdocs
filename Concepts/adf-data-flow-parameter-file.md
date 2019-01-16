@@ -2,16 +2,16 @@
 
 ## Parameter Files
 
-You can use parameter files in ADF Data Flows in order to make your data flow more flexible and reusable.
+You can use parameter files in ADF Data Flows in order to make your data flow more flexible and reusable. Use a text file or database table as the parameters container, lookup the parameter values with a Lookup transformation, and then use a Filter transformation to filter the rows that match the incoming value in the parameters file.
 
-![column patterns](../images/columnpattern2.png "Column Patterns")
+1. Add a 2nd source to your data flow, which will point to your file with parameter values
+![parameter file](../images/ce1.png "Parameter File")
 
-This is very useful for handling Schema Drift scenarios or general scenarios where you are not able always fully know or assume each column name. You can pattern match on column name and column data type and build an expression for transformation that will perform that operation against any field in the data stream that matches your `name` & `type` patterns.
+2. Use a Lookup transformation to join the main data stream with the lookup parameters file
+![lookup parameter file](../images/ce2.png "Lookup Parameter File")
 
-When adding an expression to a transform that accepts patterns instead of only exact field name matches, pick "Add Column Pattern" in order to utlize schema drift column matching patterns.
+3. Filter the rows using the Filter transformation. Match on the incoming params value to the matching column in the data source
+![filter parameter file](../images/ce4.png "Filter Parameter File")
 
-When building template column patterns, you can use `$$` in the expression to represent a reference to each matched field from the input data stream.
-
-If you utilize one of the Expression Builder regex functions, you can then subsequently use $1, $2, $3 ... to reference the sub-patterns matched from your regex expression.
-
-An example of using Column Patterns is to SUM a series of incoming fields for an Aggregate calculations in the Aggregate transformation. You can then SUM on every match of field types that match "integer" and then use $$ to reference each match in your expression.
+4. Your data flow will now work against whichever values are found at the time of execution in your parameters file
+![final parameter file](../images/ce10.png "Final Parameter File")

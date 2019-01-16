@@ -1,8 +1,8 @@
 # Azure Data Factory Data Flow Concepts
 
-## Column Patterns
+## Parameter Files
 
-Several ADF Data Flow transformations support the idea of "Columns Patterns" so that you can create template columns based on patterns instead of hard-coded column names. You can use this feature within the Expression Builder to define patterns to match columns for transformation instead of requiring you to pick exact, specific field names. This is very useful when your incoming source fields change often, particularly in the case of changing columns in text files or NoSQL databases. This is sometimes referred to as "Schema Drift".
+You can use parameter files in ADF Data Flows in order to make your data flow more flexible and reusable.
 
 ![column patterns](../images/columnpattern2.png "Column Patterns")
 

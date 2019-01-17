@@ -1,5 +1,3 @@
-[Pop-out for expression functions](https://adfdataflowexecutor.azurewebsites.net)
-
 *********************************
 isNull
 ==============================
@@ -249,6 +247,9 @@ Splits a string based on a delimiter and returns an array of strings
 * ``split('100,200,300', ',') -> ['100', '200', '300']``
 * ``split('100,200,300', '|') -> ['100,200,300']``
 * ``split('100, 200, 300', ', ') -> ['100', '200', '300']``
+* ``split('100, 200, 300', ', ')[1] -> '100'``
+* ``split('100, 200, 300', ', ')[0] -> NULL``
+* ``split('100, 200, 300', ', ')[20] -> NULL``
 * ``split('100200300', ',') -> ['100200300']``
 *********************************
 regexSplit
@@ -256,6 +257,9 @@ regexSplit
 <b>regexSplit(<i>&lt;string to split&gt;</i> : string, <i>&lt;regex expression&gt;</i> : string) => array</b><br/><br/>
 Splits a string based on a delimiter based on regex and returns an array of strings
 * ``regexSplit('oneAtwoBthreeC', '[CAB]') -> ['one', 'two', 'three']``
+* ``regexSplit('oneAtwoBthreeC', '[CAB]')[1] -> 'one'``
+* ``regexSplit('oneAtwoBthreeC', '[CAB]')[0] -> NULL``
+* ``regexSplit('oneAtwoBthreeC', '[CAB]')[20] -> NULL``
 *********************************
 soundex
 ==============================
@@ -275,6 +279,9 @@ slice
 Extracts a subset of an array from a position. Position is 1 based. If the length is omitted, it is defaulted to end of the string
 * ``slice([10, 20, 30, 40], 1, 2) -> [10, 20]``
 * ``slice([10, 20, 30, 40], 2) -> [20, 30, 40]``
+* ``slice([10, 20, 30, 40], 2)[1] -> 20``
+* ``slice([10, 20, 30, 40], 2)[0] -> NULL``
+* ``slice([10, 20, 30, 40], 2)[20] -> NULL``
 * ``slice([10, 20, 30, 40], 8) -> []``
 *********************************
 true
@@ -647,7 +654,7 @@ Gets the current timestamp when the job starts to run with local time zone
 toDate
 ==============================
 <b>toDate(<i>&lt;string&gt;</i> : any, [<i>&lt;date format&gt;</i> : string]) => date</b><br/><br/>
-Converts a string to a date given a optional date format. If the date format is omitted, combinations of the following are accepted. [ yyyy, yyyy-[m]m, yyyy-[m]m-[d]d, yyyy-[m]m-[d]d, yyyy-[m]m-[d]d, yyyy-[m]m-[d]dT* ]
+Converts a string to a date given a optional date format. If the date format is omitted, combinations of the following are accepted. [ yyyy, yyyy-[M]M, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]dT* ]
 * ``toDate('2012-8-8') -> 2012-8-8``
 * ``toDate('12/12/2012', 'mm/dd/yyyy') -> 2012-12-12``
 *********************************
@@ -768,7 +775,7 @@ Subtract months from a date or timestamp
 nextSequence
 ==============================
 <b>nextSequence() => long</b><br/><br/>
-Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId
+Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId  
 * ``nextSequence() -> 12313112``
 *********************************
 md5
@@ -1008,26 +1015,26 @@ Based on a critera, gets the unbiased variance of a column
 covariancePopulation
 ==============================
 <b>covariancePopulation(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
-Gets the population covariance of a column
-* ``covariancePopulation(sales) -> 122.12``
+Gets the population covariance between two columns
+* ``covariancePopulation(sales, profit) -> 122.12``
 *********************************
 covariancePopulationIf
 ==============================
-<b>covariancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
-Based on a critera, gets the population covariance of a column
+<b>covariancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b><br/><br/>
+Based on a critera, gets the population covariance of two columns
 * ``covariancePopulationIf(region == 'West', sales) -> 122.12``
 *********************************
 covarianceSample
 ==============================
 <b>covarianceSample(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
-Gets the sample covariance of a column
-* ``covarianceSample(sales) -> 122.12``
+Gets the sample covariance of two columns
+* ``covarianceSample(sales, profit) -> 122.12``
 *********************************
 covarianceSampleIf
 ==============================
-<b>covarianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
-Based on a critera, gets the sample covariance of a column
-* ``covarianceSampleIf(region == 'West', sales) -> 122.12``
+<b>covarianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b><br/><br/>
+Based on a critera, gets the sample covariance of two columns
+* ``covarianceSampleIf(region == 'West', sales, profit) -> 122.12``
 *********************************
 kurtosis
 ==============================
@@ -1091,7 +1098,7 @@ nTile
 ==============================
 <b>nTile() => integer</b><br/><br/>
 The NTile function divides the rows for each window partition into `n` buckets ranging from 1 to at most `n`. Bucket values will differ by at most 1. If the number of rows in the partition does not divide evenly into the number of buckets, then the remainder values are distributed one per bucket, starting with the first bucket. The NTile function is particularly useful for the calculation of tertiles, quartiles, deciles and other common summary statistics The function calculates two variables during initialization: The size of a regular bucket, and the number of buckets that will have one extra row added to it (when the rows do not evenly fit into the number of buckets); both variables are based on the size of the current partition. During the calculation process the function keeps track of the current row number, the current bucket number, and the row number at which the bucket will change (bucketThreshold). When the current row number reaches bucket threshold, the bucket value is increased by one and the threshold is increased by the bucket size (plus one extra if the current bucket is padded).
-* ``cumeDist() -> 1``
+* ``nTile() -> 1``
 *********************************
 rank
 ==============================
@@ -1104,3 +1111,9 @@ denseRank
 <b>denseRank(<i>&lt;value1&gt;</i> : any, ...) => integer</b><br/><br/>
 Computes the rank of a value in a group of values. The result is one plus the number of rows preceding or equal to the current row in the ordering of the partition. The values will not produce gaps in the sequence. Dense Rank works even when data is not sorted and looks for change in values
 * ``denseRank(salesQtr, salesAmt) -> 1``
+*********************************
+rowNumber
+==============================
+<b>rowNumber() => integer</b><br/><br/>
+Assigns a sequential row numbering for rows in a window starting with 1
+* ``rowNumber() -> 1``

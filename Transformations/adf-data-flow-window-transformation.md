@@ -1,6 +1,8 @@
 # Azure Data Factory Data Flow Transformations
 
-## Window Aggregations
+* [ADF Data Flow: Window Transformation](https://www.youtube.com/watch?v=m6zgbtY5AYQ)
+
+## Window Functions
 
 The Window transformation is where you will define window-based aggregations of columns in your data streams. In the Expression Builder, you can define different types of aggregations that are based on data or time windows (aka SQL OVER clause) such as LEAD, LAG, NTILE, CUMEDIST, RANK, etc ...) and create a new field in your output that includes these aggregations with optional group-by fields.
 

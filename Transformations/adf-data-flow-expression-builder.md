@@ -8,6 +8,8 @@ In ADF Data Flow, you will find expression boxes where you can enter expressions
 
 The Expression Builder tool defaults to the text editor option with auto-complete from the entire ADF Data Flow object model with syntax checking and highlighting.
 
+![Expression Builder auto-complete](../images/expb1.png "Expression Builder auto-complete")
+
 ## Currently Working on Field
 
 ![Expression Builder](../images/exp3.png "Currently Working On")
@@ -45,3 +47,9 @@ or using double slash
 ```
 regex_replace('100 and 200', '(\\d+)', 'digits')
 ```
+
+## Addressing Array Indexes
+
+When utilizing expression functions that return arrays, use square brackets [] to address specific indexes inside that returned array object. Note that the array is 1-based.
+
+![Expression Builder array](../images/expb2.png "Expression Data Preview")

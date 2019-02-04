@@ -1,16 +1,16 @@
 [Pop-out for expression functions](https://adfdataflowexecutor.azurewebsites.net)
 
 *********************************
-isNull
+<code>isNull</code>
 ==============================
-<b>isNull(<i>&lt;value1&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>isNull(<i>&lt;value1&gt;</i> : any) => boolean</b></code><br/><br/>
 Checks if the value is NULL
 * ``isNull(NULL()) -> true``
 * ``isNull('') -> false'``
 *********************************
-null
+<code>null</code>
 ==============================
-<b>null() => null</b><br/><br/>
+<code><b>null() => null</b></code><br/><br/>
 Returns a NULL value. Use the function syntax(null()) if there is a column name named 'null'. Any operation that uses will result in a NULL
 * ``custId = NULL (for derived field)``
 * ``custId == NULL -> NULL``
@@ -18,220 +18,220 @@ Returns a NULL value. Use the function syntax(null()) if there is a column name 
 * ``10 * NULL -> NULL'``
 * ``NULL == '' -> NULL'``
 *********************************
-iif
+<code>iif</code>
 ==============================
-<b>iif(<i>&lt;condition&gt;</i> : boolean, <i>&lt;true_expression&gt;</i> : any, [<i>&lt;false_expression&gt;</i> : any]) => any</b><br/><br/>
+<code><b>iif(<i>&lt;condition&gt;</i> : boolean, <i>&lt;true_expression&gt;</i> : any, [<i>&lt;false_expression&gt;</i> : any]) => any</b></code><br/><br/>
 Based on a condition applies one value or the other. If other is unspecified it is considered NULL. Both the values must be compatible(numeric, string...)
 * ``iif(custType == 'Premium', 10, 4.5)``
 * ``iif(amount > 100, 'High')``
 * ``iif(dayOfWeek(saleDate) == 6, 'Weekend', 'Weekday')``
 *********************************
-case
+<code>case</code>
 ==============================
-<b>case(<i>&lt;condition&gt;</i> : boolean, <i>&lt;true_expression&gt;</i> : any, <i>&lt;false_expression&gt;</i> : any, ...) => any</b><br/><br/>
+<code><b>case(<i>&lt;condition&gt;</i> : boolean, <i>&lt;true_expression&gt;</i> : any, <i>&lt;false_expression&gt;</i> : any, ...) => any</b></code><br/><br/>
 Based on alternating conditions applies one value or the other. If the number of inputs are even, the other is NULL for last condition
 * ``case(custType == 'Premium', 10, 4.5)``
 * ``case(custType == 'Premium', price*0.95, custType == 'Elite',   price*0.9, price*2)``
 * ``case(dayOfWeek(saleDate) == 1, 'Sunday', dayOfWeek(saleDate) == 6, 'Saturday')``
 *********************************
-equalsIgnoreCase
+<code>equalsIgnoreCase</code>
 ==============================
-<b>equalsIgnoreCase(<i>&lt;value1&gt;</i> : string, <i>&lt;value2&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>equalsIgnoreCase(<i>&lt;value1&gt;</i> : string, <i>&lt;value2&gt;</i> : string) => boolean</b></code><br/><br/>
 Comparison equals operator ignoring case. Same as <=> operator
 * ``'abc'=='abc' -> true``
 * ``equalsIgnoreCase('abc', 'Abc') -> true``
 *********************************
-concat
+<code>concat</code>
 ==============================
-<b>concat(<i>&lt;this&gt;</i> : string, <i>&lt;that&gt;</i> : string, ...) => string</b><br/><br/>
+<code><b>concat(<i>&lt;this&gt;</i> : string, <i>&lt;that&gt;</i> : string, ...) => string</b></code><br/><br/>
 Concatenates a variable number of strings together. Same as the + operator with strings
 * ``concat('Awesome', 'Cool', 'Product') -> 'AwesomeCoolProduct'``
 * ``'Awesome' + 'Cool' + 'Product' -> 'AwesomeCoolProduct'``
 * ``concat(addrLine1, ' ', addrLine2, ' ', city, ' ', state, ' ', zip)``
 * ``addrLine1 + ' ' + addrLine2 + ' ' + city + ' ' + state + ' ' + zip``
 *********************************
-concatWS
+<code>concatWS</code>
 ==============================
-<b>concatWS(<i>&lt;separator&gt;</i> : string, <i>&lt;this&gt;</i> : string, <i>&lt;that&gt;</i> : string, ...) => string</b><br/><br/>
+<code><b>concatWS(<i>&lt;separator&gt;</i> : string, <i>&lt;this&gt;</i> : string, <i>&lt;that&gt;</i> : string, ...) => string</b></code><br/><br/>
 Concatenates a variable number of strings together with a separator. The first parameter is the separator
 * ``concatWS(' ', 'Awesome', 'Cool', 'Product') -> 'Awesome Cool Product'``
 * ``concatWS(' ' , addrLine1, addrLine2, city, state, zip) -> ``
 * ``concatWS(',' , toString(order_total), toString(order_discount))``
 *********************************
-trim
+<code>trim</code>
 ==============================
-<b>trim(<i>&lt;string to trim&gt;</i> : string, [<i>&lt;trim characters&gt;</i> : string]) => string</b><br/><br/>
+<code><b>trim(<i>&lt;string to trim&gt;</i> : string, [<i>&lt;trim characters&gt;</i> : string]) => string</b></code><br/><br/>
 Trims a string of leading and trailing characters. If second parameter is unspecified, it trims whitespace. Else it trims any character specified in the second parameter
 * ``trim('!--!wor!ld!', '-!') -> 'wor!ld'``
 *********************************
-ltrim
+<code>ltrim</code>
 ==============================
-<b>ltrim(<i>&lt;string to trim&gt;</i> : string, <i>&lt;trim characters&gt;</i> : string) => string</b><br/><br/>
+<code><b>ltrim(<i>&lt;string to trim&gt;</i> : string, <i>&lt;trim characters&gt;</i> : string) => string</b></code><br/><br/>
 Left trims a string of leading characters. If second parameter is unspecified, it trims whitespace. Else it trims any character specified in the second parameter
 * ``ltrim('!--!wor!ld!', '-!') -> 'wor!ld!'``
 *********************************
-rtrim
+<code>rtrim</code>
 ==============================
-<b>rtrim(<i>&lt;string to trim&gt;</i> : string, <i>&lt;trim characters&gt;</i> : string) => string</b><br/><br/>
+<code><b>rtrim(<i>&lt;string to trim&gt;</i> : string, <i>&lt;trim characters&gt;</i> : string) => string</b></code><br/><br/>
 Right trims a string of leading characters. If second parameter is unspecified, it trims whitespace. Else it trims any character specified in the second parameter
 * ``rtrim('!--!wor!ld!', '-!') -> '!--!wor!ld'``
 *********************************
-substring
+<code>substring</code>
 ==============================
-<b>substring(<i>&lt;string to subset&gt;</i> : string, <i>&lt;from 1-based index&gt;</i> : integral, [<i>&lt;number of characters&gt;</i> : integral]) => string</b><br/><br/>
+<code><b>substring(<i>&lt;string to subset&gt;</i> : string, <i>&lt;from 1-based index&gt;</i> : integral, [<i>&lt;number of characters&gt;</i> : integral]) => string</b></code><br/><br/>
 Extracts a substring of a certain length from a position. Position is 1 based. If the length is omitted, it is defaulted to end of the string
 * ``substring('Cat in the hat', 5, 2) -> 'in'``
 * ``substring('Cat in the hat', 5, 100) -> 'in the hat'``
 * ``substring('Cat in the hat', 5) -> 'in the hat'``
 * ``substring('Cat in the hat', 100, 100) -> ''``
 *********************************
-lower
+<code>lower</code>
 ==============================
-<b>lower(<i>&lt;value1&gt;</i> : string) => string</b><br/><br/>
+<code><b>lower(<i>&lt;value1&gt;</i> : string) => string</b></code><br/><br/>
 Lowercases a string
 * ``lower('GunChus') -> 'gunchus'``
 *********************************
-upper
+<code>upper</code>
 ==============================
-<b>upper(<i>&lt;value1&gt;</i> : string) => string</b><br/><br/>
+<code><b>upper(<i>&lt;value1&gt;</i> : string) => string</b></code><br/><br/>
 Uppercases a string
 * ``upper('bojjus') -> 'BOJJUS'``
 *********************************
-length
+<code>length</code>
 ==============================
-<b>length(<i>&lt;value1&gt;</i> : string) => integer</b><br/><br/>
+<code><b>length(<i>&lt;value1&gt;</i> : string) => integer</b></code><br/><br/>
 Returns the length of the string
 * ``length('kiddo') -> 5``
 *********************************
-rpad
+<code>rpad</code>
 ==============================
-<b>rpad(<i>&lt;string to pad&gt;</i> : string, <i>&lt;final padded length&gt;</i> : integral, <i>&lt;padding&gt;</i> : string) => string</b><br/><br/>
+<code><b>rpad(<i>&lt;string to pad&gt;</i> : string, <i>&lt;final padded length&gt;</i> : integral, <i>&lt;padding&gt;</i> : string) => string</b></code><br/><br/>
 Right pads the string by the supplied padding until it is of a certain length. If the string is equal or greater than the length it is a no-op
 * ``rpad('great', 10, '-') -> 'great-----'``
 * ``rpad('great', 4, '-') -> 'great'``
 * ``rpad('great', 8, '<>') -> 'great<><'``
 *********************************
-lpad
+<code>lpad</code>
 ==============================
-<b>lpad(<i>&lt;string to pad&gt;</i> : string, <i>&lt;final padded length&gt;</i> : integral, <i>&lt;padding&gt;</i> : string) => string</b><br/><br/>
+<code><b>lpad(<i>&lt;string to pad&gt;</i> : string, <i>&lt;final padded length&gt;</i> : integral, <i>&lt;padding&gt;</i> : string) => string</b></code><br/><br/>
 Left pads the string by the supplied padding until it is of a certain length. If the string is equal or greater than the length it is a no-op
 * ``lpad('great', 10, '-') -> '-----great'``
 * ``lpad('great', 4, '-') -> 'great'``
 * ``lpad('great', 8, '<>') -> '<><great'``
 *********************************
-left
+<code>left</code>
 ==============================
-<b>left(<i>&lt;string to subset&gt;</i> : string, <i>&lt;number of characters&gt;</i> : integral) => string</b><br/><br/>
+<code><b>left(<i>&lt;string to subset&gt;</i> : string, <i>&lt;number of characters&gt;</i> : integral) => string</b></code><br/><br/>
 Extracts a substring start at index 1 with number of characters. Same as SUBSTRING(str, 1, n)
 * ``left('bojjus', 2) -> 'bo'``
 * ``left('bojjus', 20) -> 'bojjus'``
 *********************************
-right
+<code>right</code>
 ==============================
-<b>right(<i>&lt;string to subset&gt;</i> : string, <i>&lt;number of characters&gt;</i> : integral) => string</b><br/><br/>
+<code><b>right(<i>&lt;string to subset&gt;</i> : string, <i>&lt;number of characters&gt;</i> : integral) => string</b></code><br/><br/>
 Extracts a substring with number of characters from the right. Same as SUBSTRING(str, LENGTH(str) - n, n)
 * ``right('bojjus', 2) -> 'us'``
 * ``right('bojjus', 20) -> 'bojjus'``
 *********************************
-startsWith
+<code>startsWith</code>
 ==============================
-<b>startsWith(<i>&lt;string&gt;</i> : string, <i>&lt;substring to check&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>startsWith(<i>&lt;string&gt;</i> : string, <i>&lt;substring to check&gt;</i> : string) => boolean</b></code><br/><br/>
 Checks if the string starts with the supplied string
 * ``startsWith('great', 'gr') -> true``
 *********************************
-endsWith
+<code>endsWith</code>
 ==============================
-<b>endsWith(<i>&lt;string&gt;</i> : string, <i>&lt;substring to check&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>endsWith(<i>&lt;string&gt;</i> : string, <i>&lt;substring to check&gt;</i> : string) => boolean</b></code><br/><br/>
 Checks if the string ends with the supplied string
 * ``endsWith('great', 'eat') -> true``
 *********************************
-locate
+<code>locate</code>
 ==============================
-<b>locate(<i>&lt;substring to find&gt;</i> : string, <i>&lt;string&gt;</i> : string, [<i>&lt;from index - 1-based&gt;</i> : integral]) => integer</b><br/><br/>
+<code><b>locate(<i>&lt;substring to find&gt;</i> : string, <i>&lt;string&gt;</i> : string, [<i>&lt;from index - 1-based&gt;</i> : integral]) => integer</b></code><br/><br/>
 Finds the position(1 based) of the substring within a string starting a certain position. If the position is omitted it is considered from the beginning of the string. 0 is returned if not found
 * ``locate('eat', 'great') -> 3``
 * ``locate('o', 'microsoft', 6) -> 7``
 * ``locate('bad', 'good') -> 0``
 *********************************
-instr
+<code>instr</code>
 ==============================
-<b>instr(<i>&lt;string&gt;</i> : string, <i>&lt;substring to find&gt;</i> : string) => integer</b><br/><br/>
+<code><b>instr(<i>&lt;string&gt;</i> : string, <i>&lt;substring to find&gt;</i> : string) => integer</b></code><br/><br/>
 Finds the position(1 based) of the substring within a string. 0 is returned if not found
 * ``instr('great', 'eat') -> 3``
 * ``instr('microsoft', 'o') -> 7``
 * ``instr('good', 'bad') -> 0``
 *********************************
-translate
+<code>translate</code>
 ==============================
-<b>translate(<i>&lt;string to translate&gt;</i> : string, <i>&lt;lookup characters&gt;</i> : string, <i>&lt;replace characters&gt;</i> : string) => string</b><br/><br/>
+<code><b>translate(<i>&lt;string to translate&gt;</i> : string, <i>&lt;lookup characters&gt;</i> : string, <i>&lt;replace characters&gt;</i> : string) => string</b></code><br/><br/>
 Replace one set of characters by another set of characters in the string. Characters have  1 to 1 replacement
 * ``translate('(Hello)', '()', '[]') -> '[Hello]'``
 * ``translate('(Hello)', '()', '[') -> '[Hello'``
 *********************************
-reverse
+<code>reverse</code>
 ==============================
-<b>reverse(<i>&lt;value1&gt;</i> : string) => string</b><br/><br/>
+<code><b>reverse(<i>&lt;value1&gt;</i> : string) => string</b></code><br/><br/>
 Reverses a string
 * ``reverse('gunchus') -> 'suhcnug'``
 *********************************
-initCap
+<code>initCap</code>
 ==============================
-<b>initCap(<i>&lt;value1&gt;</i> : string) => string</b><br/><br/>
+<code><b>initCap(<i>&lt;value1&gt;</i> : string) => string</b></code><br/><br/>
 Converts the first letter of every word to uppercase. Words are identified as separated by whitespace
 * ``initCap('cool iceCREAM') -> 'Cool IceCREAM'``
 *********************************
-replace
+<code>replace</code>
 ==============================
-<b>replace(<i>&lt;string&gt;</i> : string, <i>&lt;substring to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b><br/><br/>
+<code><b>replace(<i>&lt;string&gt;</i> : string, <i>&lt;substring to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b></code><br/><br/>
 Replace all occurences of a substring with another substring in the given string
 * ``replace('doggie dog', 'dog', 'cat') -> 'catgie cat'``
 * ``replace('doggie dog', 'dog', '') -> 'gie'``
 *********************************
-regexReplace
+<code>regexReplace</code>
 ==============================
-<b>regexReplace(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b><br/><br/>
+<code><b>regexReplace(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b></code><br/><br/>
 Replace all occurences of a regex pattern with another substring in the given string Use `<regex>`(backquote) to match a string without escaping
 * ``regexReplace('100 and 200', '(\\d+)', 'bojjus') -> 'bojjus and bojjus'``
 * ``regexReplace('100 and 200', `(\d+)`, 'gunchus') -> 'gunchus and gunchus'``
 *********************************
-regexExtract
+<code>regexExtract</code>
 ==============================
-<b>regexExtract(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, [<i>&lt;match group 1-based index&gt;</i> : integral]) => string</b><br/><br/>
+<code><b>regexExtract(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, [<i>&lt;match group 1-based index&gt;</i> : integral]) => string</b></code><br/><br/>
 Extract a matching substring for a given regex pattern. The last parameter identifies the match group and is defaulted to 1 if omitted. Use `<regex>`(backquote) to match a string without escaping
 * ``regexExtract('Cost is between 600 and 800 dollars', '(\\d+) and (\\d+)', 2) -> '800'``
 * ``regexExtract('Cost is between 600 and 800 dollars', `(\d+) and (\d+)`, 2) -> '800'``
 *********************************
-regexMatch
+<code>regexMatch</code>
 ==============================
-<b>regexMatch(<i>&lt;string&gt;</i> : string, <i>&lt;regex to match&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>regexMatch(<i>&lt;string&gt;</i> : string, <i>&lt;regex to match&gt;</i> : string) => boolean</b></code><br/><br/>
 Checks if the string matches the given regex pattern. Use `<regex>`(backquote) to match a string without escaping
 * ``regexMatch('200.50', '(\\d+).(\\d+)') -> true``
 * ``regexMatch('200.50', `(\d+).(\d+)`) -> true``
 *********************************
-like
+<code>like</code>
 ==============================
-<b>like(<i>&lt;string&gt;</i> : string, <i>&lt;pattern match&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>like(<i>&lt;string&gt;</i> : string, <i>&lt;pattern match&gt;</i> : string) => boolean</b></code><br/><br/>
 The pattern is a string which is matched literally, with exception to the following special symbols:  _ matches any one character in the input (similar to . in posix regular expressions)
   % matches zero or more characters in the input (similar to .* in posix regular expressions).
   The escape character is ''. If an escape character precedes a special symbol or another escape character, the following character is matched literally. It is invalid to escape any other character.
 * ``like('icecream', 'ice%') -> true``
 *********************************
-rlike
+<code>rlike</code>
 ==============================
-<b>rlike(<i>&lt;string&gt;</i> : string, <i>&lt;pattern match&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>rlike(<i>&lt;string&gt;</i> : string, <i>&lt;pattern match&gt;</i> : string) => boolean</b></code><br/><br/>
 Checks if the string matches the given regex pattern
 * ``rlike('200.50', '(\d+).(\d+)') -> true``
 *********************************
-in
+<code>in</code>
 ==============================
-<b>in(<i>&lt;array of items&gt;</i> : array, <i>&lt;item to find&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>in(<i>&lt;array of items&gt;</i> : array, <i>&lt;item to find&gt;</i> : any) => boolean</b></code><br/><br/>
 Checks if an item is in the array
 * ``in([10, 20, 30], 10) -> true``
 * ``in(['good', 'kid'], 'bad') -> false``
 *********************************
-toString
+<code>toString</code>
 ==============================
-<b>toString(<i>&lt;value&gt;</i> : any, [<i>&lt;number format/date format&gt;</i> : string]) => string</b><br/><br/>
+<code><b>toString(<i>&lt;value&gt;</i> : any, [<i>&lt;number format/date format&gt;</i> : string]) => string</b></code><br/><br/>
 Converts a primitive datatype to a string. For numbers and date a format can be specified. If unspecified the system default is picked.Java decimal format is used for numbers. Default date format is yyyy-mm-dd
 * ``toString(10) -> '10'``
 * ``toString('engineer') -> 'engineer'``
@@ -242,9 +242,9 @@ Converts a primitive datatype to a string. For numbers and date a format can be 
 * ``toString(toDate('2018-12-31'), 'mm/dd/yy') -> '12/31/18'``
 * ``toString(4 == 20) -> 'false'``
 *********************************
-split
+<code>split</code>
 ==============================
-<b>split(<i>&lt;string to split&gt;</i> : string, <i>&lt;split characters&gt;</i> : string) => array</b><br/><br/>
+<code><b>split(<i>&lt;string to split&gt;</i> : string, <i>&lt;split characters&gt;</i> : string) => array</b></code><br/><br/>
 Splits a string based on a delimiter and returns an array of strings
 * ``split('100,200,300', ',') -> ['100', '200', '300']``
 * ``split('100,200,300', '|') -> ['100,200,300']``
@@ -254,30 +254,30 @@ Splits a string based on a delimiter and returns an array of strings
 * ``split('100, 200, 300', ', ')[20] -> NULL``
 * ``split('100200300', ',') -> ['100200300']``
 *********************************
-regexSplit
+<code>regexSplit</code>
 ==============================
-<b>regexSplit(<i>&lt;string to split&gt;</i> : string, <i>&lt;regex expression&gt;</i> : string) => array</b><br/><br/>
+<code><b>regexSplit(<i>&lt;string to split&gt;</i> : string, <i>&lt;regex expression&gt;</i> : string) => array</b></code><br/><br/>
 Splits a string based on a delimiter based on regex and returns an array of strings
 * ``regexSplit('oneAtwoBthreeC', '[CAB]') -> ['one', 'two', 'three']``
 * ``regexSplit('oneAtwoBthreeC', '[CAB]')[1] -> 'one'``
 * ``regexSplit('oneAtwoBthreeC', '[CAB]')[0] -> NULL``
 * ``regexSplit('oneAtwoBthreeC', '[CAB]')[20] -> NULL``
 *********************************
-soundex
+<code>soundex</code>
 ==============================
-<b>soundex(<i>&lt;value1&gt;</i> : string) => string</b><br/><br/>
+<code><b>soundex(<i>&lt;value1&gt;</i> : string) => string</b></code><br/><br/>
 Gets the soundex code for the string
 * ``soundex('genius') -> 'G520'``
 *********************************
-levenshtein
+<code>levenshtein</code>
 ==============================
-<b>levenshtein(<i>&lt;from string&gt;</i> : string, <i>&lt;to string&gt;</i> : string) => integer</b><br/><br/>
+<code><b>levenshtein(<i>&lt;from string&gt;</i> : string, <i>&lt;to string&gt;</i> : string) => integer</b></code><br/><br/>
 Gets the levenshtein distance between two strings
 * ``levenshtein('boys', 'girls') -> 4``
 *********************************
-slice
+<code>slice</code>
 ==============================
-<b>slice(<i>&lt;array to slice&gt;</i> : array, <i>&lt;from 1-based index&gt;</i> : integral, [<i>&lt;number of items&gt;</i> : integral]) => array</b><br/><br/>
+<code><b>slice(<i>&lt;array to slice&gt;</i> : array, <i>&lt;from 1-based index&gt;</i> : integral, [<i>&lt;number of items&gt;</i> : integral]) => array</b></code><br/><br/>
 Extracts a subset of an array from a position. Position is 1 based. If the length is omitted, it is defaulted to end of the string
 * ``slice([10, 20, 30, 40], 1, 2) -> [10, 20]``
 * ``slice([10, 20, 30, 40], 2) -> [20, 30, 40]``
@@ -286,31 +286,31 @@ Extracts a subset of an array from a position. Position is 1 based. If the lengt
 * ``slice([10, 20, 30, 40], 2)[20] -> NULL``
 * ``slice([10, 20, 30, 40], 8) -> []``
 *********************************
-true
+<code>true</code>
 ==============================
-<b>true() => boolean</b><br/><br/>
-Always returns a true value. Use the function syntax(true()) if there is an column name named 'true'
+<code><b>true() => boolean</b></code><br/><br/>
+Always returns a true value. Use the function syntax(true()) if there is a column name named 'true'
 * ``isDiscounted == true()``
 * ``isDiscounted() == true``
 *********************************
-false
+<code>false</code>
 ==============================
-<b>false() => boolean</b><br/><br/>
+<code><b>false() => boolean</b></code><br/><br/>
 Always returns a false value. Use the function syntax(false()) if there is a column name named 'false'
 * ``isDiscounted == false()``
 * ``isDiscounted() == false``
 *********************************
-toBoolean
+<code>toBoolean</code>
 ==============================
-<b>toBoolean(<i>&lt;value1&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>toBoolean(<i>&lt;value1&gt;</i> : string) => boolean</b></code><br/><br/>
 Converts a value of ('t', 'true', 'y', 'yes', '1') to true and ('f', 'false', 'n', 'no', '0') to false and NULL for any other value
 * ``toBoolean('true') -> true``
 * ``toBoolean('n') -> false``
 * ``toBoolean('truthy') -> NULL``
 *********************************
-add
+<code>add</code>
 ==============================
-<b>add(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>add(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Adds a pair of strings or numbers. Adds a date to a number of days. Appends one array of similar type to another. Same as the + operator
 * ``add(10, 20) -> 30``
 * ``10 + 20 -> 30``
@@ -320,313 +320,313 @@ Adds a pair of strings or numbers. Adds a date to a number of days. Appends one 
 * ``toDate('2012-12-12') + 3 -> 2012-12-15 (date value)``
 * ``[10, 20] + [30, 40] => [10, 20, 30, 40]``
 *********************************
-minus
+<code>minus</code>
 ==============================
-<b>minus(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>minus(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Substracts numbers. Substract from a date number of days. Same as the - operator
 * ``minus(20, 10) -> 10``
 * ``20 - 10 -> 10``
 * ``minus(toDate('2012-12-15'), 3) -> 2012-12-12 (date value)``
 * ``toDate('2012-12-15') - 3 -> 2012-12-13 (date value)``
 *********************************
-multiply
+<code>multiply</code>
 ==============================
-<b>multiply(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>multiply(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Multiplies pair of numbers. Same as the * operator
 * ``multiply(20, 10) -> 200``
 * ``20 * 10 -> 200``
 *********************************
-divide
+<code>divide</code>
 ==============================
-<b>divide(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>divide(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Divides pair of numbers. Same as the / operator
 * ``divide(20, 10) -> 2``
 * ``20 / 10 -> 2``
 *********************************
-mod
+<code>mod</code>
 ==============================
-<b>mod(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>mod(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Modulus of pair of numbers. Same as the % operator
 * ``mod(20, 8) -> 4``
 * ``20 % 8 -> 4``
 *********************************
-pMod
+<code>pMod</code>
 ==============================
-<b>pMod(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>pMod(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Positive Modulus of pair of numbers.
 * ``pmod(-20, 8) -> 4``
 *********************************
-abs
+<code>abs</code>
 ==============================
-<b>abs(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>abs(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Positive Modulus of pair of numbers.
 * ``abs(-20) -> 20``
 * ``abs(10) -> 10``
 *********************************
-and
+<code>and</code>
 ==============================
-<b>and(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b><br/><br/>
+<code><b>and(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b></code><br/><br/>
 Logical AND operator. Same as &&
 * ``and(true, false) -> false``
 * ``true && false -> false``
 *********************************
-or
+<code>or</code>
 ==============================
-<b>or(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b><br/><br/>
+<code><b>or(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b></code><br/><br/>
 Logical OR operator. Same as ||
 * ``or(true, false) -> true``
 * ``true || false -> true``
 *********************************
-xor
+<code>xor</code>
 ==============================
-<b>xor(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b><br/><br/>
+<code><b>xor(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : boolean) => boolean</b></code><br/><br/>
 Logical XOR operator. Same as ^ operator
 * ``xor(true, false) -> true``
 * ``xor(true, true) -> false``
 * ``true ^ false -> true``
 *********************************
-not
+<code>not</code>
 ==============================
-<b>not(<i>&lt;value1&gt;</i> : boolean) => boolean</b><br/><br/>
+<code><b>not(<i>&lt;value1&gt;</i> : boolean) => boolean</b></code><br/><br/>
 Logical negation operator
 * ``not(true) -> false``
 * ``not(premium)``
 *********************************
-typeMatch
+<code>typeMatch</code>
 ==============================
-<b>typeMatch(<i>&lt;type&gt;</i> : string, <i>&lt;base type&gt;</i> : string) => boolean</b><br/><br/>
+<code><b>typeMatch(<i>&lt;type&gt;</i> : string, <i>&lt;base type&gt;</i> : string) => boolean</b></code><br/><br/>
 Matches the type of the column. Can only be used in pattern expressions.number matches short, integer, long, double, float or decimal, integral matches short, integer, long, fractional matches double, float, decimal and datetime matches date or timestamptype
 * ``typeMatch(type, 'number') -> true``
 * ``typeMatch('date', 'number') -> false``
 *********************************
-toShort
+<code>toShort</code>
 ==============================
-<b>toShort(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => short</b><br/><br/>
+<code><b>toShort(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => short</b></code><br/><br/>
 Converts any numeric or string to a short value. An optional Java decimal format can be used for the conversion.Truncates any integer, long, float, double
 * ``toShort(123) -> 123``
 * ``toShort('123') -> 123``
 * ``toShort('$123', '$###') -> 123``
 *********************************
-toInteger
+<code>toInteger</code>
 ==============================
-<b>toInteger(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => integer</b><br/><br/>
+<code><b>toInteger(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => integer</b></code><br/><br/>
 Converts any numeric or string to a integer value. An optional Java decimal format can be used for the conversion.Truncates any long, float, double
 * ``toInteger(123) -> 123``
 * ``toInteger('123') -> 123``
 * ``toInteger('$123', '$###') -> 123``
 *********************************
-toLong
+<code>toLong</code>
 ==============================
-<b>toLong(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => long</b><br/><br/>
+<code><b>toLong(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => long</b></code><br/><br/>
 Converts any numeric or string to a long value. An optional Java decimal format can be used for the conversion.Truncates any float, double
 * ``toLong(123) -> 123``
 * ``toLong('123') -> 123``
 * ``toLong('$123', '$###') -> 123``
 *********************************
-toFloat
+<code>toFloat</code>
 ==============================
-<b>toFloat(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => float</b><br/><br/>
+<code><b>toFloat(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => float</b></code><br/><br/>
 Converts any numeric or string to a float value. An optional Java decimal format can be used for the conversion.Truncates any double
 * ``toFloat(123.45) -> 123.45``
 * ``toFloat('123.45') -> 123.45``
 * ``toFloat('$123.45', '$###.00') -> 123.45``
 *********************************
-toDouble
+<code>toDouble</code>
 ==============================
-<b>toDouble(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => double</b><br/><br/>
+<code><b>toDouble(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => double</b></code><br/><br/>
 Converts any numeric or string to a double value. An optional Java decimal format can be used for the conversion.
 * ``toDouble(123.45) -> 123.45``
 * ``toDouble('123.45') -> 123.45``
 * ``toDouble('$123.45', '$###.00') -> 123.45``
 *********************************
-toDecimal
+<code>toDecimal</code>
 ==============================
-<b>toDecimal(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : integral], [<i>&lt;value3&gt;</i> : integral], [<i>&lt;value4&gt;</i> : string]) => decimal(10,0)</b><br/><br/>
+<code><b>toDecimal(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : integral], [<i>&lt;value3&gt;</i> : integral], [<i>&lt;value4&gt;</i> : string]) => decimal(10,0)</b></code><br/><br/>
 Converts any numeric or string to a decimal value. If precision and scale are not specified, it is defaulted to (10,2).An optional Java decimal format can be used for the conversion.
 * ``toDecimal(123.45) -> 123.45``
 * ``toDecimal('123.45', 8, 4) -> 123.4500``
 * ``toDecimal('$123.45', 8, 4,'$###.00') -> 123.4500``
 *********************************
-equals
+<code>equals</code>
 ==============================
-<b>equals(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>equals(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison equals operator. Same as == operator
 * ``equals(12, 24) -> false``
 * ``12==24 -> false``
 * ``'abc'=='abc' -> true``
 *********************************
-notEquals
+<code>notEquals</code>
 ==============================
-<b>notEquals(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>notEquals(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison not equals operator. Same as != operator
 * ``12!=24 -> true``
 * ``'abc'!='abc' -> false``
 *********************************
-greater
+<code>greater</code>
 ==============================
-<b>greater(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>greater(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison greater operator. Same as > operator
 * ``greater(12, 24) -> false``
 * ``'abcd' > 'abc' -> true``
 *********************************
-lesser
+<code>lesser</code>
 ==============================
-<b>lesser(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>lesser(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison less operator. Same as < operator
 * ``lesser(12 < 24) -> true``
 * ``'abcd' < 'abc' -> false``
 *********************************
-greaterOrEqual
+<code>greaterOrEqual</code>
 ==============================
-<b>greaterOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>greaterOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison greater than or equal operator. Same as >= operator
 * ``greaterOrEqual(12, 12) -> false``
 * ``'abcd' >= 'abc' -> true``
 *********************************
-lesserOrEqual
+<code>lesserOrEqual</code>
 ==============================
-<b>lesserOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b><br/><br/>
+<code><b>lesserOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
 Comparison lesser than or equal operator. Same as <= operator
 * ``lesserOrEqual(12, 12) -> true``
 * ``'abcd' <= 'abc' -> false``
 *********************************
-greatest
+<code>greatest</code>
 ==============================
-<b>greatest(<i>&lt;value1&gt;</i> : any, ...) => any</b><br/><br/>
+<code><b>greatest(<i>&lt;value1&gt;</i> : any, ...) => any</b></code><br/><br/>
 Returns the greatest value among the list of values as input. Returns null if all inputs are null
 * ``greatest(10, 30, 15, 20) -> 30``
 * ``greatest(toDate('12/12/2010'), toDate('12/12/2011'), toDate('12/12/2000')) -> '12/12/2011'``
 *********************************
-least
+<code>least</code>
 ==============================
-<b>least(<i>&lt;value1&gt;</i> : any, ...) => any</b><br/><br/>
+<code><b>least(<i>&lt;value1&gt;</i> : any, ...) => any</b></code><br/><br/>
 Comparison lesser than or equal operator. Same as <= operator
 * ``least(10, 30, 15, 20) -> 10``
 * ``least(toDate('12/12/2010'), toDate('12/12/2011'), toDate('12/12/2000')) -> '12/12/2000'``
 *********************************
-power
+<code>power</code>
 ==============================
-<b>power(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>power(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Raises one number to the power of another
 * ``power(10, 2) -> 100``
 *********************************
-sqrt
+<code>sqrt</code>
 ==============================
-<b>sqrt(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>sqrt(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates the square root of a number
 * ``sqrt(9) -> 3``
 *********************************
-cbrt
+<code>cbrt</code>
 ==============================
-<b>cbrt(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>cbrt(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculate the cube root of a number
 * ``cbrt(8) -> 2.0``
 *********************************
-negate
+<code>negate</code>
 ==============================
-<b>negate(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>negate(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Negates a number. Turns positive numbers to negative and vice versa
 * ``negate(13) -> -13``
 *********************************
-cos
+<code>cos</code>
 ==============================
-<b>cos(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>cos(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a consine value
 * ``cos(10) -> -0.83907152907``
 *********************************
-acos
+<code>acos</code>
 ==============================
-<b>acos(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>acos(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a consine inverse value
 * ``acos(1) -> 0.0``
 *********************************
-cosh
+<code>cosh</code>
 ==============================
-<b>cosh(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>cosh(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a hyperbolic cosine of a value
 * ``cosh(0) -> 1.0``
 *********************************
-sin
+<code>sin</code>
 ==============================
-<b>sin(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>sin(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a sine value
 * ``sin(2) -> 0.90929742682``
 *********************************
-asin
+<code>asin</code>
 ==============================
-<b>asin(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>asin(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a inverse sine value
 * ``asin(0) -> 0.0``
 *********************************
-sinh
+<code>sinh</code>
 ==============================
-<b>sinh(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>sinh(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a hyperbolic sine value
 * ``sinh(0) -> 0.0``
 *********************************
-tan
+<code>tan</code>
 ==============================
-<b>tan(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>tan(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a tangent value
 * ``tan(0) -> 0.0``
 *********************************
-atan
+<code>atan</code>
 ==============================
-<b>atan(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>atan(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a inverse tangent value
 * ``atan(0) -> 0.0``
 *********************************
-tanh
+<code>tanh</code>
 ==============================
-<b>tanh(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>tanh(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates a hyperbolic tangent value
 * ``tanh(0) -> 0.0``
 *********************************
-atan2
+<code>atan2</code>
 ==============================
-<b>atan2(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>atan2(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Returns the angle in radians between the positive x-axis of a plane and the point given by the coordinates
 * ``atan2(0, 0) -> 0.0``
 *********************************
-factorial
+<code>factorial</code>
 ==============================
-<b>factorial(<i>&lt;value1&gt;</i> : number) => long</b><br/><br/>
+<code><b>factorial(<i>&lt;value1&gt;</i> : number) => long</b></code><br/><br/>
 Calculate the factorial of a number
 * ``factorial(5) -> 120``
 *********************************
-floor
+<code>floor</code>
 ==============================
-<b>floor(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>floor(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Returns the largest integer not greater than the number
 * ``floor(-0.1) -> -1``
 *********************************
-ceil
+<code>ceil</code>
 ==============================
-<b>ceil(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>ceil(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Returns the smallest integer not smaller than the number
 * ``ceil(-0.1) -> 0``
 *********************************
-degrees
+<code>degrees</code>
 ==============================
-<b>degrees(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>degrees(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Converts radians to degrees
 * ``degrees(3.141592653589793) -> 180``
 *********************************
-log
+<code>log</code>
 ==============================
-<b>log(<i>&lt;value1&gt;</i> : number, [<i>&lt;value2&gt;</i> : number]) => double</b><br/><br/>
+<code><b>log(<i>&lt;value1&gt;</i> : number, [<i>&lt;value2&gt;</i> : number]) => double</b></code><br/><br/>
 Calculates log value. An optional base can be supplied else a euler number if used
 * ``log(100, 10) -> 2``
 *********************************
-log10
+<code>log10</code>
 ==============================
-<b>log10(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>log10(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Calculates log value based on 10 base
 * ``log10(100) -> 2``
 *********************************
-round
+<code>round</code>
 ==============================
-<b>round(<i>&lt;number&gt;</i> : number, [<i>&lt;scale to round&gt;</i> : number], [<i>&lt;rounding option&gt;</i> : integral]) => double</b><br/><br/>
+<code><b>round(<i>&lt;number&gt;</i> : number, [<i>&lt;scale to round&gt;</i> : number], [<i>&lt;rounding option&gt;</i> : integral]) => double</b></code><br/><br/>
 Rounds a number given a optional scale and a optional rounding mode. If the scale is omitted it is defaulted to 0.  If the mode is omitted it is defaulted to ROUND_HALF_UP(5). The values for rounding include
 1 - ROUND_UP
 2 - ROUND_DOWN
@@ -640,482 +640,483 @@ Rounds a number given a optional scale and a optional rounding mode. If the scal
 * ``round(2.5, 0) -> 3.0``
 * ``round(5.3999999999999995, 2, 7) -> 5.40``
 *********************************
-currentDate
+<code>currentDate</code>
 ==============================
-<b>currentDate([<i>&lt;value1&gt;</i> : string]) => date</b><br/><br/>
+<code><b>currentDate([<i>&lt;value1&gt;</i> : string]) => date</b></code><br/><br/>
 Gets the current date when this job starts to run. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. The local timezone is used as the default.
 * ``currentDate() -> 12-12-2030``
 * ``currentDate('PST') -> 12-31-2050``
 *********************************
-currentTimestamp
+<code>currentTimestamp</code>
 ==============================
-<b>currentTimestamp() => timestamp</b><br/><br/>
+<code><b>currentTimestamp() => timestamp</b></code><br/><br/>
 Gets the current timestamp when the job starts to run with local time zone
 * ``currentTimestamp() -> 12-12-2030T12:12:12``
 *********************************
-toDate
+<code>toDate</code>
 ==============================
-<b>toDate(<i>&lt;string&gt;</i> : any, [<i>&lt;date format&gt;</i> : string]) => date</b><br/><br/>
+<code><b>toDate(<i>&lt;string&gt;</i> : any, [<i>&lt;date format&gt;</i> : string]) => date</b></code><br/><br/>
 Converts a string to a date given a optional date format. If the date format is omitted, combinations of the following are accepted. [ yyyy, yyyy-[M]M, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]dT* ]
 * ``toDate('2012-8-8') -> 2012-8-8``
 * ``toDate('12/12/2012', 'mm/dd/yyyy') -> 2012-12-12``
 *********************************
-toTimestamp
+<code>toTimestamp</code>
 ==============================
-<b>toTimestamp(<i>&lt;string&gt;</i> : any, [<i>&lt;timestamp format&gt;</i> : string], [<i>&lt;time zone&gt;</i> : string]) => timestamp</b><br/><br/>
+<code><b>toTimestamp(<i>&lt;string&gt;</i> : any, [<i>&lt;timestamp format&gt;</i> : string], [<i>&lt;time zone&gt;</i> : string]) => timestamp</b></code><br/><br/>
 Converts a string to a date given a optional timestamp format. If the timestamp is omitted the default pattern yyyy-[m]m-[d]d hh:mm:ss[.f...] is used
 * ``toTimestamp('2016-12-31 00:12:00') -> 2012-8-8T00:12:00``
 * ``toTimestamp('2016/12/31T00:12:00', 'mm/dd/yyyyThh:mm:ss') -> 2012-12-12T00:12:00``
 *********************************
-toUTC
+<code>toUTC</code>
 ==============================
-<b>toUTC(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => timestamp</b><br/><br/>
+<code><b>toUTC(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => timestamp</b></code><br/><br/>
 Converts the timestamp to UTC. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. It is defaulted to the current timezone
 * ``toUTC(currentTimeStamp()) -> 12-12-2030T19:18:12``
 * ``toUTC(currentTimeStamp(), 'Asia/Seoul') -> 12-13-2030T11:18:12``
 *********************************
-currentUTC
+<code>currentUTC</code>
 ==============================
-<b>currentUTC([<i>&lt;value1&gt;</i> : string]) => timestamp</b><br/><br/>
+<code><b>currentUTC([<i>&lt;value1&gt;</i> : string]) => timestamp</b></code><br/><br/>
 Gets the current the timestamp as UTC. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. It is defaulted to the current timezone
 * ``currentUTC() -> 12-12-2030T19:18:12``
 * ``currentUTC('Asia/Seoul') -> 12-13-2030T11:18:12``
 *********************************
-month
+<code>month</code>
 ==============================
-<b>month(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>month(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the month value of a date or timestamp
 * ``month(toDate('2012-8-8')) -> 8``
 *********************************
-year
+<code>year</code>
 ==============================
-<b>year(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>year(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the year value of a date
 * ``year(toDate('2012-8-8')) -> 2012``
 *********************************
-hour
+<code>hour</code>
 ==============================
-<b>hour(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b><br/><br/>
+<code><b>hour(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b></code><br/><br/>
 Gets the hour value of a timestamp. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. The local timezone is used as the default.
 * ``hour(toTimestamp('2009-07-30T12:58:59')) -> 12``
 * ``hour(toTimestamp('2009-07-30T12:58:59'), 'PST') -> 12``
 *********************************
-minute
+<code>minute</code>
 ==============================
-<b>minute(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b><br/><br/>
+<code><b>minute(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b></code><br/><br/>
 Gets the minute value of a timestamp. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. The local timezone is used as the default.
 * ``minute(toTimestamp('2009-07-30T12:58:59')) -> 58``
 * ``minute(toTimestamp('2009-07-30T12:58:59', 'PST')) -> 58``
 *********************************
-second
+<code>second</code>
 ==============================
-<b>second(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b><br/><br/>
+<code><b>second(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b></code><br/><br/>
 Gets the second value of a date. You can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. The local timezone is used as the default.
 * ``second(toTimestamp('2009-07-30T12:58:59')) -> 59``
 *********************************
-dayOfMonth
+<code>dayOfMonth</code>
 ==============================
-<b>dayOfMonth(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>dayOfMonth(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the day of the month given a date
 * ``dayOfMonth(toDate('2018-06-08')) -> 08``
 *********************************
-dayOfWeek
+<code>dayOfWeek</code>
 ==============================
-<b>dayOfWeek(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>dayOfWeek(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the day of the week given a date. 1 - Sunday, 2 - Monday ..., 7 - Saturday
 * ``dayOfWeek(toDate('2018-06-08')) -> 7``
 *********************************
-dayOfYear
+<code>dayOfYear</code>
 ==============================
-<b>dayOfYear(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>dayOfYear(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the day of the year given a date
 * ``dayOfYear(toDate('2016-04-09')) -> 100``
 *********************************
-weekOfYear
+<code>weekOfYear</code>
 ==============================
-<b>weekOfYear(<i>&lt;value1&gt;</i> : datetime) => integer</b><br/><br/>
+<code><b>weekOfYear(<i>&lt;value1&gt;</i> : datetime) => integer</b></code><br/><br/>
 Gets the week of the year given a date
 * ``weekOfYear(toDate('2008-02-20')) -> 8``
 *********************************
-lastDayOfMonth
+<code>lastDayOfMonth</code>
 ==============================
-<b>lastDayOfMonth(<i>&lt;value1&gt;</i> : datetime) => date</b><br/><br/>
+<code><b>lastDayOfMonth(<i>&lt;value1&gt;</i> : datetime) => date</b></code><br/><br/>
 Gets the last date of the month given a date
 * ``lastDayOfMonth(toDate('2009-01-12')) -> 2009-01-31``
 *********************************
-monthsBetween
+<code>monthsBetween</code>
 ==============================
-<b>monthsBetween(<i>&lt;from date/timestamp&gt;</i> : datetime, <i>&lt;to date/timestamp&gt;</i> : datetime, [<i>&lt;time zone&gt;</i> : boolean], [<i>&lt;value4&gt;</i> : string]) => double</b><br/><br/>
+<code><b>monthsBetween(<i>&lt;from date/timestamp&gt;</i> : datetime, <i>&lt;to date/timestamp&gt;</i> : datetime, [<i>&lt;time zone&gt;</i> : boolean], [<i>&lt;value4&gt;</i> : string]) => double</b></code><br/><br/>
 Gets the number of months between two datesYou can pass a optional timezone in the form of 'GMT', 'PST', 'UTC', 'America/Cayman'. The local timezone is used as the default.
 * ``monthsBetween(toDate('1997-02-28 10:30:00'), toDate('1996-10-30')) -> 3.94959677``
 *********************************
-addMonths
+<code>addMonths</code>
 ==============================
-<b>addMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to add&gt;</i> : integral) => datetime</b><br/><br/>
+<code><b>addMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to add&gt;</i> : integral) => datetime</b></code><br/><br/>
 Add months to a date or timestamp
 * ``addMonths(toDate('2016-08-31'), 1) -> 2016-09-30``
 * ``addMonths(toTimestamp('2016-09-30 10:10:10'), -1) -> 2016-08-31 10:10:10``
 *********************************
-addDays
+<code>addDays</code>
 ==============================
-<b>addDays(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;days to add&gt;</i> : integral) => datetime</b><br/><br/>
+<code><b>addDays(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;days to add&gt;</i> : integral) => datetime</b></code><br/><br/>
 Add days to a date or timestamp. Same as the + operator for date
 * ``addDays(toDate('2016-08-08'), 1) -> 2016-08-09``
 *********************************
-subDays
+<code>subDays</code>
 ==============================
-<b>subDays(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;days to subtract&gt;</i> : integral) => datetime</b><br/><br/>
+<code><b>subDays(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;days to subtract&gt;</i> : integral) => datetime</b></code><br/><br/>
 Subtract months from a date. Same as the - operator for date
 * ``subDays(toDate('2016-08-08'), 1) -> 2016-08-09``
 *********************************
-subMonths
+<code>subMonths</code>
 ==============================
-<b>subMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to substract&gt;</i> : integral) => datetime</b><br/><br/>
+<code><b>subMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to substract&gt;</i> : integral) => datetime</b></code><br/><br/>
 Subtract months from a date or timestamp
 * ``subMonths(toDate('2016-09-30'), 1) -> 2016-08-31``
 *********************************
-nextSequence
+<code>nextSequence</code>
 ==============================
-<b>nextSequence() => long</b><br/><br/>
-Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId  
+<code><b>nextSequence() => long</b></code><br/><br/>
+Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId
 * ``nextSequence() -> 12313112``
 *********************************
-md5
+<code>md5</code>
 ==============================
-<b>md5(<i>&lt;value1&gt;</i> : any, ...) => string</b><br/><br/>
+<code><b>md5(<i>&lt;value1&gt;</i> : any, ...) => string</b></code><br/><br/>
 Calculates the MD5 digest of set of column of varying primitive datatypes and returns a 32 character hex string. It can be used to calculate a fingerprint for a row
 * ``md5(5, 'gunchus', 8.2, 'bojjus', true, toDate('2010-4-4')) -> 'c1527622a922c83665e49835e46350fe'``
 *********************************
-sha1
+<code>sha1</code>
 ==============================
-<b>sha1(<i>&lt;value1&gt;</i> : any, ...) => string</b><br/><br/>
+<code><b>sha1(<i>&lt;value1&gt;</i> : any, ...) => string</b></code><br/><br/>
 Calculates the SHA-1 digest of set of column of varying primitive datatypes and returns a 40 character hex string. It can be used to calculate a fingerprint for a row
 * ``sha1(5, 'gunchus', 8.2, 'bojjus', true, toDate('2010-4-4')) -> '63849fd2abb65fbc626c60b1f827bd05573f0cea'``
 *********************************
-sha2
+<code>sha2</code>
 ==============================
-<b>sha2(<i>&lt;value1&gt;</i> : integer, <i>&lt;value2&gt;</i> : any, ...) => string</b><br/><br/>
+<code><b>sha2(<i>&lt;value1&gt;</i> : integer, <i>&lt;value2&gt;</i> : any, ...) => string</b></code><br/><br/>
 Calculates the SHA-2 digest of set of column of varying primitive datatypes given a bit length which can only be of values 0(256), 224, 256, 384, 512. It can be used to calculate a fingerprint for a row
 * ``sha2(256, 'gunchus', 8.2, 'bojjus', true, toDate('2010-4-4')) -> 'd3b2bff62c3a00e9370b1ac85e428e661a7df73959fa1a96ae136599e9ee20fd'``
 *********************************
-crc32
+<code>crc32</code>
 ==============================
-<b>crc32(<i>&lt;value1&gt;</i> : any, ...) => long</b><br/><br/>
+<code><b>crc32(<i>&lt;value1&gt;</i> : any, ...) => long</b></code><br/><br/>
 Calculates the CRC32 hash of set of column of varying primitive datatypes given a bit length which can only be of values 0(256), 224, 256, 384, 512. It can be used to calculate a fingerprint for a row
 * ``crc32(256, 'gunchus', 8.2, 'bojjus', true, toDate('2010-4-4')) -> 3630253689``
 *********************************
-isInsert
+<code>isInsert</code>
 ==============================
-<b>isInsert([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isInsert([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is marked for insert. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isInsert() -> true``
 * ``isInsert(1) -> false``
 *********************************
-isUpdate
+<code>isUpdate</code>
 ==============================
-<b>isUpdate([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isUpdate([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is marked for update. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isUpdate() -> true``
 * ``isUpdate(1) -> false``
 *********************************
-isDelete
+<code>isDelete</code>
 ==============================
-<b>isDelete([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isDelete([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is marked for delete. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isDelete() -> true``
 * ``isDelete(1) -> false``
 *********************************
-isMatch
+<code>isMatch</code>
 ==============================
-<b>isMatch([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isMatch([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is matched at lookup. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isMatch() -> true``
 * ``isMatch(1) -> false``
 *********************************
-isError
+<code>isError</code>
 ==============================
-<b>isError([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isError([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is marked as error. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isError() -> true``
 * ``isError(1) -> false``
 *********************************
-isIgnore
+<code>isIgnore</code>
 ==============================
-<b>isIgnore([<i>&lt;value1&gt;</i> : integer]) => boolean</b><br/><br/>
+<code><b>isIgnore([<i>&lt;value1&gt;</i> : integer]) => boolean</b></code><br/><br/>
 Checks if the row is marked to be ignored. For transformations taking more than one input stream you can pass the (1-based) index of the stream. Default value for the stream index is 1
 * ``isIgnore() -> true``
 * ``isIgnore(1) -> false``
 *********************************
-sum
+<code>sum</code>
 ==============================
-<b>sum(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>sum(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Gets the aggregate sum of a numeric column
 * ``sum(col) -> value``
 *********************************
-sumIf
+<code>sumIf</code>
 ==============================
-<b>sumIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b><br/><br/>
+<code><b>sumIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b></code><br/><br/>
 Based on criteria gets the aggregate sum of a numeric column. The condition can be based on any column
 * ``sumIf(state == 'CA' && commission < 10000, sales) -> value``
 * ``sumIf(true, sales) -> SUM(sales) ``
 *********************************
-sumDistinct
+<code>sumDistinct</code>
 ==============================
-<b>sumDistinct(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>sumDistinct(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Gets the aggregate sum of distinct values of a numeric column
 * ``sumDistinct(col) -> value``
 *********************************
-sumDistinctIf
+<code>sumDistinctIf</code>
 ==============================
-<b>sumDistinctIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b><br/><br/>
+<code><b>sumDistinctIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b></code><br/><br/>
 Based on criteria gets the aggregate sum of a numeric column. The condition can be based on any column
 * ``sumDistinctIf(state == 'CA' && commission < 10000, sales) -> value``
 * ``sumDistinctIf(true, sales) -> SUM(sales) ``
 *********************************
-count
+<code>count</code>
 ==============================
-<b>count([<i>&lt;value1&gt;</i> : any]) => long</b><br/><br/>
+<code><b>count([<i>&lt;value1&gt;</i> : any]) => long</b></code><br/><br/>
 Gets the aggregate count of values. If the optional column(s) is specified, it ignores NULL values in the count
 * ``count(custId) -> 100``
 * ``count(custId, custName) -> 50``
 * ``count() -> 125``
 * ``count(iif(isNull(custId), 1, NULL)) -> 5``
 *********************************
-countIf
+<code>countIf</code>
 ==============================
-<b>countIf(<i>&lt;value1&gt;</i> : boolean, [<i>&lt;value2&gt;</i> : any]) => long</b><br/><br/>
+<code><b>countIf(<i>&lt;value1&gt;</i> : boolean, [<i>&lt;value2&gt;</i> : any]) => long</b></code><br/><br/>
 Based on a criteria gets the aggregate count of values. If the optional column is specified, it ignores NULL values in the count
 * ``countIf(state == 'CA' && commission < 10000, name) -> 100``
 *********************************
-countDistinct
+<code>countDistinct</code>
 ==============================
-<b>countDistinct(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : any], ...) => long</b><br/><br/>
+<code><b>countDistinct(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : any], ...) => long</b></code><br/><br/>
 Gets the aggregate count of distinct values of a set of columns
 * ``countDistinct(custId, custName) -> 60``
 *********************************
-avg
+<code>avg</code>
 ==============================
-<b>avg(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>avg(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Gets the average of values of a column
 * ``avg(sales) -> 7523420.234``
 *********************************
-avgIf
+<code>avgIf</code>
 ==============================
-<b>avgIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b><br/><br/>
+<code><b>avgIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b></code><br/><br/>
 Based on a criteria gets the average of values of a column
 * ``avgIf(region == 'West', sales) -> 7523420.234``
 *********************************
-mean
+<code>mean</code>
 ==============================
-<b>mean(<i>&lt;value1&gt;</i> : number) => number</b><br/><br/>
+<code><b>mean(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Gets the mean of values of a column. Same as AVG
 * ``mean(sales) -> 7523420.234``
 *********************************
-meanIf
+<code>meanIf</code>
 ==============================
-<b>meanIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b><br/><br/>
+<code><b>meanIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b></code><br/><br/>
 Based on a criteria gets the mean of values of a column. Same as avgIf
 * ``meanIf(region == 'West', sales) -> 7523420.234``
 *********************************
-min
+<code>min</code>
 ==============================
-<b>min(<i>&lt;value1&gt;</i> : any) => any</b><br/><br/>
+<code><b>min(<i>&lt;value1&gt;</i> : any) => any</b></code><br/><br/>
 Gets the minimum value of a column
 * ``min(sales) -> 00.01``
 * ``min(orderDate) -> 12/12/2000``
 *********************************
-minIf
+<code>minIf</code>
 ==============================
-<b>minIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>minIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Based on a criteria, gets the minimum value of a column
 * ``minIf(region == 'West', sales) -> 00.01``
 *********************************
-max
+<code>max</code>
 ==============================
-<b>max(<i>&lt;value1&gt;</i> : any) => any</b><br/><br/>
+<code><b>max(<i>&lt;value1&gt;</i> : any) => any</b></code><br/><br/>
 Gets the maximum value of a column
 * ``MAX(sales) -> 12312131.12``
 *********************************
-maxIf
+<code>maxIf</code>
 ==============================
-<b>maxIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : any) => any</b><br/><br/>
+<code><b>maxIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
 Based on a criteria, gets the maximum value of a column
 * ``maxIf(region == 'West', sales) -> 99999.56``
 *********************************
-stddev
+<code>stddev</code>
 ==============================
-<b>stddev(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddev(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the standard deviation of a column
 * ``stdDev(sales) -> 122.12``
 *********************************
-stddevIf
+<code>stddevIf</code>
 ==============================
-<b>stddevIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddevIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the standard deviation of a column
 * ``stddevIf(region == 'West', sales) -> 122.12``
 *********************************
-stddevPopulation
+<code>stddevPopulation</code>
 ==============================
-<b>stddevPopulation(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddevPopulation(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the population standard deviation of a column
 * ``stddevPopulation(sales) -> 122.12``
 *********************************
-stddevPopulationIf
+<code>stddevPopulationIf</code>
 ==============================
-<b>stddevPopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddevPopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the population standard deviation of a column
 * ``stddevPopulationIf(region == 'West', sales) -> 122.12``
 *********************************
-stddevSample
+<code>stddevSample</code>
 ==============================
-<b>stddevSample(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddevSample(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the sample standard deviation of a column
 * ``stddevSample(sales) -> 122.12``
 *********************************
-stddevSampleIf
+<code>stddevSampleIf</code>
 ==============================
-<b>stddevSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>stddevSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the sample standard deviation of a column
 * ``stddevSampleIf(region == 'West', sales) -> 122.12``
 *********************************
-variance
+<code>variance</code>
 ==============================
-<b>variance(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>variance(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the variance of a column
 * ``variance(sales) -> 122.12``
 *********************************
-varianceIf
+<code>varianceIf</code>
 ==============================
-<b>varianceIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>varianceIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the variance of a column
 * ``varianceIf(region == 'West', sales) -> 122.12``
 *********************************
-variancePopulation
+<code>variancePopulation</code>
 ==============================
-<b>variancePopulation(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>variancePopulation(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the population variance of a column
 * ``variancePopulation(sales) -> 122.12``
 *********************************
-variancePopulationIf
+<code>variancePopulationIf</code>
 ==============================
-<b>variancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>variancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the population variance of a column
 * ``variancePopulationIf(region == 'West', sales) -> 122.12``
 *********************************
-varianceSample
+<code>varianceSample</code>
 ==============================
-<b>varianceSample(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>varianceSample(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the unbiased variance of a column
 * ``varianceSample(sales) -> 122.12``
 *********************************
-varianceSampleIf
+<code>varianceSampleIf</code>
 ==============================
-<b>varianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>varianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the unbiased variance of a column
 * ``varianceSampleIf(region == 'West', sales) -> 122.12``
 *********************************
-covariancePopulation
+<code>covariancePopulation</code>
 ==============================
-<b>covariancePopulation(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>covariancePopulation(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Gets the population covariance between two columns
 * ``covariancePopulation(sales, profit) -> 122.12``
 *********************************
-covariancePopulationIf
+<code>covariancePopulationIf</code>
 ==============================
-<b>covariancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b><br/><br/>
+<code><b>covariancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the population covariance of two columns
 * ``covariancePopulationIf(region == 'West', sales) -> 122.12``
 *********************************
-covarianceSample
+<code>covarianceSample</code>
 ==============================
-<b>covarianceSample(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>covarianceSample(<i>&lt;value1&gt;</i> : number, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Gets the sample covariance of two columns
 * ``covarianceSample(sales, profit) -> 122.12``
 *********************************
-covarianceSampleIf
+<code>covarianceSampleIf</code>
 ==============================
-<b>covarianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b><br/><br/>
+<code><b>covarianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the sample covariance of two columns
 * ``covarianceSampleIf(region == 'West', sales, profit) -> 122.12``
 *********************************
-kurtosis
+<code>kurtosis</code>
 ==============================
-<b>kurtosis(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>kurtosis(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the kurtosis of a column
 * ``kurtosis(sales) -> 122.12``
 *********************************
-kurtosisIf
+<code>kurtosisIf</code>
 ==============================
-<b>kurtosisIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>kurtosisIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the kurtosis of a column
 * ``kurtosisIf(region == 'West', sales) -> 122.12``
 *********************************
-skewness
+<code>skewness</code>
 ==============================
-<b>skewness(<i>&lt;value1&gt;</i> : number) => double</b><br/><br/>
+<code><b>skewness(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
 Gets the skewness of a column
 * ``skewness(sales) -> 122.12``
 *********************************
-skewnessIf
+<code>skewnessIf</code>
 ==============================
-<b>skewnessIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b><br/><br/>
+<code><b>skewnessIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
 Based on a critera, gets the skewness of a column
 * ``skewnessIf(region == 'West', sales) -> 122.12``
 *********************************
-first
+<code>first</code>
 ==============================
-<b>first(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : boolean]) => any</b><br/><br/>
+<code><b>first(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : boolean]) => any</b></code><br/><br/>
 Gets the first value of a column group. If the second parameter ignoreNulls is omitted, it is assumed false
 * ``first(sales) -> 12233.23``
 * ``first(sales, false) -> NULL``
 *********************************
-last
+<code>last</code>
 ==============================
-<b>last(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : boolean]) => any</b><br/><br/>
+<code><b>last(<i>&lt;value1&gt;</i> : any, [<i>&lt;value2&gt;</i> : boolean]) => any</b></code><br/><br/>
 Gets the last value of a column group. If the second parameter ignoreNulls is omitted, it is assumed false
 * ``last(sales) -> 523.12``
 * ``last(sales, false) -> NULL``
 *********************************
-lag
+<code>lag</code>
 ==============================
-<b>lag(<i>&lt;value&gt;</i> : any, [<i>&lt;number of rows to look before&gt;</i> : number], [<i>&lt;default value&gt;</i> : any]) => any</b><br/><br/>
+<code><b>lag(<i>&lt;value&gt;</i> : any, [<i>&lt;number of rows to look before&gt;</i> : number], [<i>&lt;default value&gt;</i> : any]) => any</b></code><br/><br/>
 Gets the value of the first parameter evaluated n rows before the current row. The second parameter is the number of rows to look backand the default value is 1. If there are not as many rows a value of null is returned unless a default value is specified
 * ``lag(amount, 2) -> 60``
 * ``lag(amount, 2000, 100) -> 100``
 *********************************
-lead
+<code>lead</code>
 ==============================
-<b>lead(<i>&lt;value&gt;</i> : any, [<i>&lt;number of rows to look after&gt;</i> : number], [<i>&lt;default value&gt;</i> : any]) => any</b><br/><br/>
+<code><b>lead(<i>&lt;value&gt;</i> : any, [<i>&lt;number of rows to look after&gt;</i> : number], [<i>&lt;default value&gt;</i> : any]) => any</b></code><br/><br/>
 Gets the value of the first parameter evaluated n rows after the current row. The second parameter is the number of rows to look forwardand the default value is 1. If there are not as many rows a value of null is returned unless a default value is specified
 * ``lead(amount, 2) -> 60``
 * ``lead(amount, 2000, 100) -> 100``
 *********************************
-cumeDist
+<code>cumeDist</code>
 ==============================
-<b>cumeDist() => integer</b><br/><br/>
+<code><b>cumeDist() => integer</b></code><br/><br/>
 The CumeDist function computes the position of a value relative to all values in the partition.The result is the number of rows preceding or equal to the current row in the ordering of the partition divided by the total number of rows in the window partition. Any tie values in the  ordering will evaluate to the same position.
 * ``cumeDist() -> 1``
 *********************************
-nTile
+<code>nTile</code>
 ==============================
-<b>nTile() => integer</b><br/><br/>
+<code><b>nTile([<i>&lt;value1&gt;</i> : integer]) => integer</b></code><br/><br/>
 The NTile function divides the rows for each window partition into `n` buckets ranging from 1 to at most `n`. Bucket values will differ by at most 1. If the number of rows in the partition does not divide evenly into the number of buckets, then the remainder values are distributed one per bucket, starting with the first bucket. The NTile function is particularly useful for the calculation of tertiles, quartiles, deciles and other common summary statistics The function calculates two variables during initialization: The size of a regular bucket, and the number of buckets that will have one extra row added to it (when the rows do not evenly fit into the number of buckets); both variables are based on the size of the current partition. During the calculation process the function keeps track of the current row number, the current bucket number, and the row number at which the bucket will change (bucketThreshold). When the current row number reaches bucket threshold, the bucket value is increased by one and the threshold is increased by the bucket size (plus one extra if the current bucket is padded).
 * ``nTile() -> 1``
+* ``nTile(numOfBuckets) -> 1``
 *********************************
-rank
+<code>rank</code>
 ==============================
-<b>rank(<i>&lt;value1&gt;</i> : any, ...) => integer</b><br/><br/>
+<code><b>rank(<i>&lt;value1&gt;</i> : any, ...) => integer</b></code><br/><br/>
 Computes the rank of a value in a group of values. The result is one plus the number of rows preceding or equal to the current row in the ordering of the partition. The values will produce gaps in the sequence. Rank works even when data is not sorted and looks for change in values
 * ``rank(salesQtr, salesAmt) -> 1``
 *********************************
-denseRank
+<code>denseRank</code>
 ==============================
-<b>denseRank(<i>&lt;value1&gt;</i> : any, ...) => integer</b><br/><br/>
+<code><b>denseRank(<i>&lt;value1&gt;</i> : any, ...) => integer</b></code><br/><br/>
 Computes the rank of a value in a group of values. The result is one plus the number of rows preceding or equal to the current row in the ordering of the partition. The values will not produce gaps in the sequence. Dense Rank works even when data is not sorted and looks for change in values
 * ``denseRank(salesQtr, salesAmt) -> 1``
 *********************************
-rowNumber
+<code>rowNumber</code>
 ==============================
-<b>rowNumber() => integer</b><br/><br/>
+<code><b>rowNumber() => integer</b></code><br/><br/>
 Assigns a sequential row numbering for rows in a window starting with 1
 * ``rowNumber() -> 1``

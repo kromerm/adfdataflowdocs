@@ -14,3 +14,4 @@
 * [ADF Data Flow Pivot Transformation](https://www.youtube.com/watch?v=Tua14ZQA3F8&t=34s)
 * [ADF Data Flow: Window Transformation](https://www.youtube.com/watch?v=m6zgbtY5AYQ)
 * [ADF Data Flow: Optimize Data Flows](https://www.youtube.com/watch?v=a2KtwUJngHo)
+* [ADF Data Flow: Deduplication of your Data](https://www.youtube.com/watch?v=OLenvYwg__I)

@@ -26,7 +26,7 @@ Lastly, you will choose the aggregation that you wish to use for the pivoted val
 
 (Optional) You can set a naming pattern with a prefix, middle, and suffix to be added to each new column name from the row values.
 
-For instance, pivoting "Sales" by "Region" would simply give you new column values from each sales value, i.e. "25", "50", "1000", etc. However, if you set a prefix value of "Sales " 
+For instance, pivoting "Sales" by "Region" would simply give you new column values from each sales value. For example: "25", "50", "1000", ... However, if you set a prefix value of "Sales", then the pivoted columns will include "Sales" in the values.
 
 <img src="../images/unpivot3.png" width="400">
 

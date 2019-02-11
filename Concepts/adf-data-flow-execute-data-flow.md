@@ -18,4 +18,12 @@ You will also need to point to an Azure Blob Storage that we can use as a stagin
 
 ## Execute Data Flow Activity in ADF V2
 
+If you are using the public ADF V2 version of Data Flows, you will not require a Linked Service because ADF will execute the Data Flow on internal ADF-managed Azure Databricks clusters.
+
+1. Select the Azure Integration Runtime to define the region location of the ADF compute you'd like to use for the data flow execution. Currently, only the auto-resolve IR is supported. This means that ADF will utilize the Databricks cluster in the same region as your Factory.
+
+2. Choose the compute type. Choose Compute Optimized for large datasets, General Purpose for general workloads, or Memory Optimized for data flows that rely heavily on aggregations and computations.
+
+3. Select the Core Count to determine how many scale-out cores of Spark that ADF should use to execute your Data Flow.
+
 <img src="../images/azureir1.png" width="400">

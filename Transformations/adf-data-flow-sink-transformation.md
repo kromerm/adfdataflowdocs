@@ -6,7 +6,7 @@
 
 <img src="../images/sink1.png" width="400">
 
-At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data.
+At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data. Data Flow debug mode does not require a sink. No data is written and no files are moved or deleted in Data Flow debug mode. You must execute your data flow using the Exec Data Flow activity for the Sink to execute. You are required to have at least 1 Sink in order to publish your data flow for pipeline execution.
 
 A common practice to account for changing incoming data and to account for schema drift is to sink the output data to a folder without a defined schema in the output dataset. You can additionally account for all column changes in your sources by selecting "Allow Schema Drift" at the Source and then auto-map all fields in the Sink.
 

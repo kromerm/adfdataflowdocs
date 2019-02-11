@@ -33,3 +33,5 @@ This separates the source *type* from the Linked Service connection type. Previo
 
 ![Scource Transformation options](../images/dataset1.png "sources")
 
+There is a new "Data Flow Compatible" checkbox on the top right of the create Dataset panel. Clicking that button will filter only the datasets that can be used with Data Flows. 
+

@@ -1,5 +1,7 @@
 # ADF Data Flow Linked Services
 
+*The Linked Services configurations for BYOC Azure Databricks only applies to the limited preview version of ADF Data Flows. For the GA Version ADF V2 Data Flows, Azure Databricks is managed by ADF and self-contained. You will use the Azure IR not Linked Services*
+
 Before you can begin debugging or executing your Data Flows, you must link to your Azure Databricks account. You can create new Azure Databricks Linked Services from the Connections section in the ADF UI or when you add a Data Flow activity to the Pipeline canvas. Choose New > Linked Service.
 
 *ADF Data Flow currently only supports Azure Databricks version 5.0*

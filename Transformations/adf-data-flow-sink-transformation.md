@@ -2,6 +2,8 @@
 
 ## Sink Transformation
 
+**NOTE: If you are using Data Flows on the ADF V2 GA Version, please go to the ADF V2 GA Version section at the bottom of this article for upates**
+
 <img src="../images/sink1.png" width="400">
 
 At the completion of your data flow transformation, you can sink your transformed data into a destination dataset. In the Sink transformation, you can choose the dataset definition that you wish to use for the destination output data.
@@ -63,3 +65,21 @@ You can set the maximum concurrent connections in the Sink transformation when w
 
 <img src="../images/maxcon.png" width="400">
 
+### Updates to Sink Transformation for ADF V2 GA Version
+
+<img src="../images/sink1.png" width="400">
+
+<img src="../images/sink2.png" width="400">
+
+1. Allow Schema Drift and Validate Schema options are now available in Sink. This will allow you to instruct ADF to either fully accept flexible schema definitions (Schema Drift) or fail the Sink if the schema changes (Validate Schema).
+
+2. Clear the Folder. ADF will truncate the sink folder contents before writing the destination files in that target folder.
+
+3. File name options
+
+* Default: Allow Spark to name files based on PART defaults
+* Pattern: Enter a name for your output files
+* Per partition: Enter a file name per partition
+* As data in column: Set the output file to the value of a column
+
+**NOTE: File operations will only execute when you are running the Execute Data Flow activity, not while in Data Flow Debug mode**

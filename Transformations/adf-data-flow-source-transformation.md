@@ -1,6 +1,6 @@
 # Azure Data Factory Data Flow Transformations
 
-## Source
+## Source on Preview Version
 
 The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow. This is where you will begin designing your Data Flows.
 
@@ -56,3 +56,30 @@ Select a column to partition on from your source table. You must also set the ma
 #### Query Condition
 
 You can optionally choose to partition the connections based on a query. For this option, simply put in the contents of a WHERE predicate. I.e. year > 1980
+
+## Source on ADF V2 Data Flow
+
+![Public Source](../images/source1.png "public source 1")
+
+### New "Validate Schema" option
+
+Use this to enforce the defined schema from your source dataset. If the incoming version of the source data does not match the defined schema, then that execution of the data flow will fail.
+
+![New Source Settings](../images/source2.png "New settings")
+
+### New settings are available on the "Settings" tab:
+
+* Wilcard paths
+* List of Files (This is a file set. Point to a text file that you create with a list of relative path files to process)
+* Column to store file name (This will store the name of the file from the source in a column in your data. Enter a new name here to store the file name string)
+* After Completion (You can choose to do nothing with the source file after the data flow executes, delete the source file(s) or move them. The paths for move are relative paths.)
+
+The file operation settings will only execute when the Data Flow is executed from a pipeline run (pipeline debug or execution run) using the Execute Data Flow activity in a pipeline.
+
+### Projection replaces schema
+
+![Projection](../images/source3.png "Projection")
+
+Similar to schemas in datasets, use Projection in Source to define the data types and formats from the source data. If you have a text file with no defined schema, click "Detect Data Type" to ask ADF to attempt to sample and infer the data types. You can set the default data formats for auto-detect using the "Define Default Format" button.
+
+![Default formats](../images/source2.png "Default formats")

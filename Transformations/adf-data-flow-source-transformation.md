@@ -4,7 +4,7 @@
 
 The Source transformation configures a data source that you wish to use to bring data into your data flow. You may have more than 1 Source transform in a single Data Flow. This is where you will begin designing your Data Flows.
 
-** NOTE: Every Data Flow requires at least 1 Source Transformation (i.e. 1 to n) **
+**NOTE: Every Data Flow requires at least 1 Source Transformation (i.e. 1 to n)**
 
 ![Scource Transformation options](../images/source.png "source 1")
 
@@ -74,7 +74,7 @@ Use this to enforce the defined schema from your source dataset. If the incoming
 * Column to store file name (This will store the name of the file from the source in a column in your data. Enter a new name here to store the file name string)
 * After Completion (You can choose to do nothing with the source file after the data flow executes, delete the source file(s) or move them. The paths for move are relative paths.)
 
-The file operation settings will only execute when the Data Flow is executed from a pipeline run (pipeline debug or execution run) using the Execute Data Flow activity in a pipeline.
+**NOTE: The file operation settings will only execute when the Data Flow is executed from a pipeline run (pipeline debug or execution run) using the Execute Data Flow activity in a pipeline. File operations do NOT execute in Data Flow debug mode**
 
 ### Projection replaces schema
 

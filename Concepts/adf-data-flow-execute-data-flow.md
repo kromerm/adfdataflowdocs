@@ -16,7 +16,7 @@ You will also need to point to an Azure Blob Storage that we can use as a stagin
 
 <img src="../images/newdataflowactivity.png" width="400">
 
-## Execute Data Flow Activity in ADF V2
+### Execute Data Flow Activity in ADF V2
 
 If you are using the public ADF V2 version of Data Flows, you will not require a Linked Service because ADF will execute the Data Flow on internal ADF-managed Azure Databricks clusters.
 
@@ -27,3 +27,9 @@ If you are using the public ADF V2 version of Data Flows, you will not require a
 3. Select the Core Count to determine how many scale-out cores of Spark that ADF should use to execute your Data Flow.
 
 <img src="../images/azureir1.png" width="400">
+
+### Parameterized Datasets
+
+In the Execute Data Flow activity, make sure to set a value for any parameters that you have in your dataset
+
+<img src="../images/params.png" width="400">

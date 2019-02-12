@@ -2,7 +2,7 @@
 
 This is the docs home repo for Azure Data Factory Data Flow preview customers. All documents herein are early release and subject to frequent change.
 
-*** LIMITED PREVIEW CUSTOMERS: Start here:
+***LIMITED PREVIEW CUSTOMERS START HERE:
 
 https://github.com/kromerm/adfdataflowdocs/blob/master/ADF%20Data%20Flow%20Get%20Started%20in%2012%20Steps.md
 

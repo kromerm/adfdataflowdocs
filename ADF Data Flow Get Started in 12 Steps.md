@@ -3,7 +3,7 @@ by balakreshnan <https://github.com/balakreshnan>
 Here’s how to get started using Azure Data factory Data Flow
 ============================================================
 
-This guide is for private preview customers to get started with Azure data factory v2 with data flow
+This guide is for limted preview customers to get started with Azure data factory v2 with data flow using the preview version of ADF with Data Flows
 ----------------------------------------------------------------------------------------------------
 
 1. To build your first Data Flow Data Factory, use the Azure Portal to create "Azure Data Factory" and select "V2 with data flow (preview)". Be sure to include the sample Data Flows by checking the "sample" checkbox:

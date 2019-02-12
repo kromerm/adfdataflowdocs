@@ -35,3 +35,7 @@ This separates the source *type* from the Linked Service connection type. Previo
 
 There is a new "Data Flow Compatible" checkbox on the top right of the create Dataset panel. Clicking that button will filter only the datasets that can be used with Data Flows. 
 
+## Import schemas
+
+When importing the schema of Data Flow datasets, you will see an Import Schema button. Clicking that button will present you with 2 options: Import from the source or import from a local file. In most cases, you will import the schema directly from the source. However, if you have a richly-defined schema file, you can point to that local file and ADF will define the schema based upon that schema file.
+

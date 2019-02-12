@@ -83,3 +83,11 @@ You can set the maximum concurrent connections in the Sink transformation when w
 * As data in column: Set the output file to the value of a column
 
 **NOTE: File operations will only execute when you are running the Execute Data Flow activity, not while in Data Flow Debug mode**
+
+With the SQL sink types, you can set:
+
+* Truncate table
+* Recreate table (performs drop/create)
+* Batch size for large data loads
+
+<img src="../images/sql001.png" width="400">

@@ -88,6 +88,6 @@ With the SQL sink types, you can set:
 
 * Truncate table
 * Recreate table (performs drop/create)
-* Batch size for large data loads
+* Batch size for large data loads. Enter a number to bucket writes into chunks.
 
 <img src="../images/sql001.png" width="400">

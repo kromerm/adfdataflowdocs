@@ -183,28 +183,28 @@ Converts the first letter of every word to uppercase. Words are identified as se
 <code>replace</code>
 ==============================
 <code><b>replace(<i>&lt;string&gt;</i> : string, <i>&lt;substring to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b></code><br/><br/>
-Replace all occurences of a substring with another substring in the given string
+Replace all occurrences of a substring with another substring in the given string
 * ``replace('doggie dog', 'dog', 'cat') -> 'catgie cat'``
 * ``replace('doggie dog', 'dog', '') -> 'gie'``
 *********************************
 <code>regexReplace</code>
 ==============================
 <code><b>regexReplace(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, <i>&lt;substring to replace&gt;</i> : string) => string</b></code><br/><br/>
-Replace all occurences of a regex pattern with another substring in the given string Use `<regex>`(backquote) to match a string without escaping
+Replace all occurrences of a regex pattern with another substring in the given string Use `<regex>`(back quote) to match a string without escaping
 * ``regexReplace('100 and 200', '(\\d+)', 'bojjus') -> 'bojjus and bojjus'``
 * ``regexReplace('100 and 200', `(\d+)`, 'gunchus') -> 'gunchus and gunchus'``
 *********************************
 <code>regexExtract</code>
 ==============================
 <code><b>regexExtract(<i>&lt;string&gt;</i> : string, <i>&lt;regex to find&gt;</i> : string, [<i>&lt;match group 1-based index&gt;</i> : integral]) => string</b></code><br/><br/>
-Extract a matching substring for a given regex pattern. The last parameter identifies the match group and is defaulted to 1 if omitted. Use `<regex>`(backquote) to match a string without escaping
+Extract a matching substring for a given regex pattern. The last parameter identifies the match group and is defaulted to 1 if omitted. Use `<regex>`(back quote) to match a string without escaping
 * ``regexExtract('Cost is between 600 and 800 dollars', '(\\d+) and (\\d+)', 2) -> '800'``
 * ``regexExtract('Cost is between 600 and 800 dollars', `(\d+) and (\d+)`, 2) -> '800'``
 *********************************
 <code>regexMatch</code>
 ==============================
 <code><b>regexMatch(<i>&lt;string&gt;</i> : string, <i>&lt;regex to match&gt;</i> : string) => boolean</b></code><br/><br/>
-Checks if the string matches the given regex pattern. Use `<regex>`(backquote) to match a string without escaping
+Checks if the string matches the given regex pattern. Use `<regex>`(back quote) to match a string without escaping
 * ``regexMatch('200.50', '(\\d+).(\\d+)') -> true``
 * ``regexMatch('200.50', `(\d+).(\d+)`) -> true``
 *********************************
@@ -323,7 +323,7 @@ Adds a pair of strings or numbers. Adds a date to a number of days. Appends one 
 <code>minus</code>
 ==============================
 <code><b>minus(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
-Substracts numbers. Substract from a date number of days. Same as the - operator
+Subtracts numbers. Subtract from a date number of days. Same as the - operator
 * ``minus(20, 10) -> 10``
 * ``20 - 10 -> 10``
 * ``minus(toDate('2012-12-15'), 3) -> 2012-12-12 (date value)``
@@ -395,7 +395,7 @@ Logical negation operator
 <code>typeMatch</code>
 ==============================
 <code><b>typeMatch(<i>&lt;type&gt;</i> : string, <i>&lt;base type&gt;</i> : string) => boolean</b></code><br/><br/>
-Matches the type of the column. Can only be used in pattern expressions.number matches short, integer, long, double, float or decimal, integral matches short, integer, long, fractional matches double, float, decimal and datetime matches date or timestamptype
+Matches the type of the column. Can only be used in pattern expressions.number matches short, integer, long, double, float or decimal, integral matches short, integer, long, fractional matches double, float, decimal and datetime matches date or timestamp type
 * ``typeMatch(type, 'number') -> true``
 * ``typeMatch('date', 'number') -> false``
 *********************************
@@ -531,7 +531,7 @@ Negates a number. Turns positive numbers to negative and vice versa
 <code>cos</code>
 ==============================
 <code><b>cos(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
-Calculates a consine value
+Calculates a cosine value
 * ``cos(10) -> -0.83907152907``
 *********************************
 <code>acos</code>
@@ -770,14 +770,14 @@ Subtract months from a date. Same as the - operator for date
 *********************************
 <code>subMonths</code>
 ==============================
-<code><b>subMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to substract&gt;</i> : integral) => datetime</b></code><br/><br/>
+<code><b>subMonths(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;months to subtract&gt;</i> : integral) => datetime</b></code><br/><br/>
 Subtract months from a date or timestamp
 * ``subMonths(toDate('2016-09-30'), 1) -> 2016-08-31``
 *********************************
 <code>nextSequence</code>
 ==============================
 <code><b>nextSequence() => long</b></code><br/><br/>
-Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId
+Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId  
 * ``nextSequence() -> 12313112``
 *********************************
 <code>md5</code>
@@ -951,7 +951,7 @@ Gets the standard deviation of a column
 <code>stddevIf</code>
 ==============================
 <code><b>stddevIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the standard deviation of a column
+Based on a criteria, gets the standard deviation of a column
 * ``stddevIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>stddevPopulation</code>
@@ -963,7 +963,7 @@ Gets the population standard deviation of a column
 <code>stddevPopulationIf</code>
 ==============================
 <code><b>stddevPopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the population standard deviation of a column
+Based on a criteria, gets the population standard deviation of a column
 * ``stddevPopulationIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>stddevSample</code>
@@ -975,7 +975,7 @@ Gets the sample standard deviation of a column
 <code>stddevSampleIf</code>
 ==============================
 <code><b>stddevSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the sample standard deviation of a column
+Based on a criteria, gets the sample standard deviation of a column
 * ``stddevSampleIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>variance</code>
@@ -987,7 +987,7 @@ Gets the variance of a column
 <code>varianceIf</code>
 ==============================
 <code><b>varianceIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the variance of a column
+Based on a criteria, gets the variance of a column
 * ``varianceIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>variancePopulation</code>
@@ -999,7 +999,7 @@ Gets the population variance of a column
 <code>variancePopulationIf</code>
 ==============================
 <code><b>variancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the population variance of a column
+Based on a criteria, gets the population variance of a column
 * ``variancePopulationIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>varianceSample</code>
@@ -1011,7 +1011,7 @@ Gets the unbiased variance of a column
 <code>varianceSampleIf</code>
 ==============================
 <code><b>varianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the unbiased variance of a column
+Based on a criteria, gets the unbiased variance of a column
 * ``varianceSampleIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>covariancePopulation</code>
@@ -1023,7 +1023,7 @@ Gets the population covariance between two columns
 <code>covariancePopulationIf</code>
 ==============================
 <code><b>covariancePopulationIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the population covariance of two columns
+Based on a criteria, gets the population covariance of two columns
 * ``covariancePopulationIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>covarianceSample</code>
@@ -1035,7 +1035,7 @@ Gets the sample covariance of two columns
 <code>covarianceSampleIf</code>
 ==============================
 <code><b>covarianceSampleIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number, <i>&lt;value3&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the sample covariance of two columns
+Based on a criteria, gets the sample covariance of two columns
 * ``covarianceSampleIf(region == 'West', sales, profit) -> 122.12``
 *********************************
 <code>kurtosis</code>
@@ -1047,7 +1047,7 @@ Gets the kurtosis of a column
 <code>kurtosisIf</code>
 ==============================
 <code><b>kurtosisIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the kurtosis of a column
+Based on a criteria, gets the kurtosis of a column
 * ``kurtosisIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>skewness</code>
@@ -1059,7 +1059,7 @@ Gets the skewness of a column
 <code>skewnessIf</code>
 ==============================
 <code><b>skewnessIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => double</b></code><br/><br/>
-Based on a critera, gets the skewness of a column
+Based on a criteria, gets the skewness of a column
 * ``skewnessIf(region == 'West', sales) -> 122.12``
 *********************************
 <code>first</code>

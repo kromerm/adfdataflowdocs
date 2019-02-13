@@ -74,6 +74,14 @@ Use this to enforce the defined schema from your source dataset. If the incoming
 * Column to store file name (This will store the name of the file from the source in a column in your data. Enter a new name here to store the file name string)
 * After Completion (You can choose to do nothing with the source file after the data flow executes, delete the source file(s) or move them. The paths for move are relative paths.)
 
+### New Settings for SQL Datasets
+
+When you are using Azure SQL DB or Azure SQL DW as your source, you will have additional options for:
+
+1. Query: Enter a SQL query for your source
+
+2. Batch size: Enter a batch size to chunk large data into batch-sized reads
+
 **NOTE: The file operation settings will only execute when the Data Flow is executed from a pipeline run (pipeline debug or execution run) using the Execute Data Flow activity in a pipeline. File operations do NOT execute in Data Flow debug mode**
 
 ### Projection replaces schema

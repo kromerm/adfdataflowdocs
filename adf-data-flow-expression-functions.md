@@ -232,14 +232,14 @@ Checks if an item is in the array
 <code>toString</code>
 ==============================
 <code><b>toString(<i>&lt;value&gt;</i> : any, [<i>&lt;number format/date format&gt;</i> : string]) => string</b></code><br/><br/>
-Converts a primitive datatype to a string. For numbers and date a format can be specified. If unspecified the system default is picked.Java decimal format is used for numbers. Default date format is yyyy-mm-dd
+Converts a primitive datatype to a string. For numbers and date a format can be specified. If unspecified the system default is picked.Java decimal format is used for numbers. Default date format is yyyy-MM-dd
 * ``toString(10) -> '10'``
 * ``toString('engineer') -> 'engineer'``
 * ``toString(123456.789, '##,###.##') -> '123,456.79'``
 * ``toString(123.78, '000000.000') -> '000123.780'``
 * ``toString(12345, '##0.#####E0') -> '12.345E3'``
 * ``toString(toDate('2018-12-31')) -> '2018-12-31'``
-* ``toString(toDate('2018-12-31'), 'mm/dd/yy') -> '12/31/18'``
+* ``toString(toDate('2018-12-31'), 'MM/dd/yy') -> '12/31/18'``
 * ``toString(4 == 20) -> 'false'``
 *********************************
 <code>split</code>
@@ -658,14 +658,14 @@ Gets the current timestamp when the job starts to run with local time zone
 <code><b>toDate(<i>&lt;string&gt;</i> : any, [<i>&lt;date format&gt;</i> : string]) => date</b></code><br/><br/>
 Converts a string to a date given a optional date format. If the date format is omitted, combinations of the following are accepted. [ yyyy, yyyy-[M]M, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]d, yyyy-[M]M-[d]dT* ]
 * ``toDate('2012-8-8') -> 2012-8-8``
-* ``toDate('12/12/2012', 'mm/dd/yyyy') -> 2012-12-12``
+* ``toDate('12/12/2012', 'MM/dd/yyyy') -> 2012-12-12``
 *********************************
 <code>toTimestamp</code>
 ==============================
 <code><b>toTimestamp(<i>&lt;string&gt;</i> : any, [<i>&lt;timestamp format&gt;</i> : string], [<i>&lt;time zone&gt;</i> : string]) => timestamp</b></code><br/><br/>
-Converts a string to a date given a optional timestamp format. If the timestamp is omitted the default pattern yyyy-[m]m-[d]d hh:mm:ss[.f...] is used
+Converts a string to a date given a optional timestamp format. If the timestamp is omitted the default pattern yyyy-[M]M-[d]d hh:mm:ss[.f...] is used
 * ``toTimestamp('2016-12-31 00:12:00') -> 2012-8-8T00:12:00``
-* ``toTimestamp('2016/12/31T00:12:00', 'mm/dd/yyyyThh:mm:ss') -> 2012-12-12T00:12:00``
+* ``toTimestamp('2016/12/31T00:12:00', 'MM/dd/yyyyThh:mm:ss') -> 2012-12-12T00:12:00``
 *********************************
 <code>toUTC</code>
 ==============================
@@ -777,7 +777,7 @@ Subtract months from a date or timestamp
 <code>nextSequence</code>
 ==============================
 <code><b>nextSequence() => long</b></code><br/><br/>
-Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId  
+Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId
 * ``nextSequence() -> 12313112``
 *********************************
 <code>md5</code>

@@ -15,3 +15,4 @@
 * [ADF Data Flow: Window Transformation](https://www.youtube.com/watch?v=m6zgbtY5AYQ)
 * [ADF Data Flow: Optimize Data Flows](https://www.youtube.com/watch?v=a2KtwUJngHo)
 * [ADF Data Flow: Deduplication of your Data](https://www.youtube.com/watch?v=OLenvYwg__I)
+* [ADF Data Flow: New Datasets Parquet and Delimited Text](https://youtu.be/kPtvfd_TzGQ)

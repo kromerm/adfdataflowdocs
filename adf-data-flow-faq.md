@@ -10,3 +10,6 @@ Q: What has changed from private preview to limited public preview in Data Flows
 
 You will no longer have to bring your own Databricks clusters. ADF will manage cluster creation and tear-down. Blob datasets and ADLS datasets are separated into Delimited Text and Parquet datasets. You can still use ADLS & Blob Store to store those files. Use the appropriate Linked Service for those storage engines.
 
+Q: Can I migrate my private preview factories to ADF V2?
+
+[Yes, follow the instructions here](https://www.slideshare.net/kromerm/adf-mapping-data-flow-private-preview-migration)

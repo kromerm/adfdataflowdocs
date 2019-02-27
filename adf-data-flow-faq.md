@@ -22,3 +22,6 @@ When Microsoft provides help or troubleshooting with Data Flows, please provide 
 * From the code view, click "Plan" on the top-right corner. The Plan swtich from JSON to the formatted DSL script plan.
 * Copy & paste this script or save it in a text file.
 
+Q: How do I access data using the other 80 dataset types in ADF?
+
+Data Flow currently allows Azure SQL DB, Azure SQL DW, Delimited Text files from Blob or ADLS, and Parquet files from Blob or ADLS natively for Source and Sink. Use the Copy Activity to stage data from any of the other connectors and then execute a Data Flow activity to transform data after it's been staged. For example, your pipeline will first Copy into Blob and then a Data Flow activity will use a dataset in Source to transform that data.

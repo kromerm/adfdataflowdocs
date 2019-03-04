@@ -20,7 +20,7 @@ You will be prompted to enter your Azure Blob Storage account information.
 
 [The data used for these samples can be found here](https://github.com/kromerm/adfdataflowdocs/tree/master/sampledata). Download the sample data and store the files in your Azure Blob storage accounts so that you can execute the samples.
 
-Use the Craete Resource plus sign button in the ADF UI to create Data Flows
+Use the Create Resource plus sign button in the ADF UI to create Data Flows
 
 <img src="images/newresource.png" width="500">
 

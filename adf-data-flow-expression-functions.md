@@ -49,7 +49,7 @@ Logical AND operator. Same as &&
 <code>asin</code>
 ==============================
 <code><b>asin(<i>&lt;value1&gt;</i> : number) => double</b></code><br/><br/>
-Calculates a inverse sine value
+Calculates an inverse sine value
 * ``asin(0) -> 0.0``
 *********************************
 <code>atan</code>
@@ -75,6 +75,27 @@ Gets the average of values of a column
 <code><b>avgIf(<i>&lt;value1&gt;</i> : boolean, <i>&lt;value2&gt;</i> : number) => number</b></code><br/><br/>
 Based on a criteria gets the average of values of a column
 * ``avgIf(region == 'West', sales) -> 7523420.234``
+*********************************
+<code>byName</code>
+==============================
+<code><b>byName(<i>&lt;column name&gt;</i> : string) => any</b></code><br/><br/>
+Selects a column value by name in the stream. If there are multiple matches, the first match is returned. If no match it returns a NULL value. The returned value has to be type converted by one of the type conversion functions(TO_DATE, TO_STRING ...).  Column names known at design time should be addressed just by their name. Computed inputs are not supported but you can use parameter substitutions
+* ``toString(byName('parent')) -> appa``
+* ``toLong(byName('income')) -> 9000000000009``
+* ``toBoolean(byName('foster')) -> false``
+* ``toLong(byName($debtCol)) -> 123456890``
+* ``birthDate -> 12/31/2050``
+* ``toString(byName('Bogus Column')) -> NULL``
+*********************************
+<code>byPosition</code>
+==============================
+<code><b>byPosition(<i>&lt;position&gt;</i> : integer) => any</b></code><br/><br/>
+Selects a column value by its relative position(1 based) in the stream. If the position is out of bounds it returns a NULL value. The returned value has to be type converted by one of the type conversion functions(TO_DATE, TO_STRING ...)Computed inputs are not supported but you can use parameter substitutions
+* ``toString(byPosition(1)) -> amma``
+* ``toDecimal(byPosition(2), 10, 2) -> 199990.99``
+* ``toBoolean(byName(4)) -> false``
+* ``toString(byName($colName)) -> family``
+* ``toString(byPosition(1234)) -> NULL``
 *********************************
 <code>case</code>
 ==============================
@@ -251,13 +272,15 @@ Checks if the string ends with the supplied string
 Comparison equals operator. Same as == operator
 * ``equals(12, 24) -> false``
 * ``12==24 -> false``
-* ``'abc'=='abc' -> true``
+* ``'bad'=='bad' -> true``
+* ``'good'== NULL -> false``
+* ``NULL===NULL -> false``
 *********************************
 <code>equalsIgnoreCase</code>
 ==============================
 <code><b>equalsIgnoreCase(<i>&lt;value1&gt;</i> : string, <i>&lt;value2&gt;</i> : string) => boolean</b></code><br/><br/>
 Comparison equals operator ignoring case. Same as <=> operator
-* ``'abc'=='abc' -> true``
+* ``'abc'<==>'abc' -> true``
 * ``equalsIgnoreCase('abc', 'Abc') -> true``
 *********************************
 <code>factorial</code>
@@ -269,7 +292,7 @@ Calculate the factorial of a number
 <code>false</code>
 ==============================
 <code><b>false() => boolean</b></code><br/><br/>
-Always returns a false value. Use the function syntax(false()) if there is a column name named 'false'
+Always returns a false value. Use the function syntax(false()) if there is a column named 'false'
 * ``isDiscounted == false()``
 * ``isDiscounted() == false``
 *********************************
@@ -607,7 +630,7 @@ Multiplies pair of numbers. Same as the * operator
 <code>nTile</code>
 ==============================
 <code><b>nTile([<i>&lt;value1&gt;</i> : integer]) => integer</b></code><br/><br/>
-The NTile function divides the rows for each window partition into `n` buckets ranging from 1 to at most `n`. Bucket values will differ by at most 1. If the number of rows in the partition does not divide evenly into the number of buckets, then the remainder values are distributed one per bucket, starting with the first bucket. The NTile function is particularly useful for the calculation of tertiles, quartiles, deciles and other common summary statistics The function calculates two variables during initialization: The size of a regular bucket will have one extra row added to it. Both variables are based on the size of the current partition. During the calculation process the function keeps track of the current row number, the current bucket number, and the row number at which the bucket will change (bucketThreshold). When the current row number reaches bucket threshold, the bucket value is increased by one and the threshold is increased by the bucket size (plus one extra if the current bucket is padded).
+The NTile function divides the rows for each window partition into `n` buckets ranging from 1 to at most `n`. Bucket values will differ by at most 1. If the number of rows in the partition does not divide evenly into the number of buckets, then the remainder values are distributed one per bucket, starting with the first bucket. The NTile function is useful for the calculation of tertiles, quartiles, deciles, and other common summary statistics. The function calculates two variables during initialization: The size of a regular bucket will have one extra row added to it. Both variables are based on the size of the current partition. During the calculation process the function keeps track of the current row number, the current bucket number, and the row number at which the bucket will change (bucketThreshold). When the current row number reaches bucket threshold, the bucket value is increased by one and the threshold is increased by the bucket size (plus one extra if the current bucket is padded).
 * ``nTile() -> 1``
 * ``nTile(numOfBuckets) -> 1``
 *********************************
@@ -620,7 +643,7 @@ Negates a number. Turns positive numbers to negative and vice versa
 <code>nextSequence</code>
 ==============================
 <code><b>nextSequence() => long</b></code><br/><br/>
-Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId
+Returns the next unique sequence. The number is consecutive only within a partition and is prefixed by the partitionId  
 * ``nextSequence() -> 12313112``
 *********************************
 <code>not</code>
@@ -640,7 +663,7 @@ Comparison not equals operator. Same as != operator
 <code>null</code>
 ==============================
 <code><b>null() => null</b></code><br/><br/>
-Returns a NULL value. Use the function syntax(null()) if there is a column name named 'null'. Any operation that uses will result in a NULL
+Returns a NULL value. Use the function syntax(null()) if there is a column named 'null'. Any operation that uses will result in a NULL
 * ``custId = NULL (for derived field)``
 * ``custId == NULL -> NULL``
 * ``'nothing' + NULL -> NULL``
@@ -731,7 +754,7 @@ Checks if the string matches the given regex pattern
 <code>round</code>
 ==============================
 <code><b>round(<i>&lt;number&gt;</i> : number, [<i>&lt;scale to round&gt;</i> : number], [<i>&lt;rounding option&gt;</i> : integral]) => double</b></code><br/><br/>
-Rounds a number given an optional scale and an optional rounding mode. If the scale is omitted, it is defaulted to 0.  If the mode is omitted it is defaulted to ROUND_HALF_UP(5). The values for rounding include
+Rounds a number given an optional scale and an optional rounding mode. If the scale is omitted, it is defaulted to 0.  If the mode is omitted, it is defaulted to ROUND_HALF_UP(5). The values for rounding include
 1 - ROUND_UP
 2 - ROUND_DOWN
 3 - ROUND_CEILING
@@ -976,7 +999,7 @@ Converts any numeric or string to a double value. An optional Java decimal forma
 <code>toFloat</code>
 ==============================
 <code><b>toFloat(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => float</b></code><br/><br/>
-Converts any numeric or string to a float value. An optional Java decimal format can be used for the conversion.Truncates any double
+Converts any numeric or string to a float value. An optional Java decimal format can be used for the conversion. Truncates any double
 * ``toFloat(123.45) -> 123.45``
 * ``toFloat('123.45') -> 123.45``
 * ``toFloat('$123.45', '$###.00') -> 123.45``
@@ -984,7 +1007,7 @@ Converts any numeric or string to a float value. An optional Java decimal format
 <code>toInteger</code>
 ==============================
 <code><b>toInteger(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => integer</b></code><br/><br/>
-Converts any numeric or string to a integer value. An optional Java decimal format can be used for the conversion.Truncates any long, float, double
+Converts any numeric or string to an integer value. An optional Java decimal format can be used for the conversion. Truncates any long, float, double
 * ``toInteger(123) -> 123``
 * ``toInteger('123') -> 123``
 * ``toInteger('$123', '$###') -> 123``
@@ -992,7 +1015,7 @@ Converts any numeric or string to a integer value. An optional Java decimal form
 <code>toLong</code>
 ==============================
 <code><b>toLong(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => long</b></code><br/><br/>
-Converts any numeric or string to a long value. An optional Java decimal format can be used for the conversion.Truncates any float, double
+Converts any numeric or string to a long value. An optional Java decimal format can be used for the conversion. Truncates any float, double
 * ``toLong(123) -> 123``
 * ``toLong('123') -> 123``
 * ``toLong('$123', '$###') -> 123``
@@ -1000,7 +1023,7 @@ Converts any numeric or string to a long value. An optional Java decimal format 
 <code>toShort</code>
 ==============================
 <code><b>toShort(<i>&lt;value&gt;</i> : any, [<i>&lt;format&gt;</i> : string]) => short</b></code><br/><br/>
-Converts any numeric or string to a short value. An optional Java decimal format can be used for the conversion.Truncates any integer, long, float, double
+Converts any numeric or string to a short value. An optional Java decimal format can be used for the conversion. Truncates any integer, long, float, double
 * ``toShort(123) -> 123``
 * ``toShort('123') -> 123``
 * ``toShort('$123', '$###') -> 123``
@@ -1048,7 +1071,7 @@ Trims a string of leading and trailing characters. If second parameter is unspec
 <code>true</code>
 ==============================
 <code><b>true() => boolean</b></code><br/><br/>
-Always returns a true value. Use the function syntax(true()) if there is a column name named 'true'
+Always returns a true value. Use the function syntax(true()) if there is a column named 'true'
 * ``isDiscounted == true()``
 * ``isDiscounted() == true``
 *********************************

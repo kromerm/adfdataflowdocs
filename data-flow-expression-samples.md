@@ -23,3 +23,7 @@ https://kromerbigdata.com/2019/01/02/azure-data-factory-data-flow-transform-data
 * regexReplace(Address1,`[ ]{2}|\.`,' ')
 * regex_extract(Address1, `^(\d+)`, 1)
 * rlike(City,'^[A-G]')
+
+## Good for Alter Row:
+
+### true() in your alter row filter will allow all rows to match that condition. Good for Upsert.

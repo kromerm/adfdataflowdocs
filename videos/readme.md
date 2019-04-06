@@ -24,6 +24,6 @@ Patterns:
 * [ADF Data Flow: ETL DW Load Pattern](https://www.youtube.com/watch?v=7mLqwtmeQFg)
 * [ADF Data Flow: Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [ADF Data Flow: Deduplication of your Data](https://www.youtube.com/watch?v=OLenvYwg__I)
-* [ADF Data Flow: Marge Files](http://youtu.be/WbDTBAyYte8)
+* [ADF Data Flow: Merge Files](http://youtu.be/WbDTBAyYte8)
 * [ADF Data Flow: SCD Type 1 Overwrite](http://youtu.be/Rz2zx5GRbrA)
 * [Flexible Schema Handling with Schema Drift](https://www.youtube.com/watch?v=1vvCM29JSAs)

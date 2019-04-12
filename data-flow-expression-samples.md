@@ -6,7 +6,7 @@ Ctrl-K Ctrl-U: Uncomment
 
 ## Convert Date to String format
 
-toString(toDate('28/03/2010', 'dd/MM/yyyy'), 'ddMMMyyyy')
+`toString(toDate('28/03/2010', 'dd/MM/yyyy'), 'ddMMMyyyy')`
 = 28Mar2010
 
 
@@ -26,4 +26,10 @@ https://kromerbigdata.com/2019/01/02/azure-data-factory-data-flow-transform-data
 
 ## Good for Alter Row:
 
-### true() in your alter row filter will allow all rows to match that condition. Good for Upsert.
+true() in your alter row filter will allow all rows to match that condition. Good for Upsert
+
+## Use byName() to access "hidden fields"
+
+When you are working in the ADF Data Flow UI, you can see the metadata as you construct your transformations. The metadata is based on the projection of the source plus the columns defined in transformations. However, in some instances you do not get the metadata due to schema drift, column patterns, or dynamic transfomrations like Pivot that create column names on the fly. In that case, you byName():
+
+`toString(byName('mynewcol'))`

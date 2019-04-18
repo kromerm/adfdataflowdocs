@@ -12,6 +12,7 @@ Transformations:
 * [ADF Data Flow: Window Transformation](https://www.youtube.com/watch?v=m6zgbtY5AYQ)
 * [ADF Data Flow: New Datasets Parquet and Delimited Text](https://youtu.be/V_2a60j2Kjo)
 * [ADF Data Flow: Alter Row Transformation](https://www.youtube.com/watch?v=4ktoohwptmQ)
+* [ADF Data Flow: Surrogate Key](https://www.youtube.com/watch?v=ISpegL9CbTM)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

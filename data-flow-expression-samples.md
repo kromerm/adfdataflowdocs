@@ -33,3 +33,9 @@ true() in your alter row filter will allow all rows to match that condition. Goo
 When you are working in the ADF Data Flow UI, you can see the metadata as you construct your transformations. The metadata is based on the projection of the source plus the columns defined in transformations. However, in some instances you do not get the metadata due to schema drift, column patterns, or dynamic transfomrations like Pivot that create column names on the fly. In that case, you byName():
 
 `toString(byName('mynewcol'))`
+
+## Fuzzy matching
+
+`Soundex(columnname)`
+
+

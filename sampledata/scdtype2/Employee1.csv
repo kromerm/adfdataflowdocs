@@ -1,0 +1,6 @@
+EmpID,Region,Status,Function,Level,Role,StartDate,EndDate
+1234,SER,A,ADM,A,Finance,1/1/2000,
+1345,SER,A,ADM,A,Finance,4/5/2008,
+1789,PNW,A,ENG,N,Engineer,7/9/2011,
+2349,PNW,I,ENG,N,Engineer,9/8/1999,4/1/2019
+8382,NER,A,RAD,A,Marketing,4/5/1998,

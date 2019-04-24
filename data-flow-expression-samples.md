@@ -38,4 +38,8 @@ When you are working in the ADF Data Flow UI, you can see the metadata as you co
 
 `Soundex(columnname)`
 
+## isNull (SSIS)
+
+`ifNull (col1, 'somevalue')`
+
 

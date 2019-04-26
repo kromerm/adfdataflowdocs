@@ -42,4 +42,8 @@ When you are working in the ADF Data Flow UI, you can see the metadata as you co
 
 `ifNull (col1, 'somevalue')`
 
+## Lookup Match / No match
+
+After your Lookup transformation, you can use subsequent transformations to inspect the results of each match row by using the expression function `isMatch()` to make further choices in your logic based on whether or not the Lookup resulted in a row match or not.
+
 

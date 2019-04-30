@@ -2,7 +2,6 @@
 
 *********************************
 ### <code>abs</code>
-==============================
 <code><b>abs(<i>&lt;value1&gt;</i> : number) => number</b></code><br/><br/>
 Positive Modulus of pair of numbers.
 * ``abs(-20) -> 20``

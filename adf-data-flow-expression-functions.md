@@ -14,7 +14,7 @@ Calculates a consine inverse value
 *********************************
 ### <code>add</code>
 <code><b>add(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
-Adds a pair of strings or numbers. Adds a date to a number of days. Appends one array of similar type to another. Same as the + operator
+Adds a pair of strings or numbers. Adds a date to a number of days. Adds a duration to a timestamp. Appends one array of similar type to another. Same as the + operator
 * ``add(10, 20) -> 30``
 * ``10 + 20 -> 30``
 * ``add('ice', 'cream') -> 'icecream'``
@@ -22,6 +22,7 @@ Adds a pair of strings or numbers. Adds a date to a number of days. Appends one 
 * ``add(toDate('2012-12-12'), 3) -> 2012-12-15 (date value)``
 * ``toDate('2012-12-12') + 3 -> 2012-12-15 (date value)``
 * ``[10, 20] + [30, 40] => [10, 20, 30, 40]``
+* ``toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS') + (days(1) + hours(2) - seconds(10)) => 2019-02-04 07:19:18.871``
 *********************************
 ### <code>addDays</code>
 <code><b>addDays(<i>&lt;date/timestamp&gt;</i> : datetime, <i>&lt;days to add&gt;</i> : integral) => datetime</b></code><br/><br/>
@@ -275,6 +276,7 @@ Converts to the timestamp from UTC. You can optionally pass the timezone in the 
 Comparison greater operator. Same as > operator
 * ``greater(12, 24) -> false``
 * ``'abcd' > 'abc' -> true``
+* ``toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS') < toTimestamp('2019-02-05 08:21:34.890', 'yyyy-MM-dd HH:mm:ss.SSS') => false``
 *********************************
 ### <code>greaterOrEqual</code>
 <code><b>greaterOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
@@ -287,6 +289,7 @@ Comparison greater than or equal operator. Same as >= operator
 Returns the greatest value among the list of values as input. Returns null if all inputs are null
 * ``greatest(10, 30, 15, 20) -> 30``
 * ``greatest(toDate('12/12/2010'), toDate('12/12/2011'), toDate('12/12/2000')) -> '12/12/2011'``
+* ``greatest(toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS'), toTimestamp('2019-02-05 08:21:34.890', 'yyyy-MM-dd HH:mm:ss.SSS')) => '2019-02-05 08:21:34.890'``
 *********************************
 ### <code>hour</code>
 <code><b>hour(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b></code><br/><br/>
@@ -416,6 +419,7 @@ Returns the length of the string
 Comparison less operator. Same as < operator
 * ``lesser(12 < 24) -> true``
 * ``'abcd' < 'abc' -> false``
+* ``toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS') < toTimestamp('2019-02-05 08:21:34.890', 'yyyy-MM-dd HH:mm:ss.SSS') => true``
 *********************************
 ### <code>lesserOrEqual</code>
 <code><b>lesserOrEqual(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => boolean</b></code><br/><br/>
@@ -507,11 +511,12 @@ Based on a criteria, gets the minimum value of a column
 *********************************
 ### <code>minus</code>
 <code><b>minus(<i>&lt;value1&gt;</i> : any, <i>&lt;value2&gt;</i> : any) => any</b></code><br/><br/>
-Subtracts numbers. Subtract from a date number of days. Same as the - operator
+Subtracts numbers. Subtract from a date number of days. Substract duration from a timestamp. Same as the - operator
 * ``minus(20, 10) -> 10``
 * ``20 - 10 -> 10``
 * ``minus(toDate('2012-12-15'), 3) -> 2012-12-12 (date value)``
 * ``toDate('2012-12-15') - 3 -> 2012-12-13 (date value)``
+* ``toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS') + (days(1) + hours(2) - seconds(10)) => 2019-02-04 07:19:18.871``
 *********************************
 ### <code>minute</code>
 <code><b>minute(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => integer</b></code><br/><br/>
@@ -906,9 +911,10 @@ Converts a primitive datatype to a string. For numbers and date a format can be 
 *********************************
 ### <code>toTimestamp</code>
 <code><b>toTimestamp(<i>&lt;string&gt;</i> : any, [<i>&lt;timestamp format&gt;</i> : string], [<i>&lt;time zone&gt;</i> : string]) => timestamp</b></code><br/><br/>
-Converts a string to a date given an optional timestamp format. Refer to Java SimpleDateFormat for all possible formats. If the timestamp is omitted the default pattern yyyy-[M]M-[d]d hh:mm:ss[.f...] is used
+Converts a string to a timestamp given an optional timestamp format. Refer to Java SimpleDateFormat for all possible formats. If the timestamp is omitted the default pattern yyyy-[M]M-[d]d hh:mm:ss[.f...] is used. Timestamp supports upto millisecond accuracy with value of 999
 * ``toTimestamp('2016-12-31 00:12:00') -> 2012-8-8T00:12:00``
 * ``toTimestamp('2016/12/31T00:12:00', 'MM/dd/yyyyThh:mm:ss') -> 2012-12-12T00:12:00``
+* ``toTimestamp('2019-02-03 05:19:28.871', 'yyyy-MM-dd HH:mm:ss.SSS') -> 2019-02-03 05:19:28.871``
 *********************************
 ### <code>toUTC</code>
 <code><b>toUTC(<i>&lt;value1&gt;</i> : timestamp, [<i>&lt;value2&gt;</i> : string]) => timestamp</b></code><br/><br/>

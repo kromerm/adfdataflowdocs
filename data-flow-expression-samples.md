@@ -46,4 +46,13 @@ When you are working in the ADF Data Flow UI, you can see the metadata as you co
 
 After your Lookup transformation, you can use subsequent transformations to inspect the results of each match row by using the expression function `isMatch()` to make further choices in your logic based on whether or not the Lookup resulted in a row match or not.
 
+## Regex to remove non-alphanumeric chars
+
+```
+regexReplace(mystring,`^a-zA-Z\d\s:`,'')
+```
+
+## Convert to Timestamp
+
+`toTimestamp('10/20/2018T08:11:22Z','MM/dd/yyyy\'T\'hh:mm:ss\'Z\'')`
 

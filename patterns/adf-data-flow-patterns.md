@@ -11,6 +11,7 @@
 * [Slowly Changing Dimension Type 2](https://mssqldude.wordpress.com/2019/04/15/adf-slowly-changing-dimension-type-2-with-mapping-data-flows-complete/)
 * [Fuzzy Matching and Dedupe](https://kromerbigdata.com/2019/04/21/use-adf-mapping-data-flows-for-fuzzy-matching-and-dedupe/)
 * [Partition Large Files](https://mssqldude.wordpress.com/2019/03/23/partition-large-files-with-adf-using-mapping-data-flows/)
+* [Data Flow Partitioning](https://dataflowninja.blogspot.com/2019/06/all-about-partitioning.html)
 * [Dynamic File Names](https://kromerbigdata.com/2019/04/05/dynamic-file-names-in-adf-with-mapping-data-flows/)
 * [Dynamic field names](https://kromerbigdata.com/2019/05/24/adf-mapping-data-flows-create-rules-to-modify-column-names/)
 * [Data Vault data model pattern by Rayis Imayev](http://datanrg.blogspot.com/2019/05/using-azure-data-factory-mapping-data.html)

@@ -32,5 +32,5 @@ Patterns:
 * [Flexible Schema Handling with Schema Drift](https://www.youtube.com/watch?v=1vvCM29JSAs)
 * [ADF Data Flow: Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [Transform SQL Server on-prem with delta data loading pattern](https://youtu.be/IN-4v0e7UIs)
-
+* [ADF Data Flow: Parameters](https://www.youtube.com/watch?v=vpuuQcFojt8)
 

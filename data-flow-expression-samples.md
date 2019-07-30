@@ -26,7 +26,13 @@ https://kromerbigdata.com/2019/01/02/azure-data-factory-data-flow-transform-data
 
 ## Good for Alter Row:
 
-true() in your alter row filter will allow all rows to match that condition. Good for Upsert
+`true()`
+
+Use it in your alter row filter will allow all rows to match that condition. Good for Upsert. No need to use 1==1.
+
+Or, if you want inequality (1==0):
+
+`false()`
 
 ## Use byName() to access "hidden fields"
 
@@ -38,9 +44,13 @@ When you are working in the ADF Data Flow UI, you can see the metadata as you co
 
 `Soundex(columnname)`
 
-## isNull (SSIS)
+## isNull / coalesce
 
-`ifNull (col1, 'somevalue')`
+`isNull (col1, 'somevalue')`
+
+or
+
+`coalesce(expression)`
 
 ## Lookup Match / No match
 

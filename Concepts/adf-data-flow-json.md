@@ -138,7 +138,7 @@ filter(['a', 'b', 'c', 'd'], #item == 'a' || #item == 'b') => ['a', 'b']
 
 ## map
 ### Description
-Maps each element of the array to a new element using the provided predicate. Map expects a reference to one element in the predicate function as #item.
+Maps each element of the array to a new element using the provided expression. Map expects a reference to one element in the expression function as #item.
 
 ### Examples
 ```
@@ -148,7 +148,7 @@ map(['a', 'b', 'c', 'd'], #item + '_processed') => ['a_processed', 'b_processed'
 
 ## reduce
 ### Description
-Accumulates elements in an array. Reduce expects a reference to an accumulator and one element in the first predicate function as #acc and #item and it expects the resulting value as #result to be used in the second predicate function.
+Accumulates elements in an array. Reduce expects a reference to an accumulator and one element in the first expression function as #acc and #item and it expects the resulting value as #result to be used in the second expression function.
 
 ### Examples
 ```
@@ -159,7 +159,7 @@ reduce([1, 2, 3, 4], 0, #acc + #item, #result + 15) => 25
 
 ## sort
 ### Description
-Sorts the array using the provided predicate function. Sort expects a reference to two consecutive elements in the predicate function as #item1 and #item2.
+Sorts the array using the provided predicate function. Sort expects a reference to two consecutive elements in the expression function as #item1 and #item2.
 
 ### Examples
 ```

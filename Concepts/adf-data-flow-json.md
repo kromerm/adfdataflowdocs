@@ -1,7 +1,35 @@
 # JSON
 ## Creating JSONs in UI
 ### Derived Column Transformation
-#### Sample DSL
+Adding a complex column to your data flow is easier through the derived column expression editor. After adding a new column and opening the editor, there are two options: enter the JSON structure manually or use the UI to add subcolumns interactively.
+
+#### Interactive UI JSON Design
+From the output schema side pane, new subcolumns can be added using the `+` menu:
+![](../images/AddSubcolumn.png "Add subcolumn")
+From there, new columns and subcolumns can be added in the same way. For each non-complex field, an expression can be added in the expression editor to the right.
+![](../images/ComplexColumn.png "Complex column")
+
+#### Manual JSON Design
+To manually add a JSON structure, add a new column and enter the expression in the editor. The expression follows the following general format:
+```
+@(
+	field1=0,
+	field2=@(
+		field1=0
+	)
+)
+```
+Which would translate to the following JSON:
+```
+{
+	"field1": 0,
+	"field2": {
+		"field1": 0
+	}
+}
+```
+
+#### Sample Manual DSL
 ```
 @(
 	title=Title,

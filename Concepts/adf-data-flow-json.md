@@ -19,12 +19,14 @@ To manually add a JSON structure, add a new column and enter the expression in t
 	)
 )
 ```
-Which would translate to the following JSON:
+If this expression were entered for a column named "complexColumn" then it would be written to the sink as the following JSON:
 ```
 {
-	"field1": 0,
-	"field2": {
-		"field1": 0
+	"complexColumn": {
+		"field1": 0,
+		"field2": {
+			"field1": 0
+		}
 	}
 }
 ```

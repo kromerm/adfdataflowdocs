@@ -9,7 +9,7 @@ Ctrl-K Ctrl-U: Uncomment
 
 TIP: If you put a comment at the top of your expression, it will appear in the transformation text box to document your transformation expressions:
 
-![Comments](media/data-flow/comments2.png "Comments")
+![Comments](media/comments2.png "Comments")
 
 ## Convert Date to String format
 

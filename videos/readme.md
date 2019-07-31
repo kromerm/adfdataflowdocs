@@ -34,4 +34,5 @@ Patterns:
 * [ADF Data Flow: Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [Transform SQL Server on-prem with delta data loading pattern](https://youtu.be/IN-4v0e7UIs)
 * [ADF Data Flow: Parameters](https://www.youtube.com/watch?v=vpuuQcFojt8)
+* [SCD Type 1 and Type 2 demo by Bob Rubocki](https://www.youtube.com/watch?v=ps12o93VAo0)
 

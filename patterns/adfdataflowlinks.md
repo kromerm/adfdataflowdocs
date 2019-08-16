@@ -1,8 +1,8 @@
 # Azure Data Factory Mapping Data Flows
 ## Helpful links
 
-* [Short video tutorials](http://aka.ms/dataflowvideos)
-* [Common data flow patterns](http://aka.ms/dataflowpatterns)
-* [Official online documentation](http://aka.ms/adfdataflowdocs)
-* [Data transformation expression language functions guide](http://aka.ms/dataflowvideos)
-* [Expressions cheatsheet](http://aka.ms/dataflowvideos)
+* [Short video tutorials](https://aka.ms/dataflowvideos)
+* [Common data flow patterns](https://aka.ms/dataflowpatterns)
+* [Official online documentation](https://aka.ms/adfdataflowdocs)
+* [Data transformation expression language functions guide](https://aka.ms/dataflowexpressions)
+* [Expression examples](https://aka.ms/dataflowexpsamples)

@@ -19,3 +19,4 @@
 * [Iterate through multiple files and folders in Source Transformation](https://kromerbigdata.com/2019/07/05/adf-mapping-data-flows-iterate-multiple-files-with-source-transformation/)
 * [End-to-end hands-on lab: Movie Analytics](http://aka.ms/moviesanalytics)
 * [Migrate Pig ETL to Data Flows](https://mssqldude.wordpress.com/2019/08/16/etl-with-adf-convert-pig-to-data-flows/)
+* [Process Fixed-length text files](https://kromerbigdata.com/2019/08/20/process-fixed-length-text-files-with-adf-mapping-data-flows/)

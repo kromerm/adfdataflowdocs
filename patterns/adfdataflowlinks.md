@@ -9,3 +9,4 @@
 * [ADF Data Flow Hands-on Lab: Chicago Crime Stats](https://github.com/kromerm/adfmappingdataflowslab)
 * [ADF Data Flow Hands-on Lab: Movies Analytics](https://aka.ms/moviesanalytics)
 * [ADF Data Flow Performance Guide](https://aka.ms/dfperf)
+* [ADF Data Flow Training Slides](https://www.slideshare.net/kromerm/adf-mapping-data-flows-training-slides)

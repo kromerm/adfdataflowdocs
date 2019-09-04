@@ -1,6 +1,7 @@
 Start Here:
 * [ADF Data Flow: Overview](https://www.youtube.com/watch?v=ZMG-qPqeH50)
 * [ADF Data Flow: Data Flow Scenarios](https://www.youtube.com/watch?v=l-Pjii8eNBM&t=6s)
+* [Debug and testing in Mapping Data Flows](http://youtu.be/Qj0mS7BsCPo)
 
 Debug and Prep:
 * [ADF Data Flow: Debug Session, Pt 1](https://www.youtube.com/watch?v=k0YHmJc14FM)

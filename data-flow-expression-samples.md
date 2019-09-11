@@ -73,3 +73,15 @@ regexReplace(mystring,`^a-zA-Z\d\s:`,'')
 
 `toTimestamp('10/20/2018T08:11:22Z','MM/dd/yyyy\'T\'hh:mm:ss\'Z\'')`
 
+## How can I create a derived column that is a nullable timestamp, like C# DateTime or SSIS NULL(DT_DATE)?
+DateReported2 =
+CASE
+    WHEN DateReported is null THEN DateReported
+    WHEN YEAR(DateReported) = 1899 THEN NULL
+    ELSE DateReported
+End
+...
+
+Solution:
+
+case(year(DateReported) != 1899, DateReported)

@@ -71,7 +71,9 @@ regexReplace(mystring,`^a-zA-Z\d\s:`,'')
 
 ## Convert to Timestamp
 
-`toTimestamp('10/20/2018T08:11:22Z','MM/dd/yyyy\'T\'hh:mm:ss\'Z\'')`
+`toString(toTimestamp('12/31/2016T00:12:00', 'MM/dd/yyyy\'T\'HH:mm:ss'), 'MM/dd /yyyy\'T\'HH:mm:ss')`
+
+Note that to include string literals in your timestamp output, you need to wrap your conversion inside of a toString()
 
 ## How can I create a derived column that is a nullable timestamp, like C# DateTime or SSIS NULL(DT_DATE)?
 DateReported2 =

@@ -18,6 +18,7 @@ Transformations:
 * [ADF Data Flow: Surrogate Key](https://www.youtube.com/watch?v=ISpegL9CbTM)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)
+* [Drifted Columns using Pivot](https://youtu.be/5MygzCX0wnM)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

@@ -42,4 +42,5 @@ Patterns:
 * [ADF Data Flow: Parameters](https://www.youtube.com/watch?v=vpuuQcFojt8)
 * [SCD Type 1 and Type 2 demo by Bob Rubocki](https://www.youtube.com/watch?v=ps12o93VAo0)
 * [Rule-based Mapping](https://youtu.be/5lf1lh1qMwU)
+* [Distinct Row & Row Counts](https://youtu.be/ryYo8UFUgTI)
 

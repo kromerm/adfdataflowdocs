@@ -87,3 +87,11 @@ End
 Solution:
 
 case(year(DateReported) != 1899, DateReported)
+
+## Row Counts
+
+To get Row Counts in Data Flows, add an Aggregate transformation, leave the Group By empty, then use `count(1)` as your aggregate function.
+
+## Distinct Rows
+
+To get distinct rows in your Data Flows, use the Aggregate transformation, set the key(s) to use for distinct in your group by, then choose `First($$)` or `Last($$)` as your aggregate function using column patterns.

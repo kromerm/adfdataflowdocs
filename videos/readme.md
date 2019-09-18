@@ -19,7 +19,7 @@ Transformations:
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)
 * [Drifted Columns using Pivot](https://youtu.be/5MygzCX0wnM)
-* [Source Transformation: Partitioned Files](https://www.youtube.com/watch?v=7Q-db4Qgc4M)
+* [Source & Sink Transformations: Partitioned Files](https://www.youtube.com/watch?v=7Q-db4Qgc4M)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

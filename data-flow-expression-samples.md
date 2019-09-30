@@ -7,6 +7,11 @@ Ctrl-K Ctrl-U: Uncomment
 
 /* This is my comment */
 
+/* This is a
+   multi-line comment */
+   
+// This is a single line comment
+
 TIP: If you put a comment at the top of your expression, it will appear in the transformation text box to document your transformation expressions:
 
 ![Comments](media/comments2.png "Comments")
@@ -95,3 +100,10 @@ To get Row Counts in Data Flows, add an Aggregate transformation, leave the Grou
 ## Distinct Rows
 
 To get distinct rows in your Data Flows, use the Aggregate transformation, set the key(s) to use for distinct in your group by, then choose `First($$)` or `Last($$)` as your aggregate function using column patterns.
+
+## Handling names with special characters
+
+When you have column names that include special characters or spaces, surround the name with curly braces.
+
+```{[dbo].this_is my complex name$$$}```
+

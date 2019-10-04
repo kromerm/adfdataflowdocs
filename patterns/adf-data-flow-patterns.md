@@ -25,3 +25,4 @@
 * [Tutorial: Big Data Analytics using Rank and Dense Rank Window Functions by Ron L'Esteve](https://www.mssqltips.com/sqlservertip/6169/azure-data-factory-mapping-data-flows-for-big-data-lake-aggregations-and-transformations/)
 * [Tutorial: Slowly changing dimensions and ETL by Ron L'Esteve](https://www.mssqltips.com/sqlservertip/6074/azure-data-factory-mapping-data-flow-for-datawarehouse-etl/)
 * [Distinct Rows and Row Counts](https://mssqldude.wordpress.com/2019/09/18/adf-data-flows-distinct-rows/)
+* [Reduce total execution time of data flow](https://mssqldude.wordpress.com/2019/10/04/reduce-execution-time-for-data-flow-activities-in-adf-pipelines/)

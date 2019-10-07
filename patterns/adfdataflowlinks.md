@@ -1,6 +1,7 @@
 # Azure Data Factory Mapping Data Flows
 ## Helpful links
 
+* [Get Started with ADF Mapping Data Flows Tutorial](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-data-flow)
 * [Short video tutorials](https://aka.ms/dataflowvideos)
 * [Common data flow patterns](https://aka.ms/dataflowpatterns)
 * [Official online documentation](https://aka.ms/adfdataflowdocs)

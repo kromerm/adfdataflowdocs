@@ -8,6 +8,7 @@ Debug and Prep:
 * [ADF Data Flow: Debug Session, Pt 2 Data Prep](https://www.youtube.com/watch?v=6ezKRDgK3rE)
 * [ADF Data Flow: Debug and Test Lifecycle](https://youtu.be/fktIWdJiqTk)
 * [Debug and testing End-to-End in Mapping Data Flows](http://youtu.be/3ANxyvDGfjA)
+* [Data Masking for Sensitive Data](https://www.youtube.com/watch?v=OFd4LeiTmfs)
 
 Transformations:
 * [ADF Data Flow: Joins](https://www.youtube.com/watch?v=zukwayEXRtg)

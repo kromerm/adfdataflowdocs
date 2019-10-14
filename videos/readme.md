@@ -22,6 +22,7 @@ Transformations:
 * [Drifted Columns using Pivot](https://youtu.be/5MygzCX0wnM)
 * [Source & Sink Transformations: Partitioned Files](https://www.youtube.com/watch?v=7Q-db4Qgc4M)
 * [JSON Transformations](https://www.youtube.com/watch?v=yY5aB7Kdhjg)
+* [Infer Data Types](https://www.youtube.com/watch?v=nJjRzlFktlA)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

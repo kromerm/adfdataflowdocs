@@ -11,3 +11,4 @@
 * [ADF Data Flow Hands-on Lab: Movies Analytics](https://aka.ms/moviesanalytics)
 * [ADF Data Flow Performance Guide](https://aka.ms/dfperf)
 * [ADF Data Flow Training Slides](https://www.slideshare.net/kromerm/adf-mapping-data-flows-training-slides)
+* [ADF Data Flow NYC Taxi Demo Lab](https://github.com/fabragaMS/ADPE2E/blob/master/Lab/Lab2/Lab2.md)

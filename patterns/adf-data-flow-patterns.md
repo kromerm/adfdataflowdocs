@@ -27,3 +27,4 @@
 * [Distinct Rows and Row Counts](https://mssqldude.wordpress.com/2019/09/18/adf-data-flows-distinct-rows/)
 * [Reduce total execution time of data flow](https://mssqldude.wordpress.com/2019/10/04/reduce-execution-time-for-data-flow-activities-in-adf-pipelines/)
 * [Dynamically skip lines in a text file](https://kromerbigdata.com/2019/09/28/adf-dynamic-skip-lines-find-data-with-variable-headers/)
+* [Create reusable patterns: SCD Type 1 example](https://techcommunity.microsoft.com/t5/Azure-Data-Factory/Create-Generic-SCD-Pattern-in-ADF-Mapping-Data-Flows/ba-p/918519)

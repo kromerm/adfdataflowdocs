@@ -12,3 +12,4 @@
 * [ADF Data Flow Performance Guide](https://aka.ms/dfperf)
 * [ADF Data Flow Training Slides](https://www.slideshare.net/kromerm/adf-mapping-data-flows-training-slides)
 * [ADF Data Flow NYC Taxi Demo Lab](https://github.com/fabragaMS/ADPE2E/blob/master/Lab/Lab2/Lab2.md)
+* [How to migrate from Notebooks ETL to ADF Mapping Data Flows](https://techcommunity.microsoft.com/t5/Azure-Data-Factory/ADF-Mapping-Data-Flows-for-Databricks-Notebook-Developers/ba-p/919214)

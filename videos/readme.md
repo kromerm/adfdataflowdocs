@@ -18,6 +18,7 @@ Transformations:
 * [ADF Data Flow: Alter Row Transformation](https://www.youtube.com/watch?v=4ktoohwptmQ)
 * [ADF Data Flow: Surrogate Key](https://www.youtube.com/watch?v=ISpegL9CbTM)
 * [ADF Data Flow: Lookup Transformation](https://www.youtube.com/watch?v=9U-0VPU2ZPU)
+* [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)
 * [Drifted Columns using Pivot](https://youtu.be/5MygzCX0wnM)

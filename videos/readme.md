@@ -1,7 +1,9 @@
 Start Here:
 * [ADF Data Flow: Overview](https://www.youtube.com/watch?v=ZMG-qPqeH50)
 * [ADF Data Flow: Data Flow Scenarios](https://www.youtube.com/watch?v=l-Pjii8eNBM&t=6s)
+* [ADF Data Flows: Getting started](http://youtu.be/MFw7t_8tuV4)
 * [Getting started with ADF Data Flows from Altius](https://www.youtube.com/watch?v=CQ1JfgZKH9s&t=981s)
+* [Getting started with Mapping Data Flows by Adam from Azure 4 Everyone](https://www.youtube.com/watch?v=AUpMCRggjIM)
 
 Debug and Prep:
 * [ADF Data Flow: Debug Session, Pt 1](https://www.youtube.com/watch?v=k0YHmJc14FM)
@@ -20,6 +22,8 @@ Transformations:
 * [ADF Data Flow: Surrogate Key](https://www.youtube.com/watch?v=ISpegL9CbTM)
 * [ADF Data Flow: Lookup Transformation](https://www.youtube.com/watch?v=9U-0VPU2ZPU)
 * [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)
+* [ADF Data Flows: Aggregate](http://youtu.be/jdL75xIr98I)
+* [ADF Data Flows: Derived Columns](https://www.youtube.com/watch?v=FFCbU4ujCiY)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)
 * [Drifted Columns using Pivot](https://youtu.be/5MygzCX0wnM)
@@ -32,6 +36,7 @@ Optimize:
 * [ADF Data Flow: Data Lineage](https://www.youtube.com/watch?v=5KvqYF-y93s)
 * [ADF Data Flow: Optimize Data Flows](https://www.youtube.com/watch?v=a2KtwUJngHo)
 * [ADF Data Flow: Iterate files with parameters](http://youtu.be/uEgz0ptYRDM?hd=1)
+* [ADF Data Flow: Decrease start-up times]()
 
 Patterns:
 * [ADF Data Flow: Staging Data Pattern](https://youtu.be/mZLKdyoL3Mo)

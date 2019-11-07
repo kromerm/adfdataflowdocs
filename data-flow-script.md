@@ -12,7 +12,7 @@ Here are a few examples:
 - Complex expressions that are difficult to manage in the UI or are resulting in validation issues
 - Debugging and better understanding various errors returned during execution
 
-## How do I add transforms
+## How to add transforms
 Adding transformations requires three basic steps: adding the core transformation data, rerouting the input stream, and then rerouting the output stream. This can be seen easiest in an example.
 Let's say we start with a simple source to sink data flow like the following:
 

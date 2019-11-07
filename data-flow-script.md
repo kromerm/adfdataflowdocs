@@ -2,7 +2,7 @@
 ## What is the DFS?
 The data flow script (DFS) is the underlying text, similar to a coding language, that is used to execute the transformations that are included in a mapping data flow. Every transformation is represented by a series of properties that provide the necessary information to run the job properly.
 
-For instance, `allowSchemaDrift: true,` in a source transformation tells the service to include all columns from the source dataset even if they are not included in the schema projection.
+For instance, `allowSchemaDrift: true,` in a source transformation tells the service to include all columns from the source dataset in the data flow even if they are not included in the schema projection.
 
 ## Use cases
 The DFS is usually hidden from users and is automatically produced by the user interface. As a result, most of the time reading or editing the DFS directly is unnecessary. There are some cases, though, where it can be helpful or necessary to have an understanding of the script while debugging and producing data flows.

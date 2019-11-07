@@ -1,6 +1,6 @@
 # Data Flow Script (DFS)
 ## What is the DFS?
-The data flow script (DFS) is the underlying text, similar to a coding language, that is used to execute the transformations that are included in a mapping data flow. Every transformation is represented by a series of properties that provide the necessary information to run the job properly. For instance, 
+The data flow script (DFS) is the underlying text, similar to a coding language, that is used to execute the transformations that are included in a mapping data flow. Every transformation is represented by a series of properties that provide the necessary information to run the job properly. For instance, `allowSchemaDrift: true,` in a source transformation tells the service to include all columns from the source dataset even if they are not included in the schema projection.
 
 ## Use cases
 The DFS is usually hidden from users and is automatically produced by the user interface. As a result, most of the time reading or editing the DFS directly is unnecessary. There are some cases, though, where it can be helpful or necessary to have an understanding of the script while debugging and producing data flows.
@@ -73,16 +73,41 @@ source1 derive(upperCaseTitle = upper(title)) ~> deriveTransformationName
 	validateSchema: false) ~> sink1
 </pre>
 
-## What are top level constructs
+## DFS fundamentals
+The DFS is composed of a series of connected transformations, including sources, sinks, and various others which can add new columns, filter data, join data, and much more.
+Usually, the script with start with one or more sources followed by many transformations and ending with one or more sinks.
+
+Sources all have the same basic construction:
+<pre>
+source(
+  <i>source properties</i>
+) ~> <b>source_name</b>
+</pre>
+For instance, a simple source with three columns (movieId, title, genres) would be:
+<pre>
+source(output(
+		movieId as string,
+		title as string,
+		genres as string
+	),
+	allowSchemaDrift: true,
+	validateSchema: false) ~> source1
+</pre>
+
 All transformations other than sources have the same basic construction:
 <pre>
 <b>name_of_incoming_stream</b> transformation_type(
   <i>properties</i>
 ) ~> <b>new_stream_name</b>
 </pre>
-For example, a simple derive transformation that takes a column and overwrites it with an uppercase version would be as follows:
+For example, a simple derive transformation that takes a column (title) and overwrites it with an uppercase version would be as follows:
 <pre>
 source1 derive(
-  column1 = upper(column1)
+  title = upper(title)
 ) ~> derive1
+</pre>
+And a sink with no schema would simply be:
+<pre>
+derive1 sink(allowSchemaDrift: true,
+	validateSchema: false) ~> sink1
 </pre>

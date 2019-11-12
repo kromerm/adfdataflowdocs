@@ -24,6 +24,7 @@ Transformations:
 * [ADF Data Flows: Aggregate](http://youtu.be/jdL75xIr98I)
 * [ADF Data Flows: Derived Columns](https://www.youtube.com/watch?v=FFCbU4ujCiY)
 * [ADF Data Flows: Union](http://youtu.be/_Et6mg1tEr8?hd=1)
+* [ADF Data Flows: Select and New Branch](http://youtu.be/F9VjQ_YyRyU?hd=1)
 * [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)

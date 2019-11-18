@@ -1,7 +1,11 @@
-## Shortcuts
+## Keyboard shortcuts
 
-Ctrl-K Ctrl-C: Comment entire line
-Ctrl-K Ctrl-U: Uncomment
+* ```Ctrl-K Ctrl-C```: Comments entire line
+* ```Ctrl-K Ctrl-U```: Uncomment
+* ```F1```: Provide editor help commands
+* ```Alt-Down Arrow```: Move current line down
+* ```Alt-Up Arrow```: Move current line up
+* ```Cntrl-Space```: Show context help
 
 ## Manual Comments
 

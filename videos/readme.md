@@ -58,3 +58,5 @@ Patterns:
 * [Rule-based Mapping](https://youtu.be/5lf1lh1qMwU)
 * [Distinct Row & Row Counts](https://youtu.be/ryYo8UFUgTI)
 * [Handling truncation errors](http://youtu.be/sPpcSiKQz34)
+* [Partition your files in the data lake](https://youtu.be/VNWv-MvLQ_0)
+* [Intelligent data routing](https://youtu.be/PIGw-Z-0upw)

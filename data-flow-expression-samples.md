@@ -83,9 +83,14 @@ regexReplace(mystring,`^a-zA-Z\d\s:`,'')
 
 `toString(toTimestamp('12/31/2016T00:12:00', 'MM/dd/yyyy\'T\'HH:mm:ss'), 'MM/dd /yyyy\'T\'HH:mm:ss')`
 
-Note that to include string literals in your timestamp output, you need to wrap your conversion inside of a toString()
+Note that to include string literals in your timestamp output, you need to wrap your conversion inside of a toString().
+
+Here is how to convert seconds from Epoch to a date or timestamp:
+
+`toTimestamp(seconds(1575250977))`
 
 ## How can I create a derived column that is a nullable timestamp, like C# DateTime or SSIS NULL(DT_DATE)?
+
 DateReported2 =
 CASE
     WHEN DateReported is null THEN DateReported

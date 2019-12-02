@@ -40,6 +40,7 @@ Optimize:
 * [ADF Data Flow: Optimize Data Flows](https://www.youtube.com/watch?v=a2KtwUJngHo)
 * [ADF Data Flow: Iterate files with parameters](http://youtu.be/uEgz0ptYRDM?hd=1)
 * [ADF Data Flow: Decrease start-up times]()
+* [ADF Data Flow Perf: SQL DB](https://youtu.be/iyZT5CY3V_4)
 
 Patterns:
 * [ADF Data Flow: Staging Data Pattern](https://youtu.be/mZLKdyoL3Mo)

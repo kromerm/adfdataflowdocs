@@ -52,6 +52,7 @@ Patterns:
 * [ADF Data Flow: SCD Type 2 History](http://youtu.be/123CptslKvU)
 * [ADF Data Flow: Fact Table Loading](http://youtu.be/ABG3X9pgFPQ)
 * [ADF Data Flow: Logical Models](http://youtu.be/K5tgzLjEE9Q)
+* [ADF Data Flow: Detect source data changes](http://youtu.be/CaxIlI7oXfI?hd=1)
 * [Flexible Schema Handling with Schema Drift](https://www.youtube.com/watch?v=1vvCM29JSAs)
 * [ADF Data Flow: Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
 * [Transform SQL Server on-prem with delta data loading pattern](https://youtu.be/IN-4v0e7UIs)

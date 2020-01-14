@@ -25,7 +25,7 @@ Transformations:
 * [ADF Data Flows: Union Transformation](http://youtu.be/_Et6mg1tEr8?hd=1)
 * [ADF Data Flows: Unpivot Transformation](http://youtu.be/KFYkxcpB8b0?hd=1)
 * [ADF Data Flows: Exists Transformation](http://youtu.be/GS8JVgNBMfs?hd=1)
-* [ADF Data Flows: Filter Transformation]()
+* [ADF Data Flows: Filter Transformation](https://youtu.be/OhbKDOXSfeE)
 * [ADF Data Flows: Conditional Split Transformation]()
 * [ADF Data Flows: Select and New Branch](http://youtu.be/F9VjQ_YyRyU?hd=1)
 * [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)

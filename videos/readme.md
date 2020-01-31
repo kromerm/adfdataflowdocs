@@ -67,3 +67,4 @@ Patterns:
 * [Partition your files in the data lake](https://youtu.be/VNWv-MvLQ_0)
 * [Intelligent data routing](https://youtu.be/PIGw-Z-0upw)
 * [Transform and Create Multiple Tables](https://www.youtube.com/watch?v=Sj15Yjwai1A)
+* [Data Quality Patterns](https://www.youtube.com/watch?v=wjsi9g3ffco)

@@ -68,3 +68,4 @@ Patterns:
 * [Intelligent data routing](https://youtu.be/PIGw-Z-0upw)
 * [Transform and Create Multiple Tables](https://www.youtube.com/watch?v=Sj15Yjwai1A)
 * [Data Quality Patterns](https://www.youtube.com/watch?v=wjsi9g3ffco)
+* [Self-join patterns](https://www.youtube.com/watch?v=Dx1kANfnvmk&feature=youtu.be&hd=1)

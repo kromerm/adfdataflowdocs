@@ -73,3 +73,4 @@ Patterns:
 
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)
+* [Split Arrays and Case Statement](http://youtu.be/DHNH8ZO7YjI?hd=1)

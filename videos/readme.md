@@ -36,6 +36,7 @@ Transformations:
 * [ADF Data Flows: New Datasets Parquet and Delimited Text](https://youtu.be/V_2a60j2Kjo)
 * [JSON Transformations](https://www.youtube.com/watch?v=yY5aB7Kdhjg)
 * [Infer Data Types](https://www.youtube.com/watch?v=nJjRzlFktlA)
+* [Dynamic Joins and Lookups](https://youtu.be/CMOPPie9bXM)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

@@ -12,7 +12,7 @@ Debug and Prep:
 * [Mapping and Wrangling: Data Exploration](http://youtu.be/En1ztyh5GaA)
 * [Debug and testing End-to-End in Mapping Data Flows](http://youtu.be/3ANxyvDGfjA)
 * [Data Masking for Sensitive Data](https://www.youtube.com/watch?v=OFd4LeiTmfs)
-* [Benchmark Timings](http://youtu.be/xxIIaMU_2nE?hd=1)
+* [Benchmark Timings](http://youtu.be/6CSbWm4lRhw?hd=1)
 
 Transformations:
 * [ADF Data Flows: Joins](https://www.youtube.com/watch?v=zukwayEXRtg)

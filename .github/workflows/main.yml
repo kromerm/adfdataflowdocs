@@ -8,5 +8,5 @@ jobs:
     - name: Find and Replace
       uses: jacobtomlinson/gha-find-replace@master
       with:
-        find: "Mark"
-        replace: "Markk"
+        find: "Data Flow"
+        replace: "DataFlow"

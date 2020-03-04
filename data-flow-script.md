@@ -1,4 +1,4 @@
-# Data flow script (DFS)
+# Data Flow script (DFS)
 ## What is the DFS?
 The data flow script (DFS) is the underlying text, similar to a coding language, that is used to execute the transformations that are included in a mapping data flow. Every transformation is represented by a series of properties that provide the necessary information to run the job properly.
 

@@ -75,3 +75,4 @@ Patterns:
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)
 * [Split Arrays and Case Statement](http://youtu.be/DHNH8ZO7YjI?hd=1)
+* [Fun with string interpolation and parameters](https://youtu.be/hb3-cn2CMgM)

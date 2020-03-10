@@ -29,6 +29,7 @@ Transformations:
 * [ADF Data Flows: Filter Transformation](https://youtu.be/OhbKDOXSfeE)
 * [ADF Data Flows: Conditional Split Transformation](http://youtu.be/W1lQHojhKZw?hd=1)
 * [ADF Data Flows: Select and New Branch](http://youtu.be/F9VjQ_YyRyU?hd=1)
+* [ADF Data Flows: Flatten Transformation](https://youtu.be/VY2tFQJoAXE)
 * [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)

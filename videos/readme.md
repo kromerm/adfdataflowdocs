@@ -13,6 +13,7 @@ Debug and Prep:
 * [Debug and testing End-to-End in Mapping Data Flows](http://youtu.be/3ANxyvDGfjA)
 * [Data Masking for Sensitive Data](https://www.youtube.com/watch?v=OFd4LeiTmfs)
 * [Benchmark Timings](http://youtu.be/6CSbWm4lRhw?hd=1)
+* [Dynamically optimize data flow cluster size at runtime](https://www.youtube.com/watch?v=jWSkJdtiJNM)
 
 Transformations:
 * [ADF Data Flows: Joins](https://www.youtube.com/watch?v=zukwayEXRtg)

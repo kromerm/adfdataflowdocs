@@ -60,10 +60,10 @@ Patterns:
 * [ADF Data Flow: Fact Table Loading](http://youtu.be/ABG3X9pgFPQ)
 * [ADF Data Flow: Logical Models](http://youtu.be/K5tgzLjEE9Q)
 * [ADF Data Flow: Detect source data changes](http://youtu.be/CaxIlI7oXfI?hd=1)
-* [Flexible Schema Handling with Schema Drift](https://www.youtube.com/watch?v=1vvCM29JSAs)
 * [ADF Data Flow: Schema Drift Handling](https://www.youtube.com/watch?v=vSTn_aGq3C8)
-* [Transform SQL Server on-prem with delta data loading pattern](https://youtu.be/IN-4v0e7UIs)
+* [Flexible Schema Handling with Schema Drift](https://www.youtube.com/watch?v=1vvCM29JSAs)
 * [ADF Data Flow: Parameters](https://www.youtube.com/watch?v=vpuuQcFojt8)
+* [Transform SQL Server on-prem with delta data loading pattern](https://youtu.be/IN-4v0e7UIs)
 * [SCD Type 1 and Type 2 demo by Bob Rubocki](https://www.youtube.com/watch?v=ps12o93VAo0)
 * [Rule-based Mapping](https://youtu.be/5lf1lh1qMwU)
 * [Distinct Row & Row Counts](https://youtu.be/ryYo8UFUgTI)
@@ -73,6 +73,7 @@ Patterns:
 * [Transform and Create Multiple Tables](https://www.youtube.com/watch?v=Sj15Yjwai1A)
 * [Data Quality Patterns](https://www.youtube.com/watch?v=wjsi9g3ffco)
 * [Self-join patterns](https://www.youtube.com/watch?v=Dx1kANfnvmk&feature=youtu.be&hd=1)
+* [Data lake file output options](https://www.youtube.com/watch?v=NAPSbjvSQA8)
 
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)

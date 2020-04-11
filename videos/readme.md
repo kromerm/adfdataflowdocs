@@ -74,6 +74,7 @@ Patterns:
 * [Data Quality Patterns](https://www.youtube.com/watch?v=wjsi9g3ffco)
 * [Self-join patterns](https://www.youtube.com/watch?v=Dx1kANfnvmk&feature=youtu.be&hd=1)
 * [Data lake file output options](https://www.youtube.com/watch?v=NAPSbjvSQA8)
+* [Evolving database schema handling](http://youtu.be/urzLAb83IjU?hd=1)
 
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)

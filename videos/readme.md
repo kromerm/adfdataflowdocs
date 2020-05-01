@@ -83,3 +83,4 @@ Expressions:
 * [Fun with string interpolation and parameters](https://youtu.be/hb3-cn2CMgM)
 * [Data Flow Script Intro: Copy, Paste, Snippets](https://www.youtube.com/watch?v=3_1I4XdoBKQ)
 * [Data Quality Expressions](https://www.youtube.com/watch?v=O8gmv5-lXhs)
+* [Collect aggregate function](https://www.youtube.com/watch?v=zneE18EHJSE)

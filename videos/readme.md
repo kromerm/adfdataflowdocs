@@ -22,6 +22,7 @@ Transformations:
 * [ADF Data Flows: Alter Row Transformation](https://www.youtube.com/watch?v=4ktoohwptmQ)
 * [ADF Data Flows: Surrogate Key Transformation](https://www.youtube.com/watch?v=ISpegL9CbTM)
 * [ADF Data Flows: Lookup Transformation](https://www.youtube.com/watch?v=9U-0VPU2ZPU)
+* [ADF Data Flows: Lookup Transformation Updates & Tips](https://youtu.be/MBskWoeuTLw)
 * [ADF Data Flows: Aggregate Transformation](http://youtu.be/jdL75xIr98I)
 * [ADF Data Flows: Derived Column Transformation](https://www.youtube.com/watch?v=FFCbU4ujCiY)
 * [ADF Data Flows: Union Transformation](http://youtu.be/_Et6mg1tEr8?hd=1)

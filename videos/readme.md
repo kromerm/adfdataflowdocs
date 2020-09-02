@@ -56,7 +56,7 @@ Patterns:
 * [ADF Data Flow: Staging Data Pattern](https://youtu.be/mZLKdyoL3Mo)
 * [ADF Data Flow: Clean Addresses Pattern](https://youtu.be/axEYbuU3lmw)
 * [ADF Data Flow: ETL DW Load Pattern](https://www.youtube.com/watch?v=7mLqwtmeQFg)
-* [ADF Data Flow: Deduplication of your Data](https://www.youtube.com/watch?v=OLenvYwg__I)
+* [ADF Data Flow: Deduplication of your Data](https://youtu.be/QOi26ETtPTw)
 * [ADF Data Flow: Merge Files](http://youtu.be/WbDTBAyYte8)
 * [ADF Data Flow: SCD Type 1 Overwrite](http://youtu.be/Rz2zx5GRbrA)
 * [ADF Data Flow: SCD Type 2 History](http://youtu.be/123CptslKvU)

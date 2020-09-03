@@ -1,6 +1,4 @@
 Start Here:
-* [ADF Data Flow: Overview](https://www.youtube.com/watch?v=ZMG-qPqeH50)
-* [ADF Data Flow: Data Flow Scenarios](https://www.youtube.com/watch?v=l-Pjii8eNBM&t=6s)
 * [ADF Data Flows: Getting started](http://youtu.be/MFw7t_8tuV4)
 * [Getting started with ADF Data Flows from Altius](https://www.youtube.com/watch?v=CQ1JfgZKH9s&t=981s)
 * [Getting started with Mapping Data Flows by Adam from Azure 4 Everyone](https://www.youtube.com/watch?v=AUpMCRggjIM)
@@ -42,6 +40,7 @@ Transformations:
 * [JSON Transformations](https://www.youtube.com/watch?v=yY5aB7Kdhjg)
 * [Infer Data Types](https://www.youtube.com/watch?v=nJjRzlFktlA)
 * [Dynamic Joins and Lookups](https://youtu.be/CMOPPie9bXM)
+* [Transform Hierachical Data](https://youtu.be/oAEh21NFgWQ)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

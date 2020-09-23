@@ -85,3 +85,6 @@ Expressions:
 * [Data Flow Script Intro: Copy, Paste, Snippets](https://www.youtube.com/watch?v=3_1I4XdoBKQ)
 * [Data Quality Expressions](https://www.youtube.com/watch?v=O8gmv5-lXhs)
 * [Collect aggregate function](https://www.youtube.com/watch?v=zneE18EHJSE)
+
+Metadata:
+* [Metadata validation rules](https://www.youtube.com/watch?v=E_UD3R-VpYE)

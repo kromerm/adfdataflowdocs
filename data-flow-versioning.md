@@ -10,10 +10,10 @@ dataFlowRuntimeVersion: "Candidate"
 }
 }
 
-* Value values for Runtime Version are:
-** Candidate (this build is updated on the 15th of every month and becomes "Stable" on the 1st of the next month)
-** Stable (this build is updated on the 1st of every month and is the previous Candidate build)
-** Live (this is the current live service version of ADF Data Flows)
+#### Valid values for Runtime Version are:
+* Candidate (this build is updated on the 15th of every month and becomes "Stable" on the 1st of the next month)
+* Stable (this build is updated on the 1st of every month and is the previous Candidate build)
+* Live (this is the current live service version of ADF Data Flows)
 
 #### Recommended use of Data Flow versioning
 

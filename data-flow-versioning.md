@@ -9,3 +9,12 @@
 dataFlowRuntimeVersion: "Candidate"
 }
 }
+
+* Value values for Runtime Version are:
+** Candidate (this build is updated on the 15th of every month and becomes "Stable" on the 1st of the next month)
+** Stable (this build is updated on the 1st of every month and is the previous Candidate build)
+** Live (this is the current live service version of ADF Data Flows)
+
+#### Recommended use of Data Flow versioning
+
+If you wish to switch to versioned Data Flows, we recommend that you use "Stable" for the live production version of your factories and "Candidate" for your dev/test environment. You can also optionally maintain an "experimental" factory that is using the "Live" version that is the version of ADF data flows that is used by all general ADF customers. This would give you an opportuntity to experiment with the features in ADF that are deployed on a weekly cadence.

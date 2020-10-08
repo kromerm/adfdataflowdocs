@@ -5,7 +5,7 @@
 #### JSON ARM Template config
 
 "properties": {
-"globalConfiguration": {
+"globalConfigurations": {
 dataFlowRuntimeVersion: "Candidate"
 }
 }

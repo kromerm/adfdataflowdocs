@@ -14,6 +14,7 @@ dataFlowRuntimeVersion: "Candidate"
 * Candidate (this build is updated on the 15th of every month and becomes "Stable" on the 1st of the next month)
 * Stable (this build is updated on the 1st of every month and is the previous Candidate build)
 * Live (this is the current live service version of ADF Data Flows)
+* If you leave the property set to blank, the default value will be "Live"
 
 #### Recommended use of Data Flow versioning
 

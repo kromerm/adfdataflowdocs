@@ -41,6 +41,7 @@ Transformations:
 * [Infer Data Types](https://www.youtube.com/watch?v=nJjRzlFktlA)
 * [Dynamic Joins and Lookups](https://youtu.be/CMOPPie9bXM)
 * [Transform Hierachical Data](https://youtu.be/oAEh21NFgWQ)
+* [Rank transformation](https://youtu.be/6XvgkbMtws0)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

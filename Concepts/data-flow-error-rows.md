@@ -1,19 +1,14 @@
----
-title: Derived column transformation in mapping data flow
-description: Learn how to transform data at scale in Azure Data Factory with the mapping data flow Derived Column transformation.
-author: kromerm
-ms.author: makromer
-ms.service: data-factory
-ms.topic: conceptual
-ms.custom: seo-lt-2019
-ms.date: 09/14/2020
----
+# Enable error row handling on Azure SQL DB sink types
 
-# Derived column transformation in mapping data flow
+Add this string to the end of your ADF URL: ```&feature.errorrowhandling=true```
 
-[!INCLUDE[appliesto-adf-asa-md](includes/appliesto-adf-asa-md.md)]
+# Sink settings
 
-Use the derived column transformation to generate new columns in your data flow or to modify existing fields.
+In the 
+
+https://github.com/kromerm/adfdataflowdocs/blob/master/images/errors1.png
+
+
 
 ## Create and update columns
 
@@ -45,57 +40,3 @@ For more information on handling complex types in data flow, see [JSON handling 
 
 ![Add complex column](media/data-flow/derive-complex-column.png "Add columns")
 
-### Locals
-
-If you are sharing logic across multiple columns or want to compartmentalize your logic, you can create a local within a derived column transformation. A local is a set of logic that doesn't get propagated downstream to the following transformation. Locals can be created within the expression builder by going to **Expression elements** and selecting **Locals**. Create a new one by selecting **Create new**.
-
-![Create local](media/data-flow/create-local.png "Create local")
-
-Locals can reference any expression element a derived column including functions, input schema, parameters, and other locals. When referencing other locals, order does matter as the referenced local needs to be "above" the current one.
-
-![Create local 2](media/data-flow/create-local-2.png "Create local 2")
-
-To reference a local in a derived column, either click on the local from the **Expression elements** view or reference it with a colon in front of its name. For example, a local called local1 would be referenced by `:local1`. To edit a local definition, hover over it in the expression elements view and click on the pencil icon.
-
-![Using locals](media/data-flow/using-locals.png "Using locals")
-
-## Data flow script
-
-### Syntax
-
-```
-<incomingStream>
-    derive(
-           <columnName1> = <expression1>,
-           <columnName2> = <expression2>,
-           each(
-                match(matchExpression),
-                <metadataColumn1> = <metadataExpression1>,
-                <metadataColumn2> = <metadataExpression2>
-               )
-          ) ~> <deriveTransformationName>
-```
-
-### Example
-
-The below example is a derived column named `CleanData` that takes an incoming stream `MoviesYear` and creates two derived columns. The first derived column replaces column `Rating` with Rating's value as an integer type. The second derived column is a pattern that matches each column whose name starts with 'movies'. For each matched column, it creates a column `movie` that is equal to the value of the matched column prefixed with 'movie_'. 
-
-In the Data Factory UX, this transformation looks like the below image:
-
-![Derive example](media/data-flow/derive-script.png "Derive example")
-
-The data flow script for this transformation is in the snippet below:
-
-```
-MoviesYear derive(
-                Rating = toInteger(Rating),
-		        each(
-                    match(startsWith(name,'movies')),
-                    'movie' = 'movie_' + toString($$)
-                )
-            ) ~> CleanData
-```
-
-## Next steps
-
-- Learn more about the [Mapping Data Flow expression language](data-flow-expression-functions.md).

@@ -1,6 +1,6 @@
 ---
 title: Understand reservations discount for Azure Data Factory data flows | Microsoft Docs
-description: Learn how a reservation discount is applied to running ADF data flows. The discount is applied to these databases on an hourly basis.
+description: Learn how a reservation discount is applied to running ADF data flows. The discount is applied to these data flows on an hourly basis.
 author: kromerm
 ms.service: cost-management-billing
 ms.subservice: reservations
@@ -11,28 +11,22 @@ ms.author: makromer
 
 # How a reservation discount is applied to Azure Data Factory data flows
 
-After you buy an Azure SQL Database reserved capacity, the reservation discount is automatically applied to SQL databases that match the attributes and quantity of the reservation. A reservation applies to the compute costs of your SQL Database, including the primary replica and any billable secondary replicas. You're charged for software, storage, and networking at the normal rates. You can cover the licensing costs for SQL Database with [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
+After you buy ADF data flow reserved capacity, the reservation discount is automatically applied to data flows using an Azure integration runtime that match the compute type and core count of the reservation.
 
 ## How reservation discount is applied
 
-A reservation discount is "*use-it-or-lose-it*". So, if you don't have matching resources for any hour, then you lose a reservation quantity for that hour. You can't carry forward unused reserved hours.
+A reservation discount is "*use-it-or-lose-it*". So, if you don't have matching Azure integration resources used for any hour, then you lose a reservation quantity for that hour. You can't carry forward unused reserved hours.
 
-When you shut down a resource, the reservation discount automatically applies to another matching resource in the specified scope. If no matching resources are found in the specified scope, then the reserved hours are *lost*.
+When you stop using the integration runtime for data flows, the reservation discount automatically applies to another matching resource in the specified scope. If no matching resources are found in the specified scope, then the reserved hours are *lost*.
 
 ## Discount applied to ADF data flows
 
-The SQL Database reserved capacity discount is applied to running SQL databases on an hourly basis. The reservation that you buy is matched to the compute usage emitted by the running SQL databases. For SQL databases that don't run the full hour, the reservation is automatically applied to other SQL databases matching the reservation attributes. The discount can apply to SQL databases that are running concurrently. If you don't have SQL databases that run for the full hour that match the reservation attributes, you don't get the full benefit of the reservation discount for that hour.
+The ADF data flow reserved capacity discount is applied to executing integration runtimes on an hourly basis. The reservation that you buy is matched to the compute usage emitted by the integration runtime being utilized. For data flows that don't run the full hour, the reservation is automatically applied to other data flows matching the reservation attributes. The discount can apply to data flows that are running concurrently. If you don't have data flows that run for the full hour that match the reservation attributes, you don't get the full benefit of the reservation discount for that hour.
 
-The following examples show how the SQL Database reserved capacity discount applies depending on the number of cores you bought, and when they're running.
+The following examples show how the ADF data flow reserved capacity discount applies depending on the number of cores you bought, and when they're running.
 
-- Scenario 1: You buy a SQL Database reserved capacity for an 8 core SQL Database. You run a 16 core SQL Database that matches the rest of the attributes of the reservation. You're charged the pay-as-you-go price for 8 cores of SQL Database compute usage. You get the reservation discount for one hour of 8 core SQL Database compute usage.
-
-For the rest of these examples, assume that the SQL Database reserved capacity you buy is for a 16 core SQL Database and the rest of the reservation attributes match the running SQL databases.
-
-- Scenario 2: You run two SQL databases with 8 cores each for an hour. The 16 core reservation discount is applied to compute usage for both the 8 cores SQL databases.
-- Scenario 3: You run one 16 core SQL Database from 1 pm to 1:30 pm. You run another 16 core SQL Database from 1:30 to 2 pm. Both are covered by the reservation discount.
-- Scenario 4: You run one 16 core SQL Database from 1 pm to 1:45 pm. You run another 16 core SQL Database from 1:30 to 2 pm. You're charged the pay-as-you-go price for the 15-minute overlap. The reservation discount applies to the compute usage for the rest of the time.
-- Scenario 5: You run one 4 core SQL Hyperscale database with three secondary replicas, each having 4 cores. The reservation applies to compute usage for the primary and for all secondary replicas.
+- Scenario 1: You buy an ADF data flow reserved capacity for 80 cores of memory optimized compute. You run a data flow with an Azure integration runtime set to 144 cores of memory optimized for one hour. You're charged the pay-as-you-go price for 64 cores of data flow usage for one hour. You get the reservation discount for one hour of 80 cores of memory optimized usage.
+- Scenario 2: You buy an ADF data flow reserved capacity for 32 cores of general purpose compute. You debug your data flows for 1 hour using 32 cores of general compute Azure integration runtime. You get the reservation discount for that entire hour of usage.
 
 To understand and view the application of your Azure Reservations in billing usage reports, see [Understand Azure reservation usage](understand-reserved-instance-usage-ea.md).
 

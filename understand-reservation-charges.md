@@ -1,16 +1,15 @@
 ---
-title: Understand reservations discount for Azure SQL Database | Microsoft Docs
-description: Learn how a reservation discount is applied to running Azure SQL databases. The discount is applied to these databases on an hourly basis.
-author: yashesvi
-ms.reviewer: yashar
+title: Understand reservations discount for Azure Data Factory data flows | Microsoft Docs
+description: Learn how a reservation discount is applied to running ADF data flows. The discount is applied to these databases on an hourly basis.
+author: kromerm
 ms.service: cost-management-billing
 ms.subservice: reservations
 ms.topic: conceptual
-ms.date: 10/13/2020
-ms.author: banders
+ms.date: 11/09/2020
+ms.author: makromer
 ---
 
-# How a reservation discount is applied to Azure SQL Database
+# How a reservation discount is applied to Azure Data Factory data flows
 
 After you buy an Azure SQL Database reserved capacity, the reservation discount is automatically applied to SQL databases that match the attributes and quantity of the reservation. A reservation applies to the compute costs of your SQL Database, including the primary replica and any billable secondary replicas. You're charged for software, storage, and networking at the normal rates. You can cover the licensing costs for SQL Database with [Azure Hybrid Benefit](https://azure.microsoft.com/pricing/hybrid-benefit/).
 

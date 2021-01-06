@@ -30,3 +30,4 @@
 * [Create reusable patterns: SCD Type 1 example](https://techcommunity.microsoft.com/t5/Azure-Data-Factory/Create-Generic-SCD-Pattern-in-ADF-Mapping-Data-Flows/ba-p/918519)
 * [Store data preview summary stats](https://techcommunity.microsoft.com/t5/azure-data-factory/how-to-save-your-data-profiler-summary-stats-in-adf-data-flows/ba-p/1243251)
 * [Fill down](https://techcommunity.microsoft.com/t5/azure-data-factory/implement-fill-down-in-adf-and-synapse-data-flows/ba-p/2013406)
+* [Transform arrays](https://kromerbigdata.com/2021/01/06/transforming-arrays-in-azure-data-factory-and-azure-synapse-data-flows/)

@@ -1,26 +1,16 @@
 ---
 title: Save compute costs with reserved capacity
-titleSuffix: Azure SQL Database & SQL Managed Instance
-description: Learn how to buy Azure SQL Database and SQL Managed Instance reserved capacity to save on your compute costs.
-services: sql-database
-ms.service: sql-db-mi
-ms.subservice: features
-ms.custom: sqldbrb=2
-ms.devlang:
+description: Learn how to buy Azure Data Factory data flow reserved capacity to save on your compute costs.
 ms.topic: conceptual
-author: anosov1960
-ms.author: sashan
-ms.reviewer: sstein
-ms.date: 10/13/2020
+author: kromerm
+ms.author: makromer
+ms.date: 01/12/2021
 ---
-# Save costs for resources with reserved capacity - Azure SQL Database & SQL Managed Instance
-[!INCLUDE[appliesto-sqldb-sqlmi](../includes/appliesto-sqldb-sqlmi.md)] 
+# Save costs for resources with reserved capacity - Azure Data Factory data flows
 
-Save money with Azure SQL Database and SQL Managed Instance by committing to a reservation for compute resources compared to pay-as-you-go prices. With reserved capacity, you make a commitment for SQL Database and/or SQL Managed Instance use for a period of one or three years to get a significant discount on the compute costs. To purchase reserved capacity, you need to specify the Azure region, deployment type, performance tier, and term.
+Save money with Azure Data Factory data flow costs by committing to a reservation for compute resources compared to pay-as-you-go prices. With reserved capacity, you make a commitment for ADF data flow usage for a period of one or three years to get a significant discount on the compute costs. To purchase reserved capacity, you need to specify the Azure region, compute type, core count, and term.
 
-You do not need to assign the reservation to a specific database or managed instance. Matching existing deployments that are already running or ones that are newly deployed automatically get the benefit. By purchasing a reservation, you commit to usage for the compute costs for a period of one or three years. As soon as you buy a reservation, the compute charges that match the reservation attributes are no longer charged at the pay-as-you go rates. 
-
-A reservation applies to both primary and billable secondary compute replicas, but does not cover software, networking, or storage charges associated with the service. At the end of the reservation term, the billing benefit expires and the database or managed instance is billed at the pay-as-you go price. Reservations do not automatically renew. For pricing information, see the [reserved capacity offering](https://azure.microsoft.com/pricing/details/sql-database/managed/).
+You do not need to assign the reservation to a specific factory or integration runtime. Existing factories or newly deployed factories automatically get the benefit. By purchasing a reservation, you commit to usage for the data flow compute costs for a period of one or three years. As soon as you buy a reservation, the compute charges that match the reservation attributes are no longer charged at the pay-as-you go rates. 
 
 You can buy reserved capacity in the [Azure portal](https://portal.azure.com). Pay for the reservation [up front or with monthly payments](../../cost-management-billing/reservations/prepare-buy-reservation.md). To buy reserved capacity:
 
@@ -81,15 +71,6 @@ If you have questions or need help, [create a support request](https://portal.az
 
 ## Next steps
 
-The vCore reservation discount is applied automatically to the number of databases or managed instances that match the capacity reservation scope and attributes. You can update the scope of the capacity reservation through the [Azure portal](https://portal.azure.com), PowerShell, Azure CLI, or the API.
-
-To learn how to manage the capacity reservation, see [manage reserved capacity](../../cost-management-billing/reservations/manage-reserved-vm-instance.md).
-
 To learn more about Azure Reservations, see the following articles:
 
-- [What are Azure Reservations?](../../cost-management-billing/reservations/save-compute-costs-reservations.md)
-- [Manage Azure Reservations](../../cost-management-billing/reservations/manage-reserved-vm-instance.md)
-- [Understand Azure Reservations discount](../../cost-management-billing/reservations/understand-reservation-charges.md)
-- [Understand reservation usage for your Pay-As-You-Go subscription](../../cost-management-billing/reservations/understand-reserved-instance-usage.md)
-- [Understand reservation usage for your Enterprise enrollment](../../cost-management-billing/reservations/understand-reserved-instance-usage-ea.md)
-- [Azure Reservations in Partner Center Cloud Solution Provider (CSP) program](/partner-center/azure-reservations)
+- [Understand Azure Reservations discount](understand-reservation-charges.md)

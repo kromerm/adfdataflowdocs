@@ -5,7 +5,7 @@ author: kromerm
 ms.service: cost-management-billing
 ms.subservice: reservations
 ms.topic: conceptual
-ms.date: 11/09/2020
+ms.date: 01/12/2021
 ms.author: makromer
 ---
 
@@ -38,4 +38,4 @@ If you have questions or need help,  [create a support request](https://go.micro
 
 To learn more about Azure Reservations, see the following article:
 
-- [What are Azure Reservations?](save-compute-costs-reservations.md)
+- [What are Azure Reservations?](https://docs.microsoft.com/azure/cost-management-billing/reservations/save-compute-costs-reservations)

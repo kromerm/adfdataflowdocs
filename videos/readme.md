@@ -43,6 +43,7 @@ Transformations:
 * [Transform Hierachical Data](https://youtu.be/oAEh21NFgWQ)
 * [Rank transformation](https://youtu.be/6XvgkbMtws0)
 * [Row context via Window transformation](http://youtu.be/jqt1gmX2XUg)
+* [Parse transformation](https://www.youtube.com/watch?v=r7O7AJcuqoY)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

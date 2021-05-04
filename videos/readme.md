@@ -44,6 +44,7 @@ Transformations:
 * [Rank transformation](https://youtu.be/6XvgkbMtws0)
 * [Row context via Window transformation](http://youtu.be/jqt1gmX2XUg)
 * [Parse transformation](https://www.youtube.com/watch?v=r7O7AJcuqoY)
+* [Transform complex data types](https://youtu.be/Wk0C76wnSDE)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)
@@ -53,6 +54,7 @@ Optimize:
 * [ADF Data Flow: Decrease start-up times](https://youtu.be/FFCbU4ujCiY?t=528)
 * [ADF Data Flow Perf: SQL DB](https://youtu.be/iyZT5CY3V_4)
 * [Optimize compute environment](https://www.youtube.com/watch?v=VT_2ZV3a7Fc&feature=youtu.be&hd=1)
+* [Quick cluster start-up time with Azure IR](https://www.youtube.com/watch?v=mxzsOZX6WVY)
 
 Patterns:
 * [ADF Data Flow: Staging Data Pattern](https://youtu.be/mZLKdyoL3Mo)

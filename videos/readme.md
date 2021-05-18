@@ -45,6 +45,7 @@ Transformations:
 * [Row context via Window transformation](http://youtu.be/jqt1gmX2XUg)
 * [Parse transformation](https://www.youtube.com/watch?v=r7O7AJcuqoY)
 * [Transform complex data types](https://youtu.be/Wk0C76wnSDE)
+* [Output to next activity](http://youtu.be/r1m3Ya14qpE?hd=1)
 
 Optimize:
 * [ADF Data Flow: Monitoring UX](https://www.youtube.com/watch?v=AYkwX6J9sII&t=4s)

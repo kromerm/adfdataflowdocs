@@ -56,6 +56,7 @@ Optimize:
 * [ADF Data Flow Perf: SQL DB](https://youtu.be/iyZT5CY3V_4)
 * [Optimize compute environment](https://www.youtube.com/watch?v=VT_2ZV3a7Fc&feature=youtu.be&hd=1)
 * [Quick cluster start-up time with Azure IR](https://www.youtube.com/watch?v=mxzsOZX6WVY)
+* [Update monitoring view](https://www.youtube.com/watch?v=FWCBslsk6KE)
 
 Patterns:
 * [ADF Data Flow: Staging Data Pattern](https://youtu.be/mZLKdyoL3Mo)

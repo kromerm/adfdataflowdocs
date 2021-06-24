@@ -1,14 +1,13 @@
 ##	Setup Log Analytics Workspace
 
-Via Portal: https://docs.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace
-ARM Template: https://docs.microsoft.com/en-us/azure/architecture/databricks-monitoring/dashboards#deploy-the-azure-log-analytics-workspace
-PS: Deploying log analytics workspace using the ARM template will include useful queries specific to spark-monitoring. These queries could be customized for specific business requirement.
+* Via Portal: https://docs.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace
+* ARM Template: https://docs.microsoft.com/en-us/azure/architecture/databricks-monitoring/dashboards#deploy-the-azure-log-analytics-workspace
+* PS: Deploying log analytics workspace using the ARM template will include useful queries specific to spark-monitoring. These queries could be customized for specific business requirement.
 
 ##	Link Log Analytics Workspace with Data Factory
 Under “diagnostic setting” property for Data Factory, link Log Analytics workspace
  
-PS: 
-Spark monitoring expects only single log analytics workspace associated with the factory. If 0 or > 1 workspaces are linked to the factory, spark monitoring will not work.
+* PS: Spark monitoring expects only single log analytics workspace associated with the factory. If 0 or > 1 workspaces are linked to the factory, spark monitoring will not work.
 
 Assign Factory managed identity permissions on log analytics workspace using built-in or custom RBAC role :
 

@@ -60,6 +60,6 @@ SparkMetric_CL
 This query can be customized to visualize cpu/memory usage per Activity/Integration Runtime/etc.
 
 Further References:
-https://spark.apache.org/docs/latest/monitoring.html#metrics
-https://docs.microsoft.com/en-us/azure/architecture/databricks-monitoring/dashboards
+* https://spark.apache.org/docs/latest/monitoring.html#metrics
+* https://docs.microsoft.com/en-us/azure/architecture/databricks-monitoring/dashboards
 

@@ -1,30 +1,34 @@
-1.	Setup Log Analytics Workspace
+##	Setup Log Analytics Workspace
 
 Via Portal: https://docs.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace
 ARM Template: https://docs.microsoft.com/en-us/azure/architecture/databricks-monitoring/dashboards#deploy-the-azure-log-analytics-workspace
 PS: Deploying log analytics workspace using the ARM template will include useful queries specific to spark-monitoring. These queries could be customized for specific business requirement.
 
-2.	Link Log Analytics Workspace with Data Factory
+##	Link Log Analytics Workspace with Data Factory
 Under “diagnostic setting” property for Data Factory, link Log Analytics workspace
  
 PS: 
-a.	Spark monitoring expects only single log analytics workspace associated with the factory. If 0 or > 1 workspaces are linked to the factory, spark monitoring will not work.
+Spark monitoring expects only single log analytics workspace associated with the factory. If 0 or > 1 workspaces are linked to the factory, spark monitoring will not work.
 
-3.	Assign Factory managed identity permissions on log analytics workspace using built-in or custom RBAC role :
+Assign Factory managed identity permissions on log analytics workspace using built-in or custom RBAC role :
+
 Option 1: Assign Built-in Monitoring contributor access on the workspace or the Resource group or subscription containing the workspace.
 https://docs.microsoft.com/en-us/azure/azure-monitor//roles-permissions-security#monitoring-contributor
+
 Option 2: Create custom Role with following permissions access on the workspace or the Resource group or subscription containing the workspace:
 https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles
 
 ```
 "actions": [
-                                                                        "*/read",
-                                                                        "Microsoft.Insights/DiagnosticSettings/*",
-                                                                        "Microsoft.OperationalInsights/workspaces/search/action",
-                                                                        "Microsoft.OperationalInsights/workspaces/sharedKeys/action"
-                                                        ]
+ "*/read",
+ "Microsoft.Insights/DiagnosticSettings/*",
+ "Microsoft.OperationalInsights/workspaces/search/action",
+ "Microsoft.OperationalInsights/workspaces/sharedKeys/action"
+]
+```
 
 Sample query to correlate Activity Run id with cluster id to analyse cpuUsage:
+```
 ADFActivityRun
 | where ActivityType contains 'ExecuteDataflow'
 | where Status !in ('Queued', 'InProgress')
@@ -54,7 +58,6 @@ SparkMetric_CL
 ```
 
 This query can be customized to visualize cpu/memory usage per Activity/Integration Runtime/etc.
-
 
 Further References:
 https://spark.apache.org/docs/latest/monitoring.html#metrics

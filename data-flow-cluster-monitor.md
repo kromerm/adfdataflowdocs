@@ -1,5 +1,7 @@
 # Data flows cluster report
 
+The ADF Data Flows cluster report is a by-request feature that enables users to self-serve analyzing cluster utilization for their ADF data flow pipelines by presenting resource utilization via Azure Log Analytics. Analyzing the results of your data flow executions can help to right-size your Azure Integration Runtime data flow configurations.
+
 ##	Setup Log Analytics Workspace
 
 * Via Portal: https://docs.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace

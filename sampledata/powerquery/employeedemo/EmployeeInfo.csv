@@ -1,0 +1,22 @@
+EmployeeId,FirstName,LastName,City,ZIP,Email,State,DateOfJoining,hiphens,mix,defaultsimpleformat
+1," ""Harry"""," ""Potter"""," ""Bellevue"""," ""98004"""," ""harryk@fabrikam.com"""," ""WA""",1/20/2008,1-20-2008,1-20-2008,2021-1-6
+2," ""Hermione"""," ""Granger"""," ""Las Vegas"""," ""19801"""," ""hermione@fabrikam.com"""," ""DE""",11/21/2008,1-20-2008,1/20/2008,2021-1-7
+3," ""Lord"""," ""Voldemort"""," ""Billings"""," ""59115"""," ""lordc@fabrikam.com"""," ""MT""",9/22/2008,1-20-2008,1-21-2008
+4," ""Albus"""," ""Dumbledore"""," ""Newyork"""," ""12345"""," ""albusd@fabrikam.com"""," ""NY""",8/23/2008,1-20-2008,1-22-2008,2021-1-6
+5," ""Severus"""," ""Snape"""," ""Columbus"""," ""56789"""," ""severus@fabrikam.com"""," ""OH""",1/24/2008,1-20-2008,1/20/2008,2021-1-2
+6," ""Draco"""," ""Malfoy"""," ""Bellevue"""," ""91019"""," ""dracoh@fabrikam.com"""," ""TX""",1/25/2008,1-20-2008,1-20-2008,2021-1-5
+7," ""Dobby"""," ""Elf"""," ""Salt Lake City""",," ""dobbyz@fabrikam.com"""," ""UT""",1/26/2008,1-20-2008,1-20-2008
+8," ""Ron"""," ""Weasley"""," ""Las Vegas"""," ""51527"""," ""ronag@fabrikam.com"""," ""NV""",1/27/2008,1-20-2008,1/20/2008
+9," ""Sirius"""," ""Black"""," ""Newyork"""," ""61623"""," ""hcblack@fabrikam.com"""," ""RI""",1/28/2008,1-20-2008,1/21/2008
+10," ""Luna"""," ""Lovegood"""," ""Kansas City"""," ""68692"""," ""lunal@fabrikam.com"""," ""MO""",1/29/2008,1-20-2008,1-20-2008
+11," ""Rubeus"""," ""Hagrid"""," ""Boston"""," ""98052"""," ""gamalfoyl@fabrikam.com"""," ""ID""",1/30/2008,1-20-2008,1-20-2008
+12," ""Bellatrix"""," ""Lestrange"""," ""Bellevue"""," ""78965"""," ""mlestrange@fabrikam.com"""," ""CA""",1/31/2008,1-20-2008
+13," ""Ginny"""," ""Weasley"""," ""Redmond"""," ""98052"""," ""ginnywfabrikam.com"""," ""WA""",2/1/2008,1-20-2008,1-20-2008
+14," ""Neville"""," ""Longbottom"""," ""Las Vegas"""," ""98053"""," ""nevillea@fabrikam.com"""," ""WA""",2/2/2008,1-20-2008,1-20-2008
+15," ""Alastor"""," ""Moody"""," ""Newyork"""," ""98054"""," ""albusd@fabrikamcom"""," ""WA""",2/3/2008,1-20-2008,1-20-2008
+16," ""Lucius"""," ""Malfoy"""," ""Bellevue""",," ""luciusmalfoy@fabrikam.com"""," ""WA""",2/4/2008,1-20-2008,1-20-2008
+17," ""Cedric"""," ""Diggory"""," ""Seattle"""," ""98989"""," ""cedricp@fabrikam.com"""," ""WA""",2/5/2008,1-20-2008,1-20-2008
+18," ""Argus"""," ""Filch"""," ""Salt Lake City"""," ""11128"""," ""argusm@fabrikam.com"""," ""UT""",2/6/2008,1-20-2008,1-20-2008
+19," ""Vernon"""," ""Dursley"""," ""Newyork"""," ""87654"""," ""gamalfoyl@fabrikam.com"""," ""OR""",2/17/2008,1-20-2008,1-20-2008
+20,Paras,Kumar," ""Newyork""",98021,parask@fabrikam.com,WA,9/29/2006,1-20-2008,1-20-2008
+21,Gaurav,Malhotra," ""Las Vegas""",,,,12/21/2019,1-20-2008,1-20-2008

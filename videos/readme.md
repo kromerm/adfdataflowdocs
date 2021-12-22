@@ -34,6 +34,7 @@ Transformations:
 * [ADF Data Flows: Flowlet](https://www.youtube.com/watch?v=bVdeBFiiJNQ)
 * [ADF Data Flows: Stringify transformation](https://www.youtube.com/watch?v=1X4sRHf5W2U)
 * [ADF Data Flows: External Call transformation](https://www.youtube.com/watch?v=dIMfbwX8r0A)
+* [ADF Data Flows: Assert transformation](https://www.youtube.com/watch?v=8K7flL7JWMo)
 * [ADF Data Flow Sources: CosmosDB](http://youtu.be/plp1etT2ftY?hd=1)
 * [Fuzzy Lookups](http://youtu.be/7gdwExjHBbw)
 * [Quick Transformations](https://www.youtube.com/watch?v=CP0TnNmaLA0)

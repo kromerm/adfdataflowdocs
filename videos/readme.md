@@ -88,6 +88,7 @@ Patterns:
 * [Self-join patterns](https://www.youtube.com/watch?v=Dx1kANfnvmk&feature=youtu.be&hd=1)
 * [Data lake file output options](https://www.youtube.com/watch?v=NAPSbjvSQA8)
 * [Evolving database schema handling](http://youtu.be/urzLAb83IjU?hd=1)
+* [Change data capture in ADF](https://www.youtube.com/watch?v=Y9J5J2SRt5k)
 
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)

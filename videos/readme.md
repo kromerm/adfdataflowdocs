@@ -89,6 +89,8 @@ Patterns:
 * [Data lake file output options](https://www.youtube.com/watch?v=NAPSbjvSQA8)
 * [Evolving database schema handling](http://youtu.be/urzLAb83IjU?hd=1)
 * [Change data capture in ADF](https://www.youtube.com/watch?v=Y9J5J2SRt5k)
+* [Incremental data loading with Azure Data Factory and Azure SQL DB](https://youtu.be/6tNWFErnGGU)
+* [Transform Avro data from Event Hubs using Parse and Flatten](https://youtu.be/F2x7Eg-635o)
 
 Expressions:
 * [Date/Time expressions](https://www.youtube.com/watch?v=uboyCZ25r_E&feature=youtu.be&hd=1)

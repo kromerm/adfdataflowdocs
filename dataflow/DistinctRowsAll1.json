@@ -1,0 +1,54 @@
+{
+	"name": "DistinctRowsAll1",
+	"properties": {
+		"description": "Distinct Rows using fuzzy, key, all cols",
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "MoviesD2",
+						"type": "DatasetReference"
+					},
+					"name": "MoviesCSV"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "folderout",
+						"type": "DatasetReference"
+					},
+					"name": "OutputDistinctData"
+				}
+			],
+			"transformations": [
+				{
+					"name": "DistinctRows"
+				},
+				{
+					"name": "RowCountDistinct"
+				},
+				{
+					"name": "OriginalData"
+				},
+				{
+					"name": "RowCountOrig"
+				},
+				{
+					"name": "DistinctAllCols"
+				},
+				{
+					"name": "FuzzyMatch"
+				},
+				{
+					"name": "RowCountAll"
+				},
+				{
+					"name": "RowCountFuzzy"
+				}
+			],
+			"script": "source(output(\n\t\tmovie as string,\n\t\ttitle as string,\n\t\tgenres as string,\n\t\tyear as string,\n\t\tRating as string,\n\t\tRottenTomato as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~> MoviesCSV\nMoviesCSV aggregate(groupBy(movie),\n\teach(match(name!='movie'), $$ = first($$))) ~> DistinctRows\nDistinctRows aggregate(rowcount_agg = count(1)) ~> RowCountDistinct\nMoviesCSV select(mapColumn(\n\t\tmovie,\n\t\ttitle,\n\t\tgenres,\n\t\tyear,\n\t\tRating,\n\t\tRottenTomato\n\t),\n\tskipDuplicateMapInputs: false,\n\tskipDuplicateMapOutputs: false) ~> OriginalData\nOriginalData aggregate(rowcount_orig = count(1)) ~> RowCountOrig\nMoviesCSV aggregate(groupBy(mycols = sha2(256,columns())),\n\teach(match(true()), $$ = first($$))) ~> DistinctAllCols\nMoviesCSV aggregate(groupBy(colsfuzzy = sha2(256,movie,year,soundex(title))),\n\teach(match(true()), $$ = first($$))) ~> FuzzyMatch\nDistinctAllCols aggregate(rowcountall = count(1)) ~> RowCountAll\nFuzzyMatch aggregate(rowcountfuzzy = count(1)) ~> RowCountFuzzy\nDistinctRows sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionBy('hash', 1)) ~> OutputDistinctData"
+		}
+	}
+}

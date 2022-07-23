@@ -7,7 +7,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "MoviesD21",
+						"referenceName": "MoviesD2",
 						"type": "DatasetReference"
 					},
 					"name": "MoviesCSV"
@@ -16,7 +16,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "folderout1",
+						"referenceName": "folderout",
 						"type": "DatasetReference"
 					},
 					"name": "OutputDistinctData"

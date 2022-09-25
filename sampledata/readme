@@ -1,5 +1,1 @@
-The sample data files found in this folder are free for your use in Azure Data Factory Data Flows to experiment and play with.
-
-Upload the files to your Azure Blob Storage and point to them with an ADF Linked Service + Dataset as part of defining a Data Flow Source transform.
-
-To use the ARM Template with samoples from repo, make sure to first create a container called "demo".
+If you are here from the ADF Mapping Data Flows book, please download this Word doc here for instructions on accessing the samples: [click here](https://github.com/kromerm/adfdataflowdocs/blob/master/sampledata/Kromer-ADF-Mapping-Data-Flows-ReadMe.docx)
